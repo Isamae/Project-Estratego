@@ -219,9 +219,11 @@ public class Project  {
     public static void columnaNoName(String urlString) throws Exception
     {
 
+        
         File file = ResourceUtils.getFile("classpath:"+urlString);
         ProjectReader reader = new UniversalProjectReader();
         ProjectFile project = reader.read(file);
+        
 
         List<Table> tables= project.getTables();
         Iterator iter = tables.iterator();
@@ -231,11 +233,13 @@ public class Project  {
         Iterator resourceIter = resources.iterator();
         while (resourceIter.hasNext())
         {
+
             Task resource = (Task)resourceIter.next();
             List columns = table.getColumns();
             Iterator columnIter = columns.iterator();
             while (columnIter.hasNext())
             {
+                
                 Column column = (Column)columnIter.next();
                 Object columnValue = resource.getCachedValue(column.getFieldType());
                 System.out.print(columnValue);
@@ -243,7 +247,10 @@ public class Project  {
             }
             System.out.println("");
         }
+                
+                
             
+
     }
 
 
