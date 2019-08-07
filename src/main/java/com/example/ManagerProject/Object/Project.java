@@ -229,15 +229,22 @@ public class Project  {
         
         List resources = project.getAllTasks();
         Iterator resourceIter = resources.iterator();
-        while (resourceIter.hasNext())
-        {
+        while (resourceIter.hasNext()){
             Task resource = (Task)resourceIter.next();
             List columns = table.getColumns();
-            Iterator columnIter = columns.iterator();
-            while (columnIter.hasNext())
-            {
-                Column column = (Column)columnIter.next();
-                Object columnValue = resource.getCachedValue(column.getFieldType());
+			Iterator columnIter = columns.iterator();
+			Object columnValue = null;
+            while (columnIter.hasNext()){
+				Column column = (Column)columnIter.next();
+				if (column.getFieldType().toString().equalsIgnoreCase("Duration")){
+					columnValue = resource.getDuration();
+				}else if (column.getFieldType().toString().equalsIgnoreCase("Start")){
+					columnValue = resource.getStart();
+				}else if (column.getFieldType().toString().equalsIgnoreCase("Finish")){
+					columnValue = resource.getFinish();
+				}else {
+					columnValue = resource.getCachedValue(column.getFieldType());
+				}                
                 System.out.print(columnValue);
                 System.out.print(",");
             }
