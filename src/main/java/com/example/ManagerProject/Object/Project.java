@@ -242,6 +242,47 @@ public class Project  {
             
     }
 
+	public ArrayList <Day> getDiasCalendario (ProjectCalendar calendar, DayType dT){
+		DayType days [] = calendar.getDays();
+		ArrayList <Day> dias = new ArrayList<Day>();
+		for (int i=1; i<8; i++){
+			if (days[i-1].equals(dT)){
+				dias.add(Day.getInstance(i));
+			}
+		}
+		return dias;
+	}
+
+	public ArrayList <String> getHorasCalendario (ProjectCalendar calendar, ArrayList <Day> diasLaborables){
+		ArrayList <String> horarioCalendario = new ArrayList<String>();
+		String horario = "";
+		ProjectCalendarHours horas [] = calendar.getHours();
+		for (ProjectCalendarHours hora : horas){
+			if (hora!= null){
+				ProjectCalendarHours c = hora.getParentCalendar().getCalendarHours(diasLaborables.get(0));
+				horario = horario + hora.getDay();
+				for (int i=0; i<c.getRangeCount(); i++){
+					horario = horario + "/" + c.getRange(i).getStart()+"/" + c.getRange(i).getEnd();
+				}
+				horarioCalendario.add(horario);
+			}
+			horario = "";
+		}
+		return horarioCalendario;
+	}
+
+	public ArrayList <String> getExcepcionesCalendario (ProjectCalendar calendar){
+		ArrayList <String> excepcionesCalendario = new ArrayList<String>();
+		List <ProjectCalendarException> excepciones = calendar.getCalendarExceptions();
+		String ex = "";
+		for (ProjectCalendarException exception : excepciones){
+			ex = ex + exception.getName() + "/" + exception.getFromDate() + "/" + exception.getToDate();
+			excepcionesCalendario.add(ex);
+			ex = "";
+		}
+		return excepcionesCalendario;
+	}
+
 
 
 
