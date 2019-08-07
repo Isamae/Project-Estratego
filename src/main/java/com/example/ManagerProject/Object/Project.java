@@ -3,13 +3,18 @@ package com.example.ManagerProject.Object;
 import org.springframework.util.ResourceUtils;
 
 import net.sf.mpxj.Column;
+import net.sf.mpxj.Day;
+import net.sf.mpxj.DayType;
 import net.sf.mpxj.ProjectCalendar;
+import net.sf.mpxj.ProjectCalendarException;
+import net.sf.mpxj.ProjectCalendarHours;
 import net.sf.mpxj.ProjectFile;
 import net.sf.mpxj.Relation;
 import net.sf.mpxj.Resource;
 import net.sf.mpxj.ResourceAssignment;
 import net.sf.mpxj.Table;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.io.File;
@@ -40,16 +45,9 @@ public class Project  {
         ProjectFile project = reader.read(file);
         for (Task task : project.getAllTasks())
         {
-            tareas = tareas + "Task: " + task.getName() + " ID=" + task.getID() + " Unique ID=" + task.getUniqueID();
+            tareas = tareas + "Task: " + task.getName() + " Unique ID=" + task.getUniqueID();
             
         }
-        return tareas;
-    }
-
-    public static String getCalendario(String urlString)  throws Exception{
-        String tareas ="";
-        
-       
         return tareas;
     }
 
@@ -199,22 +197,82 @@ public class Project  {
         return relacionPrecedecesora;
     }
 
-    public static String calendarios(String urlString) throws Exception
-    {
-
+    public static String calendarios(String urlString) throws Exception{
         String tareas ="";
         
         File file = ResourceUtils.getFile("classpath:"+urlString);
         ProjectReader reader = new UniversalProjectReader();
         ProjectFile project = reader.read(file);
-        for (Task task : project.getAllTasks())
-        {
-            tareas = tareas + "Duracion:"+  task.getDuration() + "Tarea:"+ task.getUniqueID() + "Inicio:"+ task.getStart() + "Fin:"+ task.getFinish();
+        for (Task task : project.getAllTasks()){
+            tareas = tareas + "Duracion:"+  task.getDuration() + "Tarea:"+ task.getUniqueID() + "Inicio:"+ task.getStart() + "Fin:"+ task.getFinish() + "Dias Habiles";
             
         }
         return tareas;
         
     }
+
+    private void calendario(ProjectFile file){
+		List < ProjectCalendar > calendars = file.getCalendars ();
+		for(ProjectCalendar calendar : calendars){
+			System.out.println("\nNombre calendario: " + calendar.getName());
+			ArrayList <Day> diasLaborables = getDiasCalendario (calendar, DayType.WORKING);
+			ArrayList <Day> noLaborables = getDiasCalendario (calendar, DayType.NON_WORKING);
+			ArrayList <Day> diasDefault = getDiasCalendario (calendar, DayType.DEFAULT);
+			
+			System.out.println("\nDias laborables: " + diasLaborables.toString());
+			System.out.println("\nDias no laborables: " + noLaborables.toString());
+			System.out.println("\nDias default: " + diasDefault.toString());
+
+			ArrayList <String> horario = getHorasCalendario (calendar, diasLaborables);
+			System.out.println("\nHoras calendario:" + horario.toString());	
+			
+			ArrayList <String> excepciones = getExcepcionesCalendario (calendar);
+			System.out.println("\nExcepciones calendario: Feriados" + excepciones.toString());
+
+		}
+
+	}
+
+	public ArrayList <Day> getDiasCalendario (ProjectCalendar calendar, DayType dT){
+		DayType days [] = calendar.getDays();
+		ArrayList <Day> dias = new ArrayList<Day>();
+		for (int i=1; i<8; i++){
+			if (days[i-1].equals(dT)){
+				dias.add(Day.getInstance(i));
+			}
+		}
+		return dias;
+	}
+
+	public ArrayList <String> getHorasCalendario (ProjectCalendar calendar, ArrayList <Day> diasLaborables){
+		ArrayList <String> horarioCalendario = new ArrayList<String>();
+		String horario = "";
+		ProjectCalendarHours horas [] = calendar.getHours();
+		for (ProjectCalendarHours hora : horas){
+			if (hora!= null){
+				ProjectCalendarHours c = hora.getParentCalendar().getCalendarHours(diasLaborables.get(0));
+				horario = horario + hora.getDay();
+				for (int i=0; i<c.getRangeCount(); i++){
+					horario = horario + "/" + c.getRange(i).getStart()+"/" + c.getRange(i).getEnd();
+				}
+				horarioCalendario.add(horario);
+			}
+			horario = "";
+		}
+		return horarioCalendario;
+	}
+
+	public ArrayList <String> getExcepcionesCalendario (ProjectCalendar calendar){
+		ArrayList <String> excepcionesCalendario = new ArrayList<String>();
+		List <ProjectCalendarException> excepciones = calendar.getCalendarExceptions();
+		String ex = "";
+		for (ProjectCalendarException exception : excepciones){
+			ex = ex + exception.getName() + "/" + exception.getFromDate() + "/" + exception.getToDate();
+			excepcionesCalendario.add(ex);
+			ex = "";
+		}
+		return excepcionesCalendario;
+	}
 
     public static void columnaNoName(String urlString) throws Exception
     {
