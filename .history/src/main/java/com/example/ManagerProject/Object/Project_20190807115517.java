@@ -50,14 +50,8 @@ public class Project  {
             if(task.getName() ==null) {}
 
             else{
-                tareas = tareas  
-                + "{ " + " name :" +  task.getName() +" , "+ " id : " + task.getUniqueID() 
-                + " , " + " recursos: " + asignacionesRecursosTarea(project,task.getUniqueID())  
-                + " , " + " predecesoras: " + relacionesPredecesoraTareas(project,task.getUniqueID())
-                + " , " + " duracion: " +  task.getDuration()
-                + " , " + " fechaInicio: " + task.getStart()
-                + " , " + " fechaFin: " + task.getFinish()
-                + " }"  + " ,";
+                tareas = tareas  + "{ " + "name :" +  task.getName() +" , "+ " id : " + task.getUniqueID() +"," + "recursos: " + asignacionesRecursosTarea(project,task.getUniqueID())  
+                +"," + "predecesora: " + relacionesPredecesoraTareas(project,task.getUniqueID())+" }"  + ",";
             }
         }
 
@@ -174,7 +168,26 @@ public class Project  {
         return tareasH;
     }
 
-    public static String relacionesPrdeecesoraTareas(ProjectFile project, int  idTask) throws Exception
+    /*public static String recursosTareas(ProjectFile project) throws Exception
+    {
+
+        String recursos = "";
+
+        for (Resource resource : project.getAllResources())
+        {
+            recursos =  recursos + "Id Recursos -> " + resource.getUniqueID() + ":";
+
+            for (ResourceAssignment assignment : resource.getTaskAssignments())
+            {
+                Task task = assignment.getTask();
+                recursos =  recursos +"   " + task.getName();
+            }
+        }
+        return recursos;
+        
+    }*/
+
+    public static String relacionesPredecesoraTareas(ProjectFile project, int  idTask) throws Exception
     {
         String relacionPrecedecesora = "[";
 
@@ -183,13 +196,12 @@ public class Project  {
         List<Relation> predecessors = task.getPredecessors();
         if (predecessors != null && predecessors.isEmpty() == false)
         {
+            relacionPrecedecesora = relacionPrecedecesora + task.getName() + " predecessors:";
             for (Relation relation : predecessors)
             {
-                relacionPrecedecesora = relacionPrecedecesora + 
-                " { " + "taskId: " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID() 
-                +" , " + " type: " + relation.getType() 
-                + " , " + " lag: " + relation.getTargetTask().getDuration() 
-                + " } " + " ,";
+                relacionPrecedecesora = relacionPrecedecesora + "   Task: " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getName() ;
+                relacionPrecedecesora = relacionPrecedecesora + "   Type: " + relation.getType();
+                relacionPrecedecesora = relacionPrecedecesora + "   Lag: " + relation.getTargetTask().getDuration();
             }
         }
         else{}
@@ -205,8 +217,30 @@ public class Project  {
         return relacionPrecedecesora;
     }
 
-    public static void columnaNoName(ProjectFile project) throws Exception
+    public static String calendarios(String urlString) throws Exception
     {
+
+        String tareas ="";
+        
+        File file = ResourceUtils.getFile("classpath:"+urlString);
+        ProjectReader reader = new UniversalProjectReader();
+        ProjectFile project = reader.read(file);
+        for (Task task : project.getAllTasks())
+        {
+            tareas = tareas + "Duracion:"+  task.getDuration() + "Tarea:"+ task.getUniqueID() + "Inicio:"+ task.getStart() + "Fin:"+ task.getFinish();
+            
+        }
+        return tareas;
+        
+    }
+
+    public static void columnaNoName(String urlString) throws Exception
+    {
+
+        File file = ResourceUtils.getFile("classpath:"+urlString);
+        ProjectReader reader = new UniversalProjectReader();
+        ProjectFile project = reader.read(file);
+
         List<Table> tables= project.getTables();
         Iterator iter = tables.iterator();
         Table table = (Table)iter.next();

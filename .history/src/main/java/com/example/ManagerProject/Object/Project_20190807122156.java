@@ -174,7 +174,7 @@ public class Project  {
         return tareasH;
     }
 
-    public static String relacionesPrdeecesoraTareas(ProjectFile project, int  idTask) throws Exception
+    public static String relacionesPredecesoraTareas(ProjectFile project, int  idTask) throws Exception
     {
         String relacionPrecedecesora = "[";
 

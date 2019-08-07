@@ -50,14 +50,7 @@ public class Project  {
             if(task.getName() ==null) {}
 
             else{
-                tareas = tareas  
-                + "{ " + " name :" +  task.getName() +" , "+ " id : " + task.getUniqueID() 
-                + " , " + " recursos: " + asignacionesRecursosTarea(project,task.getUniqueID())  
-                + " , " + " predecesoras: " + relacionesPredecesoraTareas(project,task.getUniqueID())
-                + " , " + " duracion: " +  task.getDuration()
-                + " , " + " fechaInicio: " + task.getStart()
-                + " , " + " fechaFin: " + task.getFinish()
-                + " }"  + " ,";
+                tareas = tareas  + "{ " + "name :" +  task.getName() +" , "+ " id : " + task.getUniqueID() +"," + "recursos: " + asignacionesRecursosTarea(project,task.getUniqueID())  +" }"  + ",";
             }
         }
 
@@ -142,7 +135,7 @@ public class Project  {
         {
             if(task.getName() ==null) {}
             else{
-                tareasM = tareasM + "{ " + task.getUniqueID()  +  " : " + listHierarchy(task, " ") + " }" + " ," ;
+                tareasM = tareasM + "{ " + " padreId : " + task.getUniqueID()  + " , " +  " hijosId : " + listHierarchy(task, " ") + " }" + " , " ;
             }
             
         }
@@ -161,8 +154,8 @@ public class Project  {
         String tareasH ="[";
         for (Task child : task.getChildTasks())
         {
-            tareasH = tareasH + "{ " +  child.getUniqueID() +":"+ listHierarchy(child, indent + " ")+ "}"+","; 
-            
+            tareasH = tareasH + child.getUniqueID() + ",";
+            listHierarchy(child, indent);
         }
 
         if(tareasH.length()>1){
@@ -174,39 +167,79 @@ public class Project  {
         return tareasH;
     }
 
-    public static String relacionesPrdeecesoraTareas(ProjectFile project, int  idTask) throws Exception
+    public static String recursosTareas(String urlString) throws Exception
     {
-        String relacionPrecedecesora = "[";
+        File file = ResourceUtils.getFile("classpath:"+urlString);
+        ProjectReader reader = new UniversalProjectReader();
+        ProjectFile project = reader.read(file);
 
-        Task task = project.getTaskByID(idTask);
-        
-        List<Relation> predecessors = task.getPredecessors();
-        if (predecessors != null && predecessors.isEmpty() == false)
+        String recursos = "";
+
+        for (Resource resource : project.getAllResources())
         {
-            for (Relation relation : predecessors)
+            recursos =  recursos + "Assignments for resource " + resource.getName() + ":";
+
+            for (ResourceAssignment assignment : resource.getTaskAssignments())
             {
-                relacionPrecedecesora = relacionPrecedecesora + 
-                " { " + "taskId: " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID() 
-                +" , " + " type: " + relation.getType() 
-                + " , " + " lag: " + relation.getTargetTask().getDuration() 
-                + " } " + " ,";
+                Task task = assignment.getTask();
+                recursos =  recursos +"   " + task.getName();
             }
         }
-        else{}
+        return recursos;
         
-        
-        if(relacionPrecedecesora.length()>1){
-            relacionPrecedecesora = relacionPrecedecesora.substring(0, relacionPrecedecesora.length()-1) ;
+    }
+
+    public static String relacionesPredecesoraTareas(String urlString) throws Exception
+    {
+        String relacionPrecedecesora = "";
+
+
+        File file = ResourceUtils.getFile("classpath:"+urlString);
+        ProjectReader reader = new UniversalProjectReader();
+        ProjectFile project = reader.read(file);
+
+        for (Task task : project.getAllTasks())
+        {
+            List<Relation> predecessors = task.getPredecessors();
+            if (predecessors != null && predecessors.isEmpty() == false)
+            {
+                relacionPrecedecesora = relacionPrecedecesora + task.getName() + " predecessors:";
+                for (Relation relation : predecessors)
+                {
+                    relacionPrecedecesora = relacionPrecedecesora + "   Task: " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getName() ;
+                    relacionPrecedecesora = relacionPrecedecesora + "   Type: " + relation.getType();
+                    relacionPrecedecesora = relacionPrecedecesora + "   Lag: " + relation.getTargetTask().getDuration();
+                }
+            }
         }
-        else{}
-
-        relacionPrecedecesora = relacionPrecedecesora + "]" ;
-
+        
         return relacionPrecedecesora;
     }
 
-    public static void columnaNoName(ProjectFile project) throws Exception
+    public static String calendarios(String urlString) throws Exception
     {
+
+        String tareas ="";
+        
+        File file = ResourceUtils.getFile("classpath:"+urlString);
+        ProjectReader reader = new UniversalProjectReader();
+        ProjectFile project = reader.read(file);
+        for (Task task : project.getAllTasks())
+        {
+            tareas = tareas + "Duracion:"+  task.getDuration() + "Tarea:"+ task.getUniqueID() + "Inicio:"+ task.getStart() + "Fin:"+ task.getFinish();
+            
+        }
+        return tareas;
+        
+    }
+
+    public static void columnaNoName(String urlString) throws Exception
+    {
+
+        File file = ResourceUtils.getFile("classpath:"+urlString);
+        ProjectReader reader = new UniversalProjectReader();
+        ProjectFile project = reader.read(file);
+
         List<Table> tables= project.getTables();
         Iterator iter = tables.iterator();
         Table table = (Table)iter.next();
