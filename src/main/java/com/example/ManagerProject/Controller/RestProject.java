@@ -46,8 +46,5 @@ public class RestProject {
         Project project = new Project();
         return project.getTareas("Casa3.mpp");
     }*/
-
-
-    
     
 }

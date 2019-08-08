@@ -17,14 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ManagerProjectApplication {
 
-	private static final String HELLO = "/hello";
-	@GetMapping(value=HELLO)
-	public String getMethodName() throws Exception{
+	// private static final String HELLO = "/hello";
+	// @GetMapping(value=HELLO)
+	// public String getMethodName() throws Exception{
 		
-		Project project = new Project();
-		return project.asignacionesRecursosArchivo("Casa3.mpp");
+	// 	Project project = new Project();
+	// 	return project.asignacionesRecursosArchivo("Casa3.mpp");
 
-	}
+	// }
 
 	
 

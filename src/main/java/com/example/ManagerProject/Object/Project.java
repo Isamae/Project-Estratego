@@ -283,8 +283,5 @@ public class Project  {
 		return excepcionesCalendario;
 	}
 
-
-
-
 }
  
