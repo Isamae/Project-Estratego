@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 ///import com.google.gson.JsonObject;
 
 import org.springframework.boot.configurationprocessor.json.JSONObject;
-import org.springframework.boot.json.JsonParseException;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,14 +20,16 @@ import org.springframework.web.bind.annotation.RequestParam;
  * RestProject
  */
 @RestController
-@RequestMapping(value = "/Project")
+
 public class RestProject {
     
-    @GetMapping(value = "/dato", produces = MediaType.APPLICATION_JSON_VALUE)
-    public String getJson() throws Exception{
+    @RequestMapping(value = "/Project")
+    public JSONObject getJson() throws Exception,JsonMappingException{
+        ResponseGenerator responseGenerator = new ResponseGenerator();
         ProjectController controller = new  ProjectController();
-
-        return controller.getjsonProject().toString();
+        responseGenerator.setJSONData((controller.getjsonProject()).toMap());
+        System.out.println(controller.getjsonProject());
+        return controller.getjsonProject();
     }
     
     

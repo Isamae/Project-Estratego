@@ -11,17 +11,17 @@ import java.util.List;
 
 import com.example.ManagerProject.Object.Project;
 import com.fasterxml.jackson.core.JsonParseException;
-/*import com.google.gson.Gson;
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
-import com.google.gson.stream.MalformedJsonException;*/
+import com.google.gson.stream.MalformedJsonException;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+
 import org.springframework.util.ResourceUtils;
 
 
@@ -36,7 +36,7 @@ public class ProjectController{
 
 		String jsonString = "{ ";
 		jsonString = jsonString + //" calendarios : " +getCalendarios(project,archivo)
-		 " 'recursos' : " + project.getRecursos(archivo)
+		 " recursos : " + project.getRecursos(archivo)
 		//+ " , " + " tareas : " + project.getTareas(archivo)
 		///+ " , " + " asigRecursos : " + project.asignacionesRecursos(archivo)
 		//+ " , " + " allColum : " + project.columnasTask(archivo)

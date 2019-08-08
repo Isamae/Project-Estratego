@@ -28,6 +28,8 @@ public class RestProject {
     public String getJson() throws Exception{
         ProjectController controller = new  ProjectController();
 
+        System.out.println( controller.getjsonProject());
+
         return controller.getjsonProject().toString();
     }
     

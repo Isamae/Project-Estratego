@@ -36,7 +36,7 @@ public class ProjectController{
 
 		String jsonString = "{ ";
 		jsonString = jsonString + //" calendarios : " +getCalendarios(project,archivo)
-		 " 'recursos' : " + project.getRecursos(archivo)
+		 " recursos : " + project.getRecursos(archivo)
 		//+ " , " + " tareas : " + project.getTareas(archivo)
 		///+ " , " + " asigRecursos : " + project.asignacionesRecursos(archivo)
 		//+ " , " + " allColum : " + project.columnasTask(archivo)

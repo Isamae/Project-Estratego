@@ -27,7 +27,7 @@ import org.springframework.util.ResourceUtils;
 
 public class ProjectController{
     
-    public JSONObject getjsonProject() throws Exception, JsonParseException{
+    public String getjsonProject() throws Exception, JsonParseException{
 
         Project project = new Project();
         File file = ResourceUtils.getFile("classpath:"+"Casa6.mpp");
@@ -45,7 +45,7 @@ public class ProjectController{
 		JSONObject jsonObject= new JSONObject(jsonString);
 		
 		//JsonObject jsonObject = new JsonParser().parse(jsonString).getAsJsonObject();
-        return jsonObject;
+        return jsonString;
         
 	}
 	

@@ -25,10 +25,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class RestProject {
     
     @GetMapping(value = "/dato", produces = MediaType.APPLICATION_JSON_VALUE)
-    public String getJson() throws Exception{
+    public JSONObject getJson() throws Exception{
         ProjectController controller = new  ProjectController();
+        System.out.println(controller.getjsonProject());
 
-        return controller.getjsonProject().toString();
+        return controller.getjsonProject();
     }
     
     
