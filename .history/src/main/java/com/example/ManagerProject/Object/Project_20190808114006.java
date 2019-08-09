@@ -236,7 +236,7 @@ public class Project  {
 				}else {
 					columnValue = resource.getCachedValue(column.getFieldType());
                 }
-                dataTable = dataTable  + "'"+column.getFieldType().toString()+"'" + " : " + "'"+columnValue+"'" + " ,";
+                dataTable = dataTable  + column.getFieldType().toString() + " : " + columnValue + " ,";
             
             }
             if(dataTable.length()>1){

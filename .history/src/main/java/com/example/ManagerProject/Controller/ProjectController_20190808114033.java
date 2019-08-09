@@ -35,11 +35,12 @@ public class ProjectController{
 		ProjectFile archivo = reader.read(file); 
 
 		String jsonString = "{ ";
-		jsonString = jsonString + " 'calendarios' : " +getCalendarios(project,archivo)
-		+ " , " + " 'recursos' : " + project.getRecursos(archivo)
-		+ " , " + " 'tareas' : " + project.getTareas(archivo)
-		+ " , " + " asigRecursos : " + project.asignacionesRecursos(archivo)
-		+ " , " + " allColum : " + project.columnasTask(archivo)
+		jsonString = jsonString + //" 'calendarios' : " +getCalendarios(project,archivo)
+		//+ " , " + " 'recursos' : " + project.getRecursos(archivo)
+		//+ " , " + 
+		" 'tareas' : " + project.getTareas(archivo)
+		///+ " , " + " asigRecursos : " + project.asignacionesRecursos(archivo)
+		//+ " , " + " allColum : " + project.columnasTask(archivo)
 		+ "}";
 		
 		JSONObject jsonObject= new JSONObject(jsonString);

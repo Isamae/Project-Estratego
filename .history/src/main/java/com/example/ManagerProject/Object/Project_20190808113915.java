@@ -190,7 +190,7 @@ public class Project  {
             for (Relation relation : predecessors)
             {
                 relacionPrecedecesora = relacionPrecedecesora + 
-                " { " + " 'taskId': " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID()
+                " { " + " 'taskId': " + "'" + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID() + "'"
                 +" , " + " 'type':" + "'"+ relation.getType()+ "'"
                 + " , " + " 'lag': " + "'"+ relation.getTargetTask().getDuration()+"'"
                 + " } " + " ,";
@@ -236,7 +236,7 @@ public class Project  {
 				}else {
 					columnValue = resource.getCachedValue(column.getFieldType());
                 }
-                dataTable = dataTable  + "'"+column.getFieldType().toString()+"'" + " : " + "'"+columnValue+"'" + " ,";
+                dataTable = dataTable  + column.getFieldType().toString() + " : " + columnValue + " ,";
             
             }
             if(dataTable.length()>1){

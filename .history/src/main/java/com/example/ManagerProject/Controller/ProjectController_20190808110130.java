@@ -36,10 +36,10 @@ public class ProjectController{
 
 		String jsonString = "{ ";
 		jsonString = jsonString + " 'calendarios' : " +getCalendarios(project,archivo)
-		+ " , " + " 'recursos' : " + project.getRecursos(archivo)
-		+ " , " + " 'tareas' : " + project.getTareas(archivo)
-		+ " , " + " asigRecursos : " + project.asignacionesRecursos(archivo)
-		+ " , " + " allColum : " + project.columnasTask(archivo)
+		//+ " , " + " 'recursos' : " + project.getRecursos(archivo)
+		//+ " , " + " tareas : " + project.getTareas(archivo)
+		///+ " , " + " asigRecursos : " + project.asignacionesRecursos(archivo)
+		//+ " , " + " allColum : " + project.columnasTask(archivo)
 		+ "}";
 		
 		JSONObject jsonObject= new JSONObject(jsonString);
@@ -55,12 +55,12 @@ public class ProjectController{
 		for(ProjectCalendar calendar : calendars){
 
 			calendarios = calendarios 
-			+ " { " + " 'nombre' : " + " ' " + calendar.getName() + " ' "
-			+ " , " + " 'diaslab' : " + (project.getDiasCalendario (calendar, DayType.WORKING)).toString() 
-			+ " , " + " 'diasnolab' : " + (project.getDiasCalendario (calendar, DayType.NON_WORKING)).toString() 
-			+ " , " + " 'calenderDefault' :" + (project.getDiasCalendario (calendar, DayType.DEFAULT)).toString() 
-			+ " , " + " 'calenderHorario' :" + (project.getHorasCalendario (calendar, project.getDiasCalendario (calendar, DayType.WORKING))).toString() 
-			+ " , " + " 'calenderExcepciones' :" + (project.getExcepcionesCalendario (calendar)).toString()
+			+ " { " + " nombre : " + calendar.getName() 
+			+ " , " + "diaslab : " + (project.getDiasCalendario (calendar, DayType.WORKING)).toString() 
+			+ " , " + "diasnolab : " + (project.getDiasCalendario (calendar, DayType.NON_WORKING)).toString() 
+			+ " , " + "calenderDefault :" + (project.getDiasCalendario (calendar, DayType.DEFAULT)).toString() 
+			+ " , " + "calenderHorario :" + (project.getHorasCalendario (calendar, project.getDiasCalendario (calendar, DayType.WORKING))).toString() 
+			+ " , " + "calenderExcepciones :" + (project.getExcepcionesCalendario (calendar)).toString()
 			+ " } " + " ,";
 
 		}

@@ -55,12 +55,12 @@ public class Project  {
             if(task.getName() ==null) {}
             else{
                 tareas = tareas  
-                + "{ " + " 'name' :" +  "'"+task.getName()+"'" +" , "+ " id : " +task.getUniqueID() 
-                + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getUniqueID())  
-                + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getUniqueID())
-                + " , " + " 'duracion': " + "'" + task.getDuration()+"'" 
-                + " , " + " 'fechaInicio': " + "'" +task.getStart()+"'" 
-                + " , " + " 'fechaFin': " + "'" + task.getFinish() + "'" 
+                + "{ " + " name :" +  task.getName() +" , "+ " id : " + task.getUniqueID() 
+                + " , " + " recursos: " + asignacionesRecursosTarea(project,task.getUniqueID())  
+                + " , " + " predecesoras: " + relacionesPredecesoraTareas(project,task.getUniqueID())
+                + " , " + " duracion: " +  task.getDuration()
+                + " , " + " fechaInicio: " + task.getStart()
+                + " , " + " fechaFin: " + task.getFinish()
                 + " }"  + " ,";
             }
         }
@@ -99,7 +99,7 @@ public class Project  {
 
             if(taskId == -1 || resourceId == -1) {}
             else{
-                asignaciones = asignaciones  + "{ " + "'idTask' :" +  taskId +" , "+ " 'idResource' : " + resourceId +" }"  + ",";
+                asignaciones = asignaciones  + "{ " + "idTask :" +  taskId +" , "+ " idResource : " + resourceId +" }"  + ",";
             }
 
         }
@@ -190,9 +190,9 @@ public class Project  {
             for (Relation relation : predecessors)
             {
                 relacionPrecedecesora = relacionPrecedecesora + 
-                " { " + " 'taskId': " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID()
-                +" , " + " 'type':" + "'"+ relation.getType()+ "'"
-                + " , " + " 'lag': " + "'"+ relation.getTargetTask().getDuration()+"'"
+                " { " + "taskId: " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID() 
+                +" , " + " type: " + relation.getType() 
+                + " , " + " lag: " + relation.getTargetTask().getDuration() 
                 + " } " + " ,";
             }
         }
@@ -236,7 +236,7 @@ public class Project  {
 				}else {
 					columnValue = resource.getCachedValue(column.getFieldType());
                 }
-                dataTable = dataTable  + "'"+column.getFieldType().toString()+"'" + " : " + "'"+columnValue+"'" + " ,";
+                dataTable = dataTable  + column.getFieldType().toString() + " : " + columnValue + " ,";
             
             }
             if(dataTable.length()>1){
@@ -269,7 +269,7 @@ public class Project  {
 
 	public ArrayList <String> getHorasCalendario (ProjectCalendar calendar, ArrayList <Day> diasLaborables){
 		ArrayList <String> horarioCalendario = new ArrayList<String>();
-		String horario = "'";
+		String horario = "";
 		ProjectCalendarHours horas [] = calendar.getHours();
 		for (ProjectCalendarHours hora : horas){
 			if (hora!= null){
@@ -277,11 +277,10 @@ public class Project  {
 				horario = horario + hora.getDay();
 				for (int i=0; i<c.getRangeCount(); i++){
 					horario = horario + "/" + c.getRange(i).getStart()+"/" + c.getRange(i).getEnd();
-                }
-                horario = horario + "'";
+				}
 				horarioCalendario.add(horario);
 			}
-			horario = "'";
+			horario = "";
 		}
 		return horarioCalendario;
 	}
@@ -289,11 +288,11 @@ public class Project  {
 	public ArrayList <String> getExcepcionesCalendario (ProjectCalendar calendar){
 		ArrayList <String> excepcionesCalendario = new ArrayList<String>();
 		List <ProjectCalendarException> excepciones = calendar.getCalendarExceptions();
-		String ex = "'";
+		String ex = "";
 		for (ProjectCalendarException exception : excepciones){
-			ex = ex + exception.getName() + "/" + exception.getFromDate() + "/" + exception.getToDate() + " '";
+			ex = ex + exception.getName() + "/" + exception.getFromDate() + "/" + exception.getToDate();
 			excepcionesCalendario.add(ex);
-			ex = "'";
+			ex = "";
 		}
 		return excepcionesCalendario;
 	}

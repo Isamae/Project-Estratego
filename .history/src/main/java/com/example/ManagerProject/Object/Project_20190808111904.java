@@ -55,12 +55,12 @@ public class Project  {
             if(task.getName() ==null) {}
             else{
                 tareas = tareas  
-                + "{ " + " 'name' :" +  "'"+task.getName()+"'" +" , "+ " id : " +task.getUniqueID() 
-                + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getUniqueID())  
-                + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getUniqueID())
-                + " , " + " 'duracion': " + "'" + task.getDuration()+"'" 
-                + " , " + " 'fechaInicio': " + "'" +task.getStart()+"'" 
-                + " , " + " 'fechaFin': " + "'" + task.getFinish() + "'" 
+                + "{ " + " name :" +  task.getName() +" , "+ " id : " + task.getUniqueID() 
+                + " , " + " recursos: " + asignacionesRecursosTarea(project,task.getUniqueID())  
+                + " , " + " predecesoras: " + relacionesPredecesoraTareas(project,task.getUniqueID())
+                + " , " + " duracion: " +  task.getDuration()
+                + " , " + " fechaInicio: " + task.getStart()
+                + " , " + " fechaFin: " + task.getFinish()
                 + " }"  + " ,";
             }
         }
@@ -99,7 +99,7 @@ public class Project  {
 
             if(taskId == -1 || resourceId == -1) {}
             else{
-                asignaciones = asignaciones  + "{ " + "'idTask' :" +  taskId +" , "+ " 'idResource' : " + resourceId +" }"  + ",";
+                asignaciones = asignaciones  + "{ " + "idTask :" +  taskId +" , "+ " idResource : " + resourceId +" }"  + ",";
             }
 
         }
@@ -190,9 +190,9 @@ public class Project  {
             for (Relation relation : predecessors)
             {
                 relacionPrecedecesora = relacionPrecedecesora + 
-                " { " + " 'taskId': " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID()
-                +" , " + " 'type':" + "'"+ relation.getType()+ "'"
-                + " , " + " 'lag': " + "'"+ relation.getTargetTask().getDuration()+"'"
+                " { " + "taskId: " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID() 
+                +" , " + " type: " + relation.getType() 
+                + " , " + " lag: " + relation.getTargetTask().getDuration() 
                 + " } " + " ,";
             }
         }
@@ -236,7 +236,7 @@ public class Project  {
 				}else {
 					columnValue = resource.getCachedValue(column.getFieldType());
                 }
-                dataTable = dataTable  + "'"+column.getFieldType().toString()+"'" + " : " + "'"+columnValue+"'" + " ,";
+                dataTable = dataTable  + column.getFieldType().toString() + " : " + columnValue + " ,";
             
             }
             if(dataTable.length()>1){
