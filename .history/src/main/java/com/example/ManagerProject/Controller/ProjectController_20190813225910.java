@@ -27,10 +27,10 @@ import org.springframework.util.ResourceUtils;
 
 public class ProjectController{
     
-    public JSONObject getjsonProject(File file) throws Exception, JsonParseException{
+    public JSONObject getjsonProject() throws Exception, JsonParseException{
 
         Project project = new Project();
-		//File file = ResourceUtils.getFile("classpath:"+"Casa6.mpp");
+		File file = ResourceUtils.getFile("classpath:"+"Casa6.mpp");
 		System.out.print("Este es el archivo usado:"+ file);
         ProjectReader reader = new UniversalProjectReader();
 		ProjectFile archivo = reader.read(file); 

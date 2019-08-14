@@ -32,6 +32,7 @@ public class RestProject {
     public String getJson(@RequestParam(value = "file", required = true) final MultipartFile file) throws Exception{
         
         File file2 =  multipartToFile(file,"file");
+        System.out.print(file2);
         ProjectController controller = new  ProjectController();
         return controller.getjsonProject(file2).toString();
     }

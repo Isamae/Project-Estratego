@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
-import java.io.IOException;
 
 import com.fasterxml.jackson.databind.JsonMappingException;
 ///import com.google.gson.JsonObject;
@@ -29,11 +28,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class RestProject {
     
     @PostMapping(value = "/dato", produces = MediaType.APPLICATION_JSON_VALUE)
-    public String getJson(@RequestParam(value = "file", required = true) final MultipartFile file) throws Exception{
+    public String getJson(@RequestParam(value = "file", required = true) final MultipartFile logo) throws Exception{
+        System.out.print(logo);
         
-        File file2 =  multipartToFile(file,"file");
         ProjectController controller = new  ProjectController();
-        return controller.getjsonProject(file2).toString();
+
+        
+        return controller.getjsonProject().toString();
     }
 
     public static File multipartToFile(MultipartFile multipart, String fileName) throws IllegalStateException, IOException {

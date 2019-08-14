@@ -30,10 +30,13 @@ public class RestProject {
     
     @PostMapping(value = "/dato", produces = MediaType.APPLICATION_JSON_VALUE)
     public String getJson(@RequestParam(value = "file", required = true) final MultipartFile file) throws Exception{
-        
+        System.out.print(file);
         File file2 =  multipartToFile(file,"file");
+        
         ProjectController controller = new  ProjectController();
-        return controller.getjsonProject(file2).toString();
+
+        
+        return controller.getjsonProject().toString();
     }
 
     public static File multipartToFile(MultipartFile multipart, String fileName) throws IllegalStateException, IOException {
