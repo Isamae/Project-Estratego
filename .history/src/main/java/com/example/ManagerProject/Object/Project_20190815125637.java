@@ -187,28 +187,27 @@ public class Project  {
         String relacionPrecedecesora = "[";
 
         Task task = project.getTaskByID(idTask);
-        if(task == null){}
-        else{
-            List<Relation> predecessors = task.getPredecessors();
-            if (predecessors != null && predecessors.isEmpty() == false)
+        
+        List<Relation> predecessors = task.getPredecessors();
+        if (predecessors != null && predecessors.isEmpty() == false)
+        {
+            for (Relation relation : predecessors)
             {
-                for (Relation relation : predecessors)
-                {
-                    relacionPrecedecesora = relacionPrecedecesora + 
-                    " { " + " 'taskId': " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID()
-                    +" , " + " 'type':" + "'"+ relation.getType()+ "'"
-                    + " , " + " 'lag': " + "'"+ relation.getTargetTask().getDuration()+"'"
-                    + " } " + " ,";
-                }
+                relacionPrecedecesora = relacionPrecedecesora + 
+                " { " + " 'taskId': " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID()
+                +" , " + " 'type':" + "'"+ relation.getType()+ "'"
+                + " , " + " 'lag': " + "'"+ relation.getTargetTask().getDuration()+"'"
+                + " } " + " ,";
             }
-            else{}
-            
-            
-            if(relacionPrecedecesora.length()>1){
-                relacionPrecedecesora = relacionPrecedecesora.substring(0, relacionPrecedecesora.length()-1) ;
-            }
-            else{}
         }
+        else{}
+        
+        
+        if(relacionPrecedecesora.length()>1){
+            relacionPrecedecesora = relacionPrecedecesora.substring(0, relacionPrecedecesora.length()-1) ;
+        }
+        else{}
+
         relacionPrecedecesora = relacionPrecedecesora + "]" ;
 
         return relacionPrecedecesora;

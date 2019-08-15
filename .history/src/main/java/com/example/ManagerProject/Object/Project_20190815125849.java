@@ -209,6 +209,8 @@ public class Project  {
             }
             else{}
         }
+        
+
         relacionPrecedecesora = relacionPrecedecesora + "]" ;
 
         return relacionPrecedecesora;
