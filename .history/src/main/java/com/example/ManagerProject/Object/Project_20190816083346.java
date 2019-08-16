@@ -33,7 +33,7 @@ public class Project  {
 
             if(resource.getName() ==null) {}
             else{
-                recursos = recursos + "{ " + " 'name' :'" + resource.getName() +"' , "+ " 'id' : '" + resource.getID()  +"' }"  + ",";
+                recursos = recursos + "{ " + " 'name' :'" + resource.getName() +"' , "+ " 'id' : '" + resource.getUniqueID()  +"' }"  + ",";
             }
             
         }
@@ -52,12 +52,12 @@ public class Project  {
     
         for (Task task : project.getAllTasks())
         {
-            if(task.getName() ==null || task.getID() ==null) {}
+            if(task.getName() ==null) {}
             else{
                 tareas = tareas  
-                + "{ " + " 'name' :" +  "'"+task.getName()+"'" +" , "+ " id : " +task.getID() 
-                + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getID())  
-                + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getID())
+                + "{ " + " 'name' :" +  "'"+task.getName()+"'" +" , "+ " id : " +task.getUniqueID() 
+                + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getUniqueID())  
+                + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getUniqueID())
                 + " , " + " 'duracion': " + "'" + task.getDuration()+"'" 
                 + " , " + " 'fechaInicio': " + "'" +task.getStart()+"'" 
                 + " , " + " 'fechaFin': " + "'" + task.getFinish() + "'" 
@@ -85,7 +85,7 @@ public class Project  {
                 taskId = -1;
             }
             else{
-                taskId = task.getID();
+                taskId = task.getUniqueID();
             }
             
             Resource resource = assignment.getResource();
@@ -94,7 +94,7 @@ public class Project  {
                 resourceId = -1;
             }
             else{
-                resourceId = resource.getID();
+                resourceId = resource.getUniqueID();
             }
 
             if(taskId == -1 || resourceId == -1) {}
@@ -126,7 +126,7 @@ public class Project  {
                 if (resource == null){}
                 else
                 {
-                    asignaciones = asignaciones +  resource.getID()  + ",";
+                    asignaciones = asignaciones +  resource.getUniqueID()  + ",";
                     
                 }
 
@@ -150,7 +150,7 @@ public class Project  {
         {
             if(task.getName() ==null) {}
             else{
-                tareasM = tareasM + "{ " + task.getID()  +  " : " + listHierarchy(task, " ") + " }" + " ," ;
+                tareasM = tareasM + "{ " + task.getUniqueID()  +  " : " + listHierarchy(task, " ") + " }" + " ," ;
             }
             
         }
@@ -169,7 +169,7 @@ public class Project  {
         String tareasH ="[";
         for (Task child : task.getChildTasks())
         {
-            tareasH = tareasH + "{ " +  child.getID() +":"+ listHierarchy(child, indent + " ")+ "}"+","; 
+            tareasH = tareasH + "{ " +  child.getUniqueID() +":"+ listHierarchy(child, indent + " ")+ "}"+","; 
             
         }
 
@@ -194,8 +194,9 @@ public class Project  {
             {
                 for (Relation relation : predecessors)
                 {
+                    System.out.print( "Resultado : " + relation.getTargetTask());
                     relacionPrecedecesora = relacionPrecedecesora + 
-                    " { " + " 'taskId': " + project.getTaskByID((relation.getTargetTask()).getID()).getID()
+                    " { " + " 'taskId': " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getUniqueID()
                     +" , " + " 'type':" + "'"+ relation.getType()+ "'"
                     + " , " + " 'lag': " + "'"+ relation.getTargetTask().getDuration()+"'"
                     + " } " + " ,";

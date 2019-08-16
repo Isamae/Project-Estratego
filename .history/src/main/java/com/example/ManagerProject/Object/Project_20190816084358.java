@@ -52,8 +52,9 @@ public class Project  {
     
         for (Task task : project.getAllTasks())
         {
-            if(task.getName() ==null || task.getID() ==null) {}
+            if(task.getName() ==null) {}
             else{
+                System.out.println( "Clave de la Tarea : " + task.getID());
                 tareas = tareas  
                 + "{ " + " 'name' :" +  "'"+task.getName()+"'" +" , "+ " id : " +task.getID() 
                 + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getID())  
@@ -194,8 +195,9 @@ public class Project  {
             {
                 for (Relation relation : predecessors)
                 {
+                    System.out.println( "Resultado : " + relation.getTargetTask());
                     relacionPrecedecesora = relacionPrecedecesora + 
-                    " { " + " 'taskId': " + project.getTaskByID((relation.getTargetTask()).getID()).getID()
+                    " { " + " 'taskId': " + project.getTaskByUniqueID((relation.getTargetTask()).getID()).getID()
                     +" , " + " 'type':" + "'"+ relation.getType()+ "'"
                     + " , " + " 'lag': " + "'"+ relation.getTargetTask().getDuration()+"'"
                     + " } " + " ,";

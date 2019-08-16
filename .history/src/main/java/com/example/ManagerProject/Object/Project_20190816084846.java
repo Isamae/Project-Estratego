@@ -194,6 +194,7 @@ public class Project  {
             {
                 for (Relation relation : predecessors)
                 {
+                    System.out.println( "Resultado : " + relation.getTargetTask());
                     relacionPrecedecesora = relacionPrecedecesora + 
                     " { " + " 'taskId': " + project.getTaskByID((relation.getTargetTask()).getID()).getID()
                     +" , " + " 'type':" + "'"+ relation.getType()+ "'"
