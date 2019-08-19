@@ -1,0 +1,61 @@
+MPX,Microsoft Project for Windows,4.0,ANSI
+10,$,1,2,",",.
+11,2,0,1,8.00,40.00,$0.00/h,$0.00/h,1,1
+12,1,0,480,/,:,am,pm,20,20
+20,Estándar,0,1,1,1,1,1,0
+25,2,09:00 am,01:00 pm,03:00 pm,07:00 pm
+25,3,09:00 am,01:00 pm,03:00 pm,07:00 pm
+25,4,09:00 am,01:00 pm,03:00 pm,07:00 pm
+25,5,09:00 am,01:00 pm,03:00 pm,07:00 pm
+25,6,09:00 am,01:00 pm,03:00 pm,07:00 pm
+55,Estándar,2,2,2,2,2,2,2
+30,010101010010101001010101001010100101,,,Estándar,16/08/2019,16/08/2019,0,19/08/2019,,$0.00,$0.00,$0.00,0h,0h,0h,0%,0d,0d,0d,0%,,,,,0d,0d,,Diego
+40,Work,Baseline Work,Actual Work,Remaining Work,Overtime Work,Cost,Baseline Cost,Actual Cost,Remaining Cost,ID,Max Units,Standard Rate,Overtime Rate,Cost Per Use,Accrue At,Peak,Unique ID
+41,20,21,22,23,24,30,31,32,33,40,41,42,43,44,45,47,49
+50,0h,0h,0h,0h,0h,$0.00,$0.00,$0.00,$0.00,0,1,$0.00/h,$0.00/h,$0.00,Prorated,0,0
+55,Estándar,2,2,2,2,2,2,2
+60,Name,WBS,Outline Level,Work,Baseline Work,Actual Work,Remaining Work,% Work Complete,Cost,Baseline Cost,Actual Cost,Remaining Cost,Fixed Cost,Cost1,Cost2,Cost3,Duration,Actual Duration,Remaining Duration,% Complete,Start,Finish,Early Start,Early Finish,Late Start,Late Finish,Fixed,Milestone,Marked,Rollup,ID,Constraint Type,Delay,Free Slack,Priority,Unique ID,Flag1,Flag2,Flag3,Flag4,Flag5,Flag6,Flag7,Flag8,Flag9,Flag10,Summary,Hide Bar,Created,Number1,Number2,Number3,Number4,Number5
+61,1,2,3,20,21,22,23,25,30,31,32,33,35,36,37,38,40,42,43,44,50,51,52,53,54,55,80,81,83,84,90,91,92,93,95,98,110,111,112,113,114,115,116,117,118,119,120,123,125,140,141,142,143,144
+70,010101010010101001010101001010100101,,0,0h,0h,0h,0h,0%,$0.00,$0.00,$0.00,$0.00,$0.00,$0.00,$0.00,$0.00,0d,0d,0d,0%,16/08/2019,16/08/2019,16/08/2019,16/08/2019,16/08/2019,16/08/2019,Yes,No,No,No,0,As Soon As Possible,0ed,0d,Medium,0,No,No,No,No,No,No,No,No,No,No,No,No,16/08/2019,0.00,0.00,0.00,0.00,0.00
+70,CASA DE CAMPO,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,0,As Soon As Possible,,,,0
+70,CASA DE CAMPO,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,1,As Soon As Possible,,,,1
+70,NEGOCIACIÓN,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,2,As Soon As Possible,,,,2
+70,Compra de terreno,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,3,As Soon As Possible,,,,3
+70,Legalización,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,4,As Soon As Possible,,,,4
+70,DISEÑO,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,5,As Soon As Possible,,,,5
+70,Planos,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,6,As Soon As Possible,,,,6
+70,Levantamiento de información,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,7,As Soon As Possible,,,,7
+70,Elaboración planos,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,8,As Soon As Possible,,,,8
+70,Permisos,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,9,As Soon As Possible,,,,9
+70,Permisos Ambientales,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,10,As Soon As Possible,,,,10
+70,Permisos de construcción,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,11,As Soon As Possible,,,,11
+70,Permisos comunitarios,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,12,As Soon As Possible,,,,12
+70,CONSTRUCCIÓN,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,13,As Soon As Possible,,,,13
+70,Equipo y Materiales,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,14,As Soon As Possible,,,,14
+70,Investigación,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,15,As Soon As Possible,,,,15
+70,Compra,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,16,As Soon As Possible,,,,16
+70,Entrega,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,17,As Soon As Possible,,,,17
+70,Ejecución,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,18,As Soon As Possible,,,,18
+70,Adecuación terreno,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,19,As Soon As Possible,,,,19
+70,Limpieza y desbroce,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,20,As Soon As Possible,,,,20
+70,Nivelación,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,21,As Soon As Possible,,,,21
+70,Cerramiento,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,22,As Soon As Possible,,,,22
+70,Acometidas,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,23,As Soon As Possible,,,,23
+70,Estructura,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,24,As Soon As Possible,,,,24
+70,Cimentación,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,25,As Soon As Possible,,,,25
+70,Excavación,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,26,As Soon As Possible,,,,26
+70,Fundición,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,27,As Soon As Possible,,,,27
+70,Columnas,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,28,As Soon As Possible,,,,28
+70,Encofrado,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,29,As Soon As Possible,,,,29
+70,Fundición,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,30,As Soon As Possible,,,,30
+70,Paredes,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,31,As Soon As Possible,,,,31
+70,Levantamiento,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,32,As Soon As Possible,,,,32
+70,manposteria,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,33,As Soon As Possible,,,,33
+70,Instalación eléctrica,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,34,As Soon As Possible,,,,34
+70,Ductos,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,35,As Soon As Possible,,,,35
+70,Cables,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,36,As Soon As Possible,,,,36
+70,Instalación sanitaria,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,37,As Soon As Possible,,,,37
+70,Líneas desague,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,38,As Soon As Possible,,,,38
+70,Tuberias AP,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,39,As Soon As Possible,,,,39
+70,ENTREGA,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,40,As Soon As Possible,,,,40
+70,Aceptación del producto,0,,,,,,,,,,,,,,,,,,,,,,,,,No,,,,41,As Soon As Possible,,,,41

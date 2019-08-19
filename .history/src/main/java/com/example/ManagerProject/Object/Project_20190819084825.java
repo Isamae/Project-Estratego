@@ -51,7 +51,7 @@ public class Project  {
             if(task.getName() ==null || task.getID() ==null) {}
             else{
                 tareas = tareas  
-                + "{ " + " 'name' :" +  "'"+task.getName()+"'" +" , "+ " id : " +task.getID() +" , "+ " uniqueID : " +task.getUniqueID()+" , "+ " estado : " +task.getActive()
+                + "{ " + " 'name' :" +  "'"+task.getName()+"'" +" , "+ " id : " +task.getID() +" , "+ " uniqueID : " +task.getUniqueID()
                 + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getID())  
                 + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getID())
                 + " , " + " 'duracion': " + "'" + task.getDuration()+"'" 
