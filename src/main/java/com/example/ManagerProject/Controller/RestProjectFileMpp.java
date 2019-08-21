@@ -3,6 +3,8 @@
 package com.example.ManagerProject.Controller;
 import java.io.Console;
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
@@ -17,6 +19,7 @@ import net.sf.mpxj.*;
 import net.sf.mpxj.reader.*;  
 import net.sf.mpxj.writer.*;  
 import net.sf.mpxj.mpp.*;
+import net.sf.mpxj.planner.schema.Days;
 import net.sf.mpxj.ganttproject.schema.Resource;
 
 import java.util.Calendar;
@@ -32,47 +35,41 @@ import java.util.Map;
 @RequestMapping(value = "/project")
 public class RestProjectFileMpp {
     
-    @GetMapping(value = "/dato")
+    @GetMapping(value = "/datoJson")
     public String postJson(@RequestBody String payload) throws Exception{
      
 		File file = ResourceUtils.getFile("classpath:"+"010101010010101001010101001010100101.mpp");
-   
-
         
         ProjectReader reader = new MPPReader();  
         ProjectFile projectObj = reader.read(file);
-
-        JSONObject jsonObject= new JSONObject(payload);
-        
-        
-        
-
-
-        for(int i=0;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
-            try {
-
-                JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
-
-                (projectObj.addTask()).setID(json.getInt("id"));
-                (projectObj.getTaskByID(json.getInt("id"))).setName(json.getString("name"));
-                (projectObj.getTaskByID(json.getInt("id"))).setUniqueID(json.getInt("uniqueID"));
-                (projectObj.getTaskByID(json.getInt("id"))).setActive(json.getBoolean("estado"));
-                //System.out.print("Este es dato agregado:"+projectObj.getAllTasks());
-                //System.out.println();
-              
-            } catch (JSONException e) {
+        JSONObject jsonObject = null;
+        try {
+            jsonObject= new JSONObject(payload);
+        } catch (Exception e) {
+            System.out.println("Error al convertir Json: ");
                 e.printStackTrace();
-            }
         }
         
+        
+        // for(int i=0;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
+        //     try {
 
+        //         JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
 
-
+        //         (projectObj.addTask()).setID(json.getInt("id"));
+        //         (projectObj.getTaskByID(json.getInt("id"))).setName(json.getString("name"));
+        //         (projectObj.getTaskByID(json.getInt("id"))).setUniqueID(json.getInt("uniqueID"));
+        //         (projectObj.getTaskByID(json.getInt("id"))).setActive(json.getBoolean("estado"));
+        //         //System.out.print("Este es dato agregado:"+projectObj.getAllTasks());
+        //         //System.out.println();
+              
+        //     } catch (JSONException e) {
+        //         System.out.println("Error: ");
+        //         e.printStackTrace();
+        //     }
+        // }
+        /******************* */
         //projectObj.addResource();
-
-
-
-
 
 
         /*for (Task task : projectObj.getAllTasks())  
@@ -110,71 +107,211 @@ public class RestProjectFileMpp {
             }  
         } */
 
-        addColumnas(projectObj,jsonObject).getAllTasks();
+        //addColumnas(projectObj,jsonObject).getAllTasks();
+        projectObj = addCalendario(projectObj,jsonObject);
+
         ProjectWriter writer = ProjectWriterUtility.getProjectWriter("HOLA.mpx");  
         writer.write(projectObj,"HOLA.mpx");
-
-
-
-
         return "Hola Mundo";
     }
 
-    public static ProjectFile addColumnas(ProjectFile project,JSONObject jsonObject) throws Exception
-    {
-        
-        
-        
-        
-        JSONObject json = ((JSONArray)(jsonObject.get("allColum"))).getJSONObject(0);
+    public ProjectFile addCalendario(ProjectFile project,JSONObject jsonObject) throws Exception{
+        JSONArray calendariosJson = ((JSONArray)(jsonObject.get("calendarios")));
 
+        JSONArray recursosJson = ((JSONArray)(jsonObject.get("recursos")));
+        for (int i=0; i<recursosJson.length(); i++){
+            net.sf.mpxj.Resource resource = project.addResource();
+            JSONObject j = recursosJson.getJSONObject(i);
+            resource.setName(j.getString("name"));
+            resource.setID(j.getInt("id"));
+            
+        }
 
-
-      
-
-        for(int i=0;i< ((JSONArray)(jsonObject.get("allColum"))).length();i++){
+        ProjectCalendar calendar = new ProjectCalendar(project);
+        for(int i=0; i< calendariosJson.length(); i++){
             try {
-
-                JSONObject json2 = ((JSONArray)(jsonObject.get("allColum"))).getJSONObject(i);
-                //System.out.print(json2.names());
-              
+                JSONObject json = calendariosJson.getJSONObject(i);
+                // set calenderName
+                calendar.setName(json.getString("nombre"));
+                // set workingDays
+                calendar = setDiasLaborables (json.getJSONArray("diaslab"), calendar);
+                // setHours
+                JSONArray horariosCalendario = json.getJSONArray("calenderHorario");
+                calendar = setHorarioDia (horariosCalendario, calendar);
+                // set exceptions
+                JSONArray excepcionesCalendario = json.getJSONArray("calenderExcepciones");
+                calendar = setExcepciones (excepcionesCalendario, calendar);
+                
+                project.addCalendar();
+                project.addCalendar().setName(calendar.getName());
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
 
+        // List <ProjectCalendar> calendarios = project.getCalendars();
+        // for (ProjectCalendar calendario : calendarios){
 
+        // }
+
+
+
+        // Table table = project.getTables().get(0);
+        // List calendars = project.getCalendars();
         
-        Table table = project.getTables().get(0);
-        List resources = project.getAllTasks();
-        //Iterator resourceIter = resources.iterator();
-        //while (resourceIter.hasNext()){
-            //Task resource = (Task)resourceIter.next();
-            List columns = table.getColumns();
-			Iterator columnIter = columns.iterator();
-            Object columnValue = null;
-            while (columnIter.hasNext()){
+
+        // //Iterator resourceIter = resources.iterator();
+        // //while (resourceIter.hasNext()){
+        //     //Task resource = (Task)resourceIter.next();
+        //     List columns = table.getColumns();
+		// 	Iterator columnIter = columns.iterator();
+        //     Object columnValue = null;
+        //     while (columnIter.hasNext()){
                 
-                Column column = (Column)columnIter.next();
-                if(   json.names().  column.getFieldType().toString())
+        //         Column column = (Column)columnIter.next();
+        //         if(   json.names().  column.getFieldType().toString())
                 
-				if (column.getFieldType().toString().equalsIgnoreCase("Duration")){
-					columnValue = resource.getDuration();
-				}else if (column.getFieldType().toString().equalsIgnoreCase("Start")){
-					columnValue = resource.getStart();
-				}else if (column.getFieldType().toString().equalsIgnoreCase("Finish")){
-					columnValue = resource.getFinish();
-				}else {
-					columnValue = resource.getCachedValue(column.getFieldType());
-                }
+		// 		if (column.getFieldType().toString().equalsIgnoreCase("Duration")){
+		// 			columnValue = resource.getDuration();
+		// 		}else if (column.getFieldType().toString().equalsIgnoreCase("Start")){
+		// 			columnValue = resource.getStart();
+		// 		}else if (column.getFieldType().toString().equalsIgnoreCase("Finish")){
+		// 			columnValue = resource.getFinish();
+		// 		}else {
+		// 			columnValue = resource.getCachedValue(column.getFieldType());
+        //         }
             
-            }
+        //     }
            
 
         //}
         return project;
             
     }
+
+    public ProjectCalendar setDiasLaborables (JSONArray diasLab, ProjectCalendar calendario) throws JSONException {
+        for (int i=0; i<diasLab.length(); i++){
+            Day day = Day.valueOf(diasLab.get(i).toString());
+            calendario.setWorkingDay(day, true);            
+        }
+        for (int i=1; i<8; i++){
+            if (!calendario.isWorkingDay(Day.getInstance(i))){
+                calendario.setWorkingDay(Day.getInstance(i), false);
+            }
+        }
+        return calendario;      
+    }
+
+    public ProjectCalendar setHorarioDia (JSONArray horarioCalendario, ProjectCalendar calendario) throws JSONException, ParseException {
+        for (int  i=0; i<horarioCalendario.length(); i++){
+            String horarioStr = horarioCalendario.getString(i);
+
+            String[] horario = horarioStr.split("/");
+            String dayName = horario[0];
+            String start1 = horario[1];
+            String end1 = horario[2];
+            String start2 = horario[3];
+            String end2 = horario[4];
+
+            Day day = Day.valueOf(dayName);
+            DateRange dateRange = new DateRange(new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(start1), new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(end1));
+            DateRange dateRange2 = new DateRange(new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(start2), new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(end2));
+            
+            ProjectCalendarHours hours = calendario.addCalendarHours(day);
+           
+            hours.addRange(dateRange);
+            hours.addRange(dateRange2);
+
+            /* ** */
+            String h = "'";
+            ProjectCalendarHours horas [] = calendario.getHours();
+            for (ProjectCalendarHours hora : horas){
+                if (hora!= null){
+                    ProjectCalendarHours c = hora.getParentCalendar().getCalendarHours(day);
+                    System.out.println("hora.getParentCalendar() " + hora.getParentCalendar());
+                    h = h + hora.getDay();
+                    for (int k=0; k<c.getRangeCount(); k++){
+                        h = h + "/" + c.getRange(k).getStart()+"/" + c.getRange(k).getEnd();
+                    }
+                    h = h + "'";
+                    
+                }
+                System.out.println(h);
+                h = "'";
+            }
+            
+        }
+        return calendario;
+    }
+
+    public ProjectCalendar setExcepciones (JSONArray excepcionesCalendario, ProjectCalendar calendario) throws JSONException, ParseException {
+        for (int  i=0; i<excepcionesCalendario.length(); i++){
+            String exStr = excepcionesCalendario.getString(i);
+
+            String[] excepcion = exStr.split("/");
+            
+            calendario.addCalendarException(new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(excepcion[1]), new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(excepcion[2]));
+            ProjectCalendarException ex = calendario.getException(new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(excepcion[1]));
+            ex.setName(excepcion[0]);
+        }
+        return calendario;
+    }
+
+    // public static ProjectFile addColumnas(ProjectFile project,JSONObject jsonObject) throws Exception
+    // {
+        
+        
+        
+        
+    //     JSONObject json = ((JSONArray)(jsonObject.get("allColum"))).getJSONObject(0);
+
+
+
+      
+
+    //     for(int i=0;i< ((JSONArray)(jsonObject.get("allColum"))).length();i++){
+    //         try {
+
+    //             JSONObject json2 = ((JSONArray)(jsonObject.get("allColum"))).getJSONObject(i);
+    //             //System.out.print(json2.names());
+              
+    //         } catch (JSONException e) {
+    //             e.printStackTrace();
+    //         }
+    //     }
+
+
+        
+    //     Table table = project.getTables().get(0);
+    //     List resources = project.getAllTasks();
+    //     //Iterator resourceIter = resources.iterator();
+    //     //while (resourceIter.hasNext()){
+    //         //Task resource = (Task)resourceIter.next();
+    //         List columns = table.getColumns();
+	// 		Iterator columnIter = columns.iterator();
+    //         Object columnValue = null;
+    //         while (columnIter.hasNext()){
+                
+    //             Column column = (Column)columnIter.next();
+    //             if(   json.names().  column.getFieldType().toString())
+                
+	// 			if (column.getFieldType().toString().equalsIgnoreCase("Duration")){
+	// 				columnValue = resource.getDuration();
+	// 			}else if (column.getFieldType().toString().equalsIgnoreCase("Start")){
+	// 				columnValue = resource.getStart();
+	// 			}else if (column.getFieldType().toString().equalsIgnoreCase("Finish")){
+	// 				columnValue = resource.getFinish();
+	// 			}else {
+	// 				columnValue = resource.getCachedValue(column.getFieldType());
+    //             }
+            
+    //         }
+           
+
+    //     //}
+    //     return project;
+            
+    // }
 
 }
 
