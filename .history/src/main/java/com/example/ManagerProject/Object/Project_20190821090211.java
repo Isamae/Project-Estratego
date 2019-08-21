@@ -223,7 +223,7 @@ public class Project  {
             List columns = table.getColumns();
 			Iterator columnIter = columns.iterator();
             Object columnValue = null;
-            dataTable = dataTable + "'"+ tarea.getID() +"'"+ ":" +  " { " ; 
+            dataTable = dataTable  + " { " ; 
             while (columnIter.hasNext()){
                 
                 Column column = (Column)columnIter.next();

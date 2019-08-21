@@ -21,7 +21,7 @@ import net.sf.mpxj.reader.*;
 import net.sf.mpxj.writer.*;  
 import net.sf.mpxj.mpp.*;
 import net.sf.mpxj.planner.schema.Days;
-import net.sf.mpxj.planner.schema.Task;
+import net.sf.mpxj.Task;
 
 
 import java.util.Calendar;
@@ -64,71 +64,30 @@ public class RestProjectFileMpp {
     
     public static ProjectFile addTarea(ProjectFile project,JSONObject jsonObject) throws JSONException {
         JSONObject jsonObject2 = ((JSONObject)(jsonObject.get("allColum")));
-        project.removeTask(project.getAllTasks().get(0));
         for(int i=0;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
+                Task task = new Task();
+                task.setId(json.getString("id"));
                 
-
-                
-                (project.addTask()).setID(json.getInt("id"));
-                (project.getTaskByID(json.getInt("id"))).setName(json.getString("name"));
-                (project.getTaskByID(json.getInt("id"))).setUniqueID(json.getInt("uniqueID"));
-                (project.getTaskByID(json.getInt("id"))).setActive(json.getBoolean("estado"));
+                task.setName(json.getString("name"));
+                //(project.addTask()).setID(json.getInt("id"));
+                //(project.getTaskByID(json.getInt("id"))).setName(json.getString("name"));
+                //(project.getTaskByID(json.getInt("id"))).setUniqueID(json.getInt("uniqueID"));
+                //(project.getTaskByID(json.getInt("id"))).setActive(json.getBoolean("estado"));
 
                 JSONObject jsonObject3 = jsonObject2.getJSONObject(json.getString("id"));
                 SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
                
-                project.getTaskByID(json.getInt("id")).setStart(df.parse(jsonObject3.getString("Start")));
-                project.getTaskByID(json.getInt("id")).setActualStart(df.parse(jsonObject3.getString("Start")));
-                project.getTaskByID(json.getInt("id")).setStartText(jsonObject3.getString("Start"));
+                //project.getTaskByID(json.getInt("id")).setDate(1,df.parse(jsonObject3.getString("Start")));
+                //project.getTaskByID(json.getInt("id")).setFinish(df.parse(jsonObject3.getString("Finish")));
 
-                project.getTaskByID(json.getInt("id")).setFinish(df.parse(jsonObject3.getString("Finish")));
-                project.getTaskByID(json.getInt("id")).setActualFinish(df.parse(jsonObject3.getString("Finish")));
-                project.getTaskByID(json.getInt("id")).setFinishText(jsonObject3.getString("Finish"));
-                //String limpiando = jsonObject3.getString("Predecessors").replace("Relation lag: ", "");
-                String[] predecesoras = jsonObject3.getString("Predecessors").split("Relation ");
-                System.out.println("Id:" + json.getString("id") + " Predecesor Num:"+ (predecesoras.length-1));
-                
-                
+                task.setStart(jsonObject3.getString("Start"));
+                task.setEnd(jsonObject3.getString("Finish"));
+                project.getTasks().add(task);
 
-                for(int j = 0 ; j < predecesoras.length; j++){
-                    if(predecesoras[j].length() < 8){}
-                    else{
-                        predecesoras[j] = predecesoras[j].replace("[", "");
-                        predecesoras[j] = predecesoras[j].replace("]", "");
-                        String[] datos = predecesoras[j].split("->");
-
-                        String[] temp = datos[0].split(" ");
-                        String[] temp1 = datos[1].split(" ");
-                        String lag = temp[1];
-                        //String idP  = temp[5].replace("id=", "");
-                        String tipo  = temp[3];
-                        String idH = temp1[2].replace("id=", "");
-                        //System.out.print(idH);
-                        //RelationType type = ;
-                        if(lag.contains("d")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
-                        }
-                        else if(lag.contains("h")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                        }
-                        else if(lag.contains("y")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
-                        }
-                        else if(lag.contains("w")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
-                        }
-                        else if(lag.contains("m")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MONTHS));
-                        }
-                        else{
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
-                        }
-                    }
-                    
-                }
-                
+                System.out.println("Iniciio "+  project.getTaskByID(json.getInt("id")).getDate(1));
+                System.out.println("Fin "+  project.getTaskByID(json.getInt("id")).getFinish());
 
 
                

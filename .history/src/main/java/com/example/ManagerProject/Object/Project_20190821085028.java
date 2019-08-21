@@ -215,30 +215,29 @@ public class Project  {
         List<Table> tables= project.getTables();
         Iterator iter = tables.iterator();
         Table table = (Table)iter.next();
-        String dataTable = " { " ;
+        String dataTable = " [ " ;
         List tasks = project.getAllTasks();
         Iterator resourceIter = tasks.iterator();
         while (resourceIter.hasNext()){
-            Task tarea = (Task)resourceIter.next();
+            Task resource = (Task)resourceIter.next();
             List columns = table.getColumns();
 			Iterator columnIter = columns.iterator();
             Object columnValue = null;
-            dataTable = dataTable + "'"+ tarea.getID() +"'"+ ":" +  " { " ; 
+            dataTable = dataTable  + " { " ; 
             while (columnIter.hasNext()){
                 
                 Column column = (Column)columnIter.next();
                 
 				if (column.getFieldType().toString().equalsIgnoreCase("Duration")){
-					columnValue = tarea.getDuration();
+					columnValue = resource.getDuration();
 				}else if (column.getFieldType().toString().equalsIgnoreCase("Start")){
-					columnValue = tarea.getStart();
+					columnValue = resource.getStart();
 				}else if (column.getFieldType().toString().equalsIgnoreCase("Finish")){
-					columnValue = tarea.getFinish();
+					columnValue = resource.getFinish();
 				}else {
-					columnValue = tarea.getCachedValue(column.getFieldType());
+					columnValue = resource.getCachedValue(column.getFieldType());
                 }
-                dataTable = dataTable  + "'"+column.getFieldType().toString()+"'" + " : " + "'"+columnValue+"'" + " ,"
-                + "'"+"idTarea"+"'" + " : " + "'"+tarea.getID()+"'" + " ,";
+                dataTable = dataTable  + "'"+column.getFieldType().toString()+"'" + " : " + "'"+columnValue+"'" + " ,";
             
             }
             if(dataTable.length()>1){
@@ -253,7 +252,7 @@ public class Project  {
         }
         else{}
 
-        dataTable = dataTable + "}" ;
+        dataTable = dataTable + "]" ;
         return dataTable;
             
     }

@@ -215,7 +215,7 @@ public class Project  {
         List<Table> tables= project.getTables();
         Iterator iter = tables.iterator();
         Table table = (Table)iter.next();
-        String dataTable = " { " ;
+        String dataTable = " [ " ;
         List tasks = project.getAllTasks();
         Iterator resourceIter = tasks.iterator();
         while (resourceIter.hasNext()){
@@ -223,7 +223,7 @@ public class Project  {
             List columns = table.getColumns();
 			Iterator columnIter = columns.iterator();
             Object columnValue = null;
-            dataTable = dataTable + "'"+ tarea.getID() +"'"+ ":" +  " { " ; 
+            dataTable = dataTable  + " { " ; 
             while (columnIter.hasNext()){
                 
                 Column column = (Column)columnIter.next();
@@ -253,7 +253,7 @@ public class Project  {
         }
         else{}
 
-        dataTable = dataTable + "}" ;
+        dataTable = dataTable + "]" ;
         return dataTable;
             
     }

@@ -82,13 +82,11 @@ public class RestProjectFileMpp {
                 project.getTaskByID(json.getInt("id")).setStart(df.parse(jsonObject3.getString("Start")));
                 project.getTaskByID(json.getInt("id")).setActualStart(df.parse(jsonObject3.getString("Start")));
                 project.getTaskByID(json.getInt("id")).setStartText(jsonObject3.getString("Start"));
-
                 project.getTaskByID(json.getInt("id")).setFinish(df.parse(jsonObject3.getString("Finish")));
                 project.getTaskByID(json.getInt("id")).setActualFinish(df.parse(jsonObject3.getString("Finish")));
                 project.getTaskByID(json.getInt("id")).setFinishText(jsonObject3.getString("Finish"));
                 //String limpiando = jsonObject3.getString("Predecessors").replace("Relation lag: ", "");
                 String[] predecesoras = jsonObject3.getString("Predecessors").split("Relation ");
-                System.out.println("Id:" + json.getString("id") + " Predecesor Num:"+ (predecesoras.length-1));
                 
                 
 

@@ -82,13 +82,11 @@ public class RestProjectFileMpp {
                 project.getTaskByID(json.getInt("id")).setStart(df.parse(jsonObject3.getString("Start")));
                 project.getTaskByID(json.getInt("id")).setActualStart(df.parse(jsonObject3.getString("Start")));
                 project.getTaskByID(json.getInt("id")).setStartText(jsonObject3.getString("Start"));
-
                 project.getTaskByID(json.getInt("id")).setFinish(df.parse(jsonObject3.getString("Finish")));
                 project.getTaskByID(json.getInt("id")).setActualFinish(df.parse(jsonObject3.getString("Finish")));
                 project.getTaskByID(json.getInt("id")).setFinishText(jsonObject3.getString("Finish"));
                 //String limpiando = jsonObject3.getString("Predecessors").replace("Relation lag: ", "");
                 String[] predecesoras = jsonObject3.getString("Predecessors").split("Relation ");
-                System.out.println("Id:" + json.getString("id") + " Predecesor Num:"+ (predecesoras.length-1));
                 
                 
 
@@ -102,29 +100,10 @@ public class RestProjectFileMpp {
                         String[] temp = datos[0].split(" ");
                         String[] temp1 = datos[1].split(" ");
                         String lag = temp[1];
-                        //String idP  = temp[5].replace("id=", "");
                         String tipo  = temp[3];
-                        String idH = temp1[2].replace("id=", "");
-                        //System.out.print(idH);
-                        //RelationType type = ;
-                        if(lag.contains("d")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
-                        }
-                        else if(lag.contains("h")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                        }
-                        else if(lag.contains("y")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
-                        }
-                        else if(lag.contains("w")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
-                        }
-                        else if(lag.contains("m")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MONTHS));
-                        }
-                        else{
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
-                        }
+                        String id = temp1[2].replace("id=", "");
+                       
+                        
                     }
                     
                 }

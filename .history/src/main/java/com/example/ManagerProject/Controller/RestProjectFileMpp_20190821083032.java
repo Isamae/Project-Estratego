@@ -15,14 +15,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.sf.mpxj.*;
-import net.sf.mpxj.ganttproject.schema.Date;
+import net.sf.mpxj.*; 
 import net.sf.mpxj.reader.*;  
 import net.sf.mpxj.writer.*;  
 import net.sf.mpxj.mpp.*;
 import net.sf.mpxj.planner.schema.Days;
-import net.sf.mpxj.planner.schema.Task;
-
+import net.sf.mpxj.ganttproject.schema.Resource;
 
 import java.util.Calendar;
 import java.util.Iterator;
@@ -53,7 +51,7 @@ public class RestProjectFileMpp {
         }
         
         projectObj = addCalendario(projectObj,jsonObject);
-        //projectObj = addColumnas(projectObj,jsonObject);
+        projectObj = addColumnas(projectObj,jsonObject);
         projectObj =  addRecursos(projectObj,jsonObject);
         projectObj = addTarea(projectObj,jsonObject);
 
@@ -63,88 +61,22 @@ public class RestProjectFileMpp {
     }
     
     public static ProjectFile addTarea(ProjectFile project,JSONObject jsonObject) throws JSONException {
-        JSONObject jsonObject2 = ((JSONObject)(jsonObject.get("allColum")));
-        project.removeTask(project.getAllTasks().get(0));
         for(int i=0;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
-                JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
-                
 
-                
+                JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
+
                 (project.addTask()).setID(json.getInt("id"));
                 (project.getTaskByID(json.getInt("id"))).setName(json.getString("name"));
                 (project.getTaskByID(json.getInt("id"))).setUniqueID(json.getInt("uniqueID"));
                 (project.getTaskByID(json.getInt("id"))).setActive(json.getBoolean("estado"));
-
-                JSONObject jsonObject3 = jsonObject2.getJSONObject(json.getString("id"));
-                SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
-               
-                project.getTaskByID(json.getInt("id")).setStart(df.parse(jsonObject3.getString("Start")));
-                project.getTaskByID(json.getInt("id")).setActualStart(df.parse(jsonObject3.getString("Start")));
-                project.getTaskByID(json.getInt("id")).setStartText(jsonObject3.getString("Start"));
-
-                project.getTaskByID(json.getInt("id")).setFinish(df.parse(jsonObject3.getString("Finish")));
-                project.getTaskByID(json.getInt("id")).setActualFinish(df.parse(jsonObject3.getString("Finish")));
-                project.getTaskByID(json.getInt("id")).setFinishText(jsonObject3.getString("Finish"));
-                //String limpiando = jsonObject3.getString("Predecessors").replace("Relation lag: ", "");
-                String[] predecesoras = jsonObject3.getString("Predecessors").split("Relation ");
-                System.out.println("Id:" + json.getString("id") + " Predecesor Num:"+ (predecesoras.length-1));
+                (project.getTaskByID(json.getInt("id"))).setStart(val);
+                (project.getTaskByID(json.getInt("id"))).setFinish(date);
                 
-                
-
-                for(int j = 0 ; j < predecesoras.length; j++){
-                    if(predecesoras[j].length() < 8){}
-                    else{
-                        predecesoras[j] = predecesoras[j].replace("[", "");
-                        predecesoras[j] = predecesoras[j].replace("]", "");
-                        String[] datos = predecesoras[j].split("->");
-
-                        String[] temp = datos[0].split(" ");
-                        String[] temp1 = datos[1].split(" ");
-                        String lag = temp[1];
-                        //String idP  = temp[5].replace("id=", "");
-                        String tipo  = temp[3];
-                        String idH = temp1[2].replace("id=", "");
-                        //System.out.print(idH);
-                        //RelationType type = ;
-                        if(lag.contains("d")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
-                        }
-                        else if(lag.contains("h")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                        }
-                        else if(lag.contains("y")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
-                        }
-                        else if(lag.contains("w")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
-                        }
-                        else if(lag.contains("m")){
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MONTHS));
-                        }
-                        else{
-                            project.getTaskByID(json.getInt("id")).addPredecessor( project.getTaskByID(Integer.parseInt(idH)), RelationType.FINISH_FINISH,  Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
-                        }
-                    }
-                    
-                }
-                
-
-
-               
-                
-                
-            
-                
-
             } catch (JSONException e) {
-                e.printStackTrace();
-            } catch (ParseException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
-
         return project;
     }
 
@@ -349,18 +281,19 @@ public class RestProjectFileMpp {
         }
         return result;
     } 
+
   
     public ProjectFile addCalendario(ProjectFile project,JSONObject jsonObject) throws Exception{
         JSONArray calendariosJson = ((JSONArray)(jsonObject.get("calendarios")));
 
-        /*JSONArray recursosJson = ((JSONArray)(jsonObject.get("recursos")));
+        JSONArray recursosJson = ((JSONArray)(jsonObject.get("recursos")));
         for (int i=0; i<recursosJson.length(); i++){
             net.sf.mpxj.Resource resource = project.addResource();
             JSONObject j = recursosJson.getJSONObject(i);
             resource.setName(j.getString("name"));
             resource.setID(j.getInt("id"));
             
-        }*/
+        }
 
         ProjectCalendar calendar = new ProjectCalendar(project);
         for(int i=0; i< calendariosJson.length(); i++){

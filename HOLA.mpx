@@ -10,32 +10,424 @@ MPX,Microsoft Project for Windows,4.0,ANSI
 25,6,09:00 am,01:00 pm,03:00 pm,07:00 pm
 55,Estándar,2,2,2,2,2,2,2
 20,,2,2,2,2,2,2,2
-20, Estándar ,2,2,2,2,2,2,2
+20, Standard ,2,2,2,2,2,2,2
 20,,2,2,2,2,2,2,2
 20, Unnamed Resource ,2,2,2,2,2,2,2
 20,,2,2,2,2,2,2,2
-20, Carpinteros ,2,2,2,2,2,2,2
+20, Estándar ,2,2,2,2,2,2,2
 20,,2,2,2,2,2,2,2
-20, Electricistas ,2,2,2,2,2,2,2
+20, Administrador de Contrato - Cliente ,2,2,2,2,2,2,2
 20,,2,2,2,2,2,2,2
-20, Decorador de Interiores ,2,2,2,2,2,2,2
+20, Líder Técnico - Cliente ,2,2,2,2,2,2,2
 20,,2,2,2,2,2,2,2
-20, Obreros ,2,2,2,2,2,2,2
+20, Líder Funcional - Usuario Experto - Cliente ,2,2,2,2,2,2,2
 20,,2,2,2,2,2,2,2
-20, Albañiles ,2,2,2,2,2,2,2
+20, Funcionarios Técnicos - Cliente ,2,2,2,2,2,2,2
 20,,2,2,2,2,2,2,2
-20, Fontaneros ,2,2,2,2,2,2,2
-30,010101010010101001010101001010100101,,,Estándar,16/08/2019,16/08/2019,0,20/08/2019,,$0.00,$0.00,$0.00,0h,0h,0h,0%,0d,0d,0d,0%,,,,,0d,0d,,Diego
+20, Usuarios Finales - Cliente ,2,2,2,2,2,2,2
+20,,2,2,2,2,2,2,2
+20, Desarrollador PlanERP ,2,2,2,2,2,2,2
+20,,2,2,2,2,2,2,2
+20, Gerente de Proyecto PlanERP ,2,2,2,2,2,2,2
+20,,2,2,2,2,2,2,2
+20, Líder del Proyecto/Desarrollo PlanERP ,2,2,2,2,2,2,2
+20,,2,2,2,2,2,2,2
+20, Analista Procesos PlanERP ,2,2,2,2,2,2,2
+20,,2,2,2,2,2,2,2
+20, Analista de Calidad PlanERP ,2,2,2,2,2,2,2
+20,,2,2,2,2,2,2,2
+20, Especialista Base de Datos PlanERP ,2,2,2,2,2,2,2
+20,,2,2,2,2,2,2,2
+20, Consultor Especialista en Procesos de GADs PlanERP ,2,2,2,2,2,2,2
+20,,2,2,2,2,2,2,2
+20, Compras Publicas ,2,2,2,2,2,2,2
+30,010101010010101001010101001010100101,,,Estándar,16/08/2019,16/08/2019,0,21/08/2019,,$0.00,$0.00,$0.00,0h,0h,0h,0%,0d,0d,0d,0%,,,,,0d,0d,,Diego
 40,Name,Work,Baseline Work,Actual Work,Remaining Work,Overtime Work,Cost,Baseline Cost,Actual Cost,Remaining Cost,ID,Max Units,Standard Rate,Overtime Rate,Cost Per Use,Accrue At,Peak,Unique ID
 41,1,20,21,22,23,24,30,31,32,33,40,41,42,43,44,45,47,49
 50,,0h,0h,0h,0h,0h,$0.00,$0.00,$0.00,$0.00,0,1,$0.00/h,$0.00/h,$0.00,Prorated,0,0
 55,Estándar,2,2,2,2,2,2,2
-50,Carpinteros,,,,,,,,,,1
-50,Electricistas,,,,,,,,,,2
-50,Decorador de Interiores,,,,,,,,,,3
-50,Obreros,,,,,,,,,,4
-50,Albañiles,,,,,,,,,,5
-50,Fontaneros,,,,,,,,,,6
-60,Name,Outline Level,Work,Baseline Work,Actual Work,Remaining Work,% Work Complete,Cost,Baseline Cost,Actual Cost,Remaining Cost,Fixed Cost,Cost1,Cost2,Cost3,Duration,Actual Duration,Remaining Duration,% Complete,Start,Finish,Early Start,Early Finish,Late Start,Late Finish,Fixed,Milestone,Marked,Rollup,ID,Constraint Type,Delay,Free Slack,Priority,Unique ID,Flag1,Flag2,Flag3,Flag4,Flag5,Flag6,Flag7,Flag8,Flag9,Flag10,Summary,Hide Bar,Created,Number1,Number2,Number3,Number4,Number5
-61,1,3,20,21,22,23,25,30,31,32,33,35,36,37,38,40,42,43,44,50,51,52,53,54,55,80,81,83,84,90,91,92,93,95,98,110,111,112,113,114,115,116,117,118,119,120,123,125,140,141,142,143,144
-70,010101010010101001010101001010100101,0,0h,0h,0h,0h,0%,$0.00,$0.00,$0.00,$0.00,$0.00,$0.00,$0.00,$0.00,0d,0d,0d,0%,16/08/2019,16/08/2019,16/08/2019,16/08/2019,16/08/2019,16/08/2019,Yes,No,No,No,0,As Soon As Possible,0ed,0d,Medium,0,No,No,No,No,No,No,No,No,No,No,No,No,16/08/2019,0.00,0.00,0.00,0.00,0.00
+50,Administrador de Contrato - Cliente,,,,,,,,,,1
+50,Líder Técnico - Cliente,,,,,,,,,,2
+50,Líder Funcional - Usuario Experto - Cliente,,,,,,,,,,3
+50,Funcionarios Técnicos - Cliente,,,,,,,,,,4
+50,Usuarios Finales - Cliente,,,,,,,,,,5
+50,Desarrollador PlanERP,,,,,,,,,,6
+50,Gerente de Proyecto PlanERP,,,,,,,,,,7
+50,Líder del Proyecto/Desarrollo PlanERP,,,,,,,,,,8
+50,Analista Procesos PlanERP,,,,,,,,,,9
+50,Analista de Calidad PlanERP,,,,,,,,,,10
+50,Especialista Base de Datos PlanERP,,,,,,,,,,11
+50,Consultor Especialista en Procesos de GADs PlanERP,,,,,,,,,,12
+60,Name,WBS,Start,Finish,Actual Start,Actual Finish,Predecessors,Fixed,ID,Constraint Type,Unique ID
+61,1,2,50,51,58,59,70,80,90,91,98
+70,20190122- Plan del Proyecto de Implementacion del SIIM Daule,0,16/07/2018,10/07/2019,16/07/2018,10/07/2019,,No,0,As Soon As Possible,0
+70,Programa de Implementación SIIM,0,16/07/2018,10/07/2019,16/07/2018,10/07/2019,,No,1,As Soon As Possible,4
+70,FASE 1: Implementación de Módulos de Servicio al Cliente (SC) y Atención al Ciudadano (AC),0,16/07/2018,25/01/2019,16/07/2018,25/01/2019,,No,2,As Soon As Possible,272
+70,ETAPA 1: Preparación del Proyecto e Instalación del SIIM - Módulos SC y AC,0,16/07/2018,25/07/2018,16/07/2018,25/07/2018,,No,3,As Soon As Possible,115
+70,Actividades de Gestión del Proyecto,0,16/07/2018,18/07/2018,16/07/2018,18/07/2018,,No,4,As Soon As Possible,44
+70,Revisión de Información de Contrato y Anexos,0,16/07/2018,16/07/2018,16/07/2018,16/07/2018,,No,5,As Soon As Possible,5
+70,Definir la Organización del Proyecto,0,16/07/2018,17/07/2018,16/07/2018,17/07/2018,5FF,No,6,As Soon As Possible,16
+70,Kick-off Interno del Proyecto,0,17/07/2018,18/07/2018,17/07/2018,18/07/2018,6FF,No,7,As Soon As Possible,17
+70,Preparación del kick-off del Proyecto,0,18/07/2018,19/07/2018,18/07/2018,19/07/2018,,No,8,As Soon As Possible,18
+70,Comunicación con el Cliente,0,18/07/2018,18/07/2018,18/07/2018,18/07/2018,7FF,No,9,As Soon As Possible,19
+70,Crear la presentación del kick-off,0,18/07/2018,19/07/2018,18/07/2018,19/07/2018,9FF,No,10,As Soon As Possible,20
+70,Reunión de Kick-off,0,19/07/2018,19/07/2018,19/07/2018,19/07/2018,,No,11,As Soon As Possible,21
+70,Realizar la reunión de kick-off,0,19/07/2018,19/07/2018,19/07/2018,19/07/2018,10FF,No,12,As Soon As Possible,22
+70,Entrega e Instalación del Software,0,19/07/2018,25/07/2018,19/07/2018,25/07/2018,,No,13,As Soon As Possible,46
+70,Instalar SIIM en Servidor,0,19/07/2018,24/07/2018,19/07/2018,24/07/2018,11FF,No,14,As Soon As Possible,25
+70,1    Dirección de Desarrollo Territorial (No incluye Catastro),0,19/07/2018,19/07/2018,19/07/2018,19/07/2018,,No,15,As Soon As Possible,590
+70,4    Dirección de Justicia y Vigilancia,0,19/07/2018,19/07/2018,19/07/2018,19/07/2018,15FF,No,16,As Soon As Possible,591
+70,5    Dirección de Desarrollo Humano y Social,0,19/07/2018,20/07/2018,19/07/2018,20/07/2018,16FF,No,17,As Soon As Possible,592
+70,8.3  Rentas,0,20/07/2018,20/07/2018,20/07/2018,20/07/2018,17FF,No,18,As Soon As Possible,593
+70,8.4  Tesorería ,0,20/07/2018,20/07/2018,20/07/2018,20/07/2018,18FF,No,19,As Soon As Possible,594
+70,9.1  Mercados,0,20/07/2018,20/07/2018,20/07/2018,20/07/2018,19FF,No,20,As Soon As Possible,595
+70,9.2  Cementerio,0,20/07/2018,20/07/2018,20/07/2018,20/07/2018,20FF,No,21,As Soon As Possible,596
+70,9.3  Camal,0,20/07/2018,20/07/2018,20/07/2018,20/07/2018,21FF,No,22,As Soon As Possible,597
+70,10   Registro de la Propiedad y Mercantil,0,20/07/2018,23/07/2018,20/07/2018,23/07/2018,22FF,No,23,As Soon As Possible,598
+70,11   Administración de bomberos,0,23/07/2018,23/07/2018,23/07/2018,23/07/2018,23FF,No,24,As Soon As Possible,599
+70,12   CRM para ciudadanos. Ventanilla Única,0,23/07/2018,23/07/2018,23/07/2018,23/07/2018,24FF,No,25,As Soon As Possible,600
+70,15.1 BI Desarrollo Territorial,0,23/07/2018,23/07/2018,23/07/2018,23/07/2018,25FF,No,26,As Soon As Possible,601
+70,15.5 BI Obras Públicas Municipales,0,23/07/2018,24/07/2018,23/07/2018,24/07/2018,26FF,No,27,As Soon As Possible,602
+70,15.7 BI Registro de la Propiedad y Mercantil,0,24/07/2018,24/07/2018,24/07/2018,24/07/2018,27FF,No,28,As Soon As Possible,603
+70,16.1 Consultas Portal Web,0,24/07/2018,24/07/2018,24/07/2018,24/07/2018,28FF,No,29,As Soon As Possible,604
+70,16.2 Aplicación para móviles (APP),0,24/07/2018,24/07/2018,24/07/2018,24/07/2018,29FF,No,30,As Soon As Possible,605
+70,Entrega de Software,0,24/07/2018,25/07/2018,24/07/2018,25/07/2018,14FF,No,31,As Soon As Possible,270
+70,Revisar la ETAPA del Proyecto,0,25/07/2018,25/07/2018,25/07/2018,25/07/2018,13FF,No,32,As Soon As Possible,51
+70,HITO: FINALIZACION ETAPA 1,0,25/07/2018,25/07/2018,25/07/2018,25/07/2018,32FF,No,33,As Soon As Possible,50
+70,ETAPA 2: Levantamiento de Características Institucionales - Módulos SC y AC,0,25/07/2018,13/08/2018,25/07/2018,13/08/2018,3FF,No,34,As Soon As Possible,23
+70,Actividades de Gestión del Proyecto,0,25/07/2018,26/07/2018,25/07/2018,26/07/2018,,No,35,As Soon As Possible,24
+70,Revisión del Plan del Proyecto,0,25/07/2018,26/07/2018,25/07/2018,26/07/2018,32FF,No,36,As Soon As Possible,26
+70,Programar talleres de requerimientos de Entidad,0,26/07/2018,26/07/2018,26/07/2018,26/07/2018,36FF,No,37,As Soon As Possible,27
+70,Sesiones de Requerimientos del Entidad,0,26/07/2018,10/08/2018,26/07/2018,10/08/2018,,No,38,As Soon As Possible,28
+70,Conducir Sesiones de Requerimientos,0,26/07/2018,08/08/2018,26/07/2018,08/08/2018,37FF,No,39,As Soon As Possible,60
+70,Crear Documento de Características del Entidad,0,08/08/2018,10/08/2018,08/08/2018,10/08/2018,39FF,No,40,As Soon As Possible,59
+70,Revisar el Documento de Características del Entidad,0,10/08/2018,10/08/2018,10/08/2018,10/08/2018,,No,41,As Soon As Possible,58
+70,Revisar el Documento de Características del Entidad,0,10/08/2018,10/08/2018,10/08/2018,10/08/2018,40FF,No,42,As Soon As Possible,57
+70,Revisar el Plan del Proyecto,0,10/08/2018,10/08/2018,10/08/2018,10/08/2018,42FF,No,43,As Soon As Possible,56
+70,Revisar la ETAPA del Proyecto,0,10/08/2018,13/08/2018,10/08/2018,13/08/2018,41FF,No,44,As Soon As Possible,55
+70,HITO: FINALIZACION ETAPA 2,0,13/08/2018,13/08/2018,13/08/2018,13/08/2018,44FF,No,45,As Soon As Possible,61
+70,"ETAPA 3: Migración de Datos, Configuración y Pruebas de Operación - Módulos SC y AC",0,13/08/2018,22/10/2018,13/08/2018,22/10/2018,34FF,No,46,As Soon As Possible,62
+70,Gestión General del Proyecto,0,13/08/2018,14/08/2018,13/08/2018,14/08/2018,,No,47,As Soon As Possible,63
+70,Planificar cambio Organizacional,0,13/08/2018,14/08/2018,13/08/2018,14/08/2018,44FF,No,48,As Soon As Possible,64
+70,Planificar Entrenamiento a Usuarios Finales,0,14/08/2018,14/08/2018,14/08/2018,14/08/2018,48FF,No,49,As Soon As Possible,65
+70,Definir y Preparar la Migración de Datos,0,14/08/2018,14/08/2018,14/08/2018,14/08/2018,48FF,No,50,As Soon As Possible,66
+70,Configuración del Sistema en Producción,0,14/08/2018,22/10/2018,14/08/2018,22/10/2018,,No,51,As Soon As Possible,67
+70,Instalar el SIIM en Producción,0,14/08/2018,15/08/2018,14/08/2018,15/08/2018,50FF,No,52,As Soon As Possible,68
+70,Configurar Inicialización del Sistema,0,15/08/2018,16/08/2018,15/08/2018,16/08/2018,52FF,No,53,As Soon As Possible,69
+70,Realizar la Migración de Datos,0,16/08/2018,22/10/2018,16/08/2018,22/10/2018,53FF,No,54,As Soon As Possible,187
+70,Desarrollar Adaptaciones al Software,0,16/08/2018,28/08/2018,16/08/2018,28/08/2018,53FF,No,55,As Soon As Possible,247
+70,Configuración del Sistema en base al Documento de Características del Entidad,0,28/08/2018,31/08/2018,28/08/2018,31/08/2018,55FF,No,56,As Soon As Possible,244
+70,Configurar Interfaces,0,31/08/2018,03/09/2018,31/08/2018,03/09/2018,56FF,No,57,As Soon As Possible,72
+70,Configurar Usuarios y Autorizaciones,0,03/09/2018,04/09/2018,03/09/2018,04/09/2018,57FF,No,58,As Soon As Possible,73
+70,Gestión del Cambio Organizacional,0,04/09/2018,05/09/2018,04/09/2018,05/09/2018,,No,59,As Soon As Possible,74
+70,Conducir la comunicación de la Gestión de Cambios (si es aplicable),0,04/09/2018,05/09/2018,04/09/2018,05/09/2018,58FF,No,60,As Soon As Possible,75
+70,Pruebas de validación/aceptación del Sistema,0,05/09/2018,10/09/2018,05/09/2018,10/09/2018,,No,61,As Soon As Possible,82
+70,Mantener la Lista Maestra de Procesos de Entidad,0,05/09/2018,05/09/2018,05/09/2018,05/09/2018,60FF,No,62,As Soon As Possible,81
+70,Conducir Talleres de Validación,0,05/09/2018,10/09/2018,05/09/2018,10/09/2018,62FF,No,63,As Soon As Possible,83
+70,1    Dirección de Desarrollo Territorial (No incluye Catastro),0,05/09/2018,05/09/2018,05/09/2018,05/09/2018,,No,64,As Soon As Possible,573
+70,4    Dirección de Justicia y Vigilancia,0,05/09/2018,05/09/2018,05/09/2018,05/09/2018,64FF,No,65,As Soon As Possible,574
+70,5    Dirección de Desarrollo Humano y Social,0,05/09/2018,05/09/2018,05/09/2018,05/09/2018,65FF,No,66,As Soon As Possible,575
+70,8.3  Rentas,0,05/09/2018,06/09/2018,05/09/2018,06/09/2018,66FF,No,67,As Soon As Possible,576
+70,8.4  Tesorería ,0,06/09/2018,06/09/2018,06/09/2018,06/09/2018,67FF,No,68,As Soon As Possible,577
+70,9.1  Mercados,0,06/09/2018,06/09/2018,06/09/2018,06/09/2018,68FF,No,69,As Soon As Possible,578
+70,9.2  Cementerio,0,06/09/2018,06/09/2018,06/09/2018,06/09/2018,69FF,No,70,As Soon As Possible,579
+70,9.3  Camal,0,06/09/2018,06/09/2018,06/09/2018,06/09/2018,70FF,No,71,As Soon As Possible,580
+70,10   Registro de la Propiedad y Mercantil,0,06/09/2018,07/09/2018,06/09/2018,07/09/2018,71FF,No,72,As Soon As Possible,581
+70,11   Administración de bomberos,0,07/09/2018,07/09/2018,07/09/2018,07/09/2018,72FF,No,73,As Soon As Possible,582
+70,12   CRM para ciudadanos. Ventanilla Única,0,07/09/2018,07/09/2018,07/09/2018,07/09/2018,73FF,No,74,As Soon As Possible,583
+70,15.1 BI Desarrollo Territorial,0,07/09/2018,07/09/2018,07/09/2018,07/09/2018,74FF,No,75,As Soon As Possible,584
+70,15.5 BI Obras Públicas Municipales,0,07/09/2018,07/09/2018,07/09/2018,07/09/2018,75FF,No,76,As Soon As Possible,585
+70,15.7 BI Registro de la Propiedad y Mercantil,0,07/09/2018,07/09/2018,07/09/2018,07/09/2018,76FF,No,77,As Soon As Possible,586
+70,16.1 Consultas Portal Web,0,07/09/2018,07/09/2018,07/09/2018,07/09/2018,77FF,No,78,As Soon As Possible,587
+70,16.2 Aplicación para móviles (APP),0,07/09/2018,10/09/2018,07/09/2018,10/09/2018,78FF,No,79,As Soon As Possible,588
+70,Pruebas de Aceptacion Sistema,0,10/09/2018,14/09/2018,10/09/2018,14/09/2018,,No,80,As Soon As Possible,76
+70,Definir casos de prueba y alcance,0,10/09/2018,10/09/2018,10/09/2018,10/09/2018,"79FF,30FF",No,81,As Soon As Possible,77
+70,Preparar ambiente de pruebas,0,10/09/2018,11/09/2018,10/09/2018,11/09/2018,81FF,No,82,As Soon As Possible,78
+70,Ejecutar el plan de pruebas de Aceptacion del Sistema,0,11/09/2018,13/09/2018,11/09/2018,13/09/2018,82FF,No,83,As Soon As Possible,79
+70,1    Dirección de Desarrollo Territorial (No incluye Catastro),0,11/09/2018,11/09/2018,11/09/2018,11/09/2018,,No,84,As Soon As Possible,557
+70,4    Dirección de Justicia y Vigilancia,0,11/09/2018,11/09/2018,11/09/2018,11/09/2018,84FF,No,85,As Soon As Possible,558
+70,5    Dirección de Desarrollo Humano y Social,0,11/09/2018,11/09/2018,11/09/2018,11/09/2018,85FF,No,86,As Soon As Possible,559
+70,8.3  Rentas,0,11/09/2018,12/09/2018,11/09/2018,12/09/2018,86FF,No,87,As Soon As Possible,560
+70,8.4  Tesorería ,0,12/09/2018,12/09/2018,12/09/2018,12/09/2018,87FF,No,88,As Soon As Possible,561
+70,9.1  Mercados,0,12/09/2018,12/09/2018,12/09/2018,12/09/2018,88FF,No,89,As Soon As Possible,562
+70,9.2  Cementerio,0,12/09/2018,12/09/2018,12/09/2018,12/09/2018,89FF,No,90,As Soon As Possible,563
+70,9.3  Camal,0,12/09/2018,12/09/2018,12/09/2018,12/09/2018,90FF,No,91,As Soon As Possible,564
+70,10   Registro de la Propiedad y Mercantil,0,12/09/2018,12/09/2018,12/09/2018,12/09/2018,91FF,No,92,As Soon As Possible,565
+70,11   Administración de bomberos,0,12/09/2018,13/09/2018,12/09/2018,13/09/2018,92FF,No,93,As Soon As Possible,566
+70,12   CRM para ciudadanos. Ventanilla Única,0,13/09/2018,13/09/2018,13/09/2018,13/09/2018,93FF,No,94,As Soon As Possible,567
+70,15.1 BI Desarrollo Territorial,0,13/09/2018,13/09/2018,13/09/2018,13/09/2018,94FF,No,95,As Soon As Possible,568
+70,15.5 BI Obras Públicas Municipales,0,13/09/2018,13/09/2018,13/09/2018,13/09/2018,95FF,No,96,As Soon As Possible,569
+70,15.7 BI Registro de la Propiedad y Mercantil,0,13/09/2018,13/09/2018,13/09/2018,13/09/2018,96FF,No,97,As Soon As Possible,570
+70,16.1 Consultas Portal Web,0,13/09/2018,13/09/2018,13/09/2018,13/09/2018,97FF,No,98,As Soon As Possible,571
+70,16.2 Aplicación para móviles (APP),0,13/09/2018,13/09/2018,13/09/2018,13/09/2018,98FF,No,99,As Soon As Possible,572
+70,Revisar los resultados de las pruebas y necesidades de cambios,0,13/09/2018,14/09/2018,13/09/2018,14/09/2018,"99FF,79FF,30FF",No,100,As Soon As Possible,80
+70,Planificar Salida a Producción y Soporte,0,14/09/2018,17/09/2018,14/09/2018,17/09/2018,,No,101,As Soon As Possible,84
+70,Definir Plan de Salida a Producción,0,14/09/2018,17/09/2018,14/09/2018,17/09/2018,100FF,No,102,As Soon As Possible,85
+70,Planificar Estrategia de Soporte,0,14/09/2018,17/09/2018,14/09/2018,17/09/2018,100FF,No,103,As Soon As Possible,86
+70,Planificar Administración del Sistema,0,14/09/2018,17/09/2018,14/09/2018,17/09/2018,100FF,No,104,As Soon As Possible,87
+70,Revisar la ETAPA del Proyecto,0,17/09/2018,17/09/2018,17/09/2018,17/09/2018,101FF,No,105,As Soon As Possible,88
+70,HITO: FINALIZACION ETAPA 3,0,17/09/2018,17/09/2018,17/09/2018,17/09/2018,105FF,No,106,As Soon As Possible,251
+70,ETAPA 4: Preparación Final previo Despliegue en Producción - Módulos SC y AC,0,17/09/2018,11/10/2018,17/09/2018,11/10/2018,,No,107,As Soon As Possible,90
+70,Gestión General del Proyecto,0,17/09/2018,18/09/2018,17/09/2018,18/09/2018,,No,108,As Soon As Possible,91
+70,Confirmar el Plan de Entrenamiento,0,17/09/2018,18/09/2018,17/09/2018,18/09/2018,105FF,No,109,As Soon As Possible,92
+70,Finalizar plan de Salida a Producción,0,18/09/2018,18/09/2018,18/09/2018,18/09/2018,109FF,No,110,As Soon As Possible,93
+70,Entrenamiento en Modulos de Areas Funcionales Fase 1,0,18/09/2018,08/10/2018,18/09/2018,08/10/2018,108FF,No,111,As Soon As Possible,94
+70,Entrenamiento de Usuarios Funcionales y Certificación de Procesos,0,18/09/2018,02/10/2018,18/09/2018,02/10/2018,110FF,No,112,As Soon As Possible,95
+70,1    Dirección de Desarrollo Territorial (No incluye Catastro),0,18/09/2018,19/09/2018,18/09/2018,19/09/2018,,No,113,As Soon As Possible,544
+70,4    Dirección de Justicia y Vigilancia,0,19/09/2018,20/09/2018,19/09/2018,20/09/2018,113FF,No,114,As Soon As Possible,545
+70,5    Dirección de Desarrollo Humano y Social,0,20/09/2018,21/09/2018,20/09/2018,21/09/2018,114FF,No,115,As Soon As Possible,546
+70,8.3  Rentas,0,21/09/2018,21/09/2018,21/09/2018,21/09/2018,115FF,No,116,As Soon As Possible,548
+70,8.4  Tesorería ,0,21/09/2018,24/09/2018,21/09/2018,24/09/2018,116FF,No,117,As Soon As Possible,550
+70,9.1  Mercados,0,24/09/2018,25/09/2018,24/09/2018,25/09/2018,117FF,No,118,As Soon As Possible,551
+70,9.2  Cementerio,0,25/09/2018,25/09/2018,25/09/2018,25/09/2018,118FF,No,119,As Soon As Possible,552
+70,9.3  Camal,0,25/09/2018,26/09/2018,25/09/2018,26/09/2018,119FF,No,120,As Soon As Possible,553
+70,10   Registro de la Propiedad y Mercantil,0,26/09/2018,26/09/2018,26/09/2018,26/09/2018,120FF,No,121,As Soon As Possible,554
+70,11   Administración de bomberos,0,27/09/2018,27/09/2018,27/09/2018,27/09/2018,121FF,No,122,As Soon As Possible,555
+70,12   CRM para ciudadanos. Ventanilla Única,0,27/09/2018,28/09/2018,27/09/2018,28/09/2018,122FF,No,123,As Soon As Possible,556
+70,15.1 BI Desarrollo Territorial,0,28/09/2018,28/09/2018,28/09/2018,28/09/2018,123FF,No,124,As Soon As Possible,549
+70,15.5 BI Obras Públicas Municipales,0,28/09/2018,01/10/2018,28/09/2018,01/10/2018,124FF,No,125,As Soon As Possible,541
+70,15.7 BI Registro de la Propiedad y Mercantil,0,01/10/2018,01/10/2018,01/10/2018,01/10/2018,125FF,No,126,As Soon As Possible,542
+70,16.1 Consultas Portal Web,0,01/10/2018,02/10/2018,01/10/2018,02/10/2018,126FF,No,127,As Soon As Possible,543
+70,16.2 Aplicación para móviles (APP),0,02/10/2018,02/10/2018,02/10/2018,02/10/2018,127FF,No,128,As Soon As Possible,540
+70,Entrenamiento de Usuario Técnicos,0,02/10/2018,08/10/2018,02/10/2018,08/10/2018,"128FF,99FF,79FF,30FF",No,129,As Soon As Possible,96
+70,Preparación del Sistema,0,08/10/2018,09/10/2018,08/10/2018,09/10/2018,111FF,No,130,As Soon As Possible,97
+70,Completar la Administración del Sistema,0,08/10/2018,08/10/2018,08/10/2018,08/10/2018,,No,131,As Soon As Possible,98
+70,Comprobación de la Puesta a Producción,0,08/10/2018,09/10/2018,08/10/2018,09/10/2018,131FF,No,132,As Soon As Possible,99
+70,Transición,0,09/10/2018,11/10/2018,09/10/2018,11/10/2018,130FF,No,133,As Soon As Possible,100
+70,Finalizar Procesamiento de Sistemas Legados,0,09/10/2018,09/10/2018,09/10/2018,09/10/2018,,No,134,As Soon As Possible,101
+70,Realizar la Salida a Producción - Carga Inicial y Configuración Inicial,0,09/10/2018,11/10/2018,09/10/2018,11/10/2018,134FF,No,135,As Soon As Possible,102
+70, Revisar la ETAPA del Proyecto,0,11/10/2018,11/10/2018,11/10/2018,11/10/2018,133FF,No,136,As Soon As Possible,103
+70,HITO: FINALIZACION ETAPA 4,0,11/10/2018,11/10/2018,11/10/2018,11/10/2018,136FF,No,137,As Soon As Possible,252
+70,ETAPA 5: Despliegue en Producción y Soporte Técnico - Módulos SC y AC,0,11/10/2018,16/11/2018,11/10/2018,16/11/2018,107FF,No,138,As Soon As Possible,105
+70,Soporte en Producción,0,11/10/2018,16/11/2018,11/10/2018,16/11/2018,,No,139,As Soon As Possible,106
+70,Soporte durante la Salida a Producción,0,11/10/2018,16/11/2018,11/10/2018,16/11/2018,136FF,No,140,As Soon As Possible,107
+70,Resolver incidentes críticos,0,11/10/2018,05/11/2018,11/10/2018,05/11/2018,136FF,No,141,As Soon As Possible,108
+70,Entregar el soporte y Administración al cliente,0,11/10/2018,12/10/2018,11/10/2018,12/10/2018,,No,142,As Soon As Possible,109
+70,Mejora Continua,0,11/10/2018,24/10/2018,11/10/2018,24/10/2018,,No,143,As Soon As Possible,112
+70,Monitoreo del Sistema y Acompañamiento ETAPA1,0,11/10/2018,24/10/2018,11/10/2018,24/10/2018,136FF,No,144,As Soon As Possible,113
+70,Ajustes y Configuraciones finales al Software acorde a necesidades Entidad,0,11/10/2018,24/10/2018,11/10/2018,24/10/2018,136FF,No,145,As Soon As Possible,246
+70,Cierre de la ETAPA 5,0,24/10/2018,24/10/2018,24/10/2018,24/10/2018,,No,146,As Soon As Possible,184
+70,Reunión de Cierre de la ETAPA 5,0,24/10/2018,24/10/2018,24/10/2018,24/10/2018,143FF,No,147,As Soon As Possible,185
+70,HITO: FIN DE LA ETAPA 5,0,24/10/2018,24/10/2018,24/10/2018,24/10/2018,147FF,No,148,As Soon As Possible,253
+70,"ETAPA 6: Estabilización, Apoyo Emisión 2019 y Desarrollo de funcionalidades no establecidas en el Alcance Contractual",0,16/11/2018,25/01/2019,16/11/2018,25/01/2019,,No,149,As Soon As Possible,525
+70,Depuración de Errores de Calidad de Información fuente migrada (Base Oracle),0,16/11/2018,24/12/2018,16/11/2018,24/12/2018,138FF,No,150,As Soon As Possible,527
+70,Soporte y Mantenimiento de Módulos de la Fase 1,0,16/11/2018,24/12/2018,16/11/2018,24/12/2018,138FF,No,151,As Soon As Possible,532
+70,Adaptaciones a Software para incluir Nuevas funcionalidades no contempladas en alcance proyecto,0,16/11/2018,24/12/2018,16/11/2018,24/12/2018,138FF,No,152,As Soon As Possible,530
+70,Implementación de Licencia temporal de Modulo de Catastro Urbano SIIM,0,03/12/2018,26/12/2018,03/12/2018,26/12/2018,,No,153,As Soon As Possible,531
+70,Migración de información de Emisión de Impuestos de Catastro Urbano 2019,0,03/12/2018,26/12/2018,03/12/2018,26/12/2018,,No,154,As Soon As Possible,533
+70,Creación de interfaces mediante ETLs para integración entre Sistema Oracle y SIIM para la recaudación de Impuestos 2019 de Catastro Urbano,0,03/12/2018,26/12/2018,03/12/2018,26/12/2018,,No,155,As Soon As Possible,528
+70,Soporte en Recaudación de Impuestos de Catastro urbano y mejoras 2019,0,26/12/2018,25/01/2019,26/12/2018,25/01/2019,155FF,No,156,As Soon As Possible,534
+70,Cierre de la FASE 1,0,25/01/2019,25/01/2019,25/01/2019,25/01/2019,,No,157,As Soon As Possible,535
+70,Reunión de Cierre de la FASE 1,0,25/01/2019,25/01/2019,25/01/2019,25/01/2019,156FF,No,158,As Soon As Possible,536
+70,HITO: FIN DE LA FASE 1,0,25/01/2019,25/01/2019,25/01/2019,25/01/2019,158FF,No,159,As Soon As Possible,537
+70,FASE 2: Implementación de Módulos de Planificación de Recursos Institucionales - PRI,0,25/01/2019,14/05/2019,25/01/2019,14/05/2019,,No,160,As Soon As Possible,362
+70,ETAPA 1: Instalación del SIIM - Módulos PRI,0,25/01/2019,31/01/2019,25/01/2019,31/01/2019,,No,161,As Soon As Possible,363
+70, Entrega e Instalación del Software,0,25/01/2019,30/01/2019,25/01/2019,30/01/2019,,No,162,As Soon As Possible,373
+70, Instalar SIIM en Servidor,0,25/01/2019,30/01/2019,25/01/2019,30/01/2019,,No,163,As Soon As Possible,374
+70, Instalar Módulos PRI,0,25/01/2019,30/01/2019,25/01/2019,30/01/2019,149FF,No,164,As Soon As Possible,375
+70,2.1 Administración Técnica,0,25/01/2019,25/01/2019,25/01/2019,25/01/2019,,No,165,As Soon As Possible,610
+70,2.2 Salud Ocupacional y Riesgos,0,25/01/2019,28/01/2019,25/01/2019,28/01/2019,165FF,No,166,As Soon As Possible,611
+70,3.2 Adquisiciones,0,28/01/2019,28/01/2019,28/01/2019,28/01/2019,166FF,No,167,As Soon As Possible,612
+70,6.1 Administración de Bienes,0,28/01/2019,28/01/2019,28/01/2019,28/01/2019,167FF,No,168,As Soon As Possible,614
+70,8.1  Contabilidad,0,28/01/2019,28/01/2019,28/01/2019,28/01/2019,168FF,No,169,As Soon As Possible,616
+70,8.2  Presupuestos,0,28/01/2019,29/01/2019,28/01/2019,29/01/2019,169FF,No,170,As Soon As Possible,617
+70,13   CRM para Urbanizaciones,0,29/01/2019,29/01/2019,29/01/2019,29/01/2019,170FF,No,171,As Soon As Possible,613
+70,14 Dirección de Planificación Institucional (Incluye control de proyectos de Obras Públicas,0,29/01/2019,29/01/2019,29/01/2019,29/01/2019,171FF,No,172,As Soon As Possible,608
+70,15.6 Servicios Corporativos,0,29/01/2019,29/01/2019,29/01/2019,29/01/2019,172FF,No,173,As Soon As Possible,609
+70,15.8 BI Planificación Institucional,0,29/01/2019,30/01/2019,29/01/2019,30/01/2019,173FF,No,174,As Soon As Possible,606
+70, Entrega de Software,0,30/01/2019,30/01/2019,30/01/2019,30/01/2019,163FF,No,175,As Soon As Possible,380
+70, Revisar la ETAPA del Proyecto,0,30/01/2019,31/01/2019,30/01/2019,31/01/2019,162FF,No,176,As Soon As Possible,381
+70, HITO: FINALIZACION ETAPA 1,0,31/01/2019,31/01/2019,31/01/2019,31/01/2019,176FF,No,177,As Soon As Possible,382
+70,ETAPA 2:  Levantamiento de Características Institucionales - Módulos PRI,0,31/01/2019,11/02/2019,31/01/2019,11/02/2019,161FF,No,178,As Soon As Possible,383
+70, Actividades de Gestión del Proyecto,0,31/01/2019,31/01/2019,31/01/2019,31/01/2019,,No,179,As Soon As Possible,384
+70, Revisión del Plan del Proyecto,0,31/01/2019,31/01/2019,31/01/2019,31/01/2019,,No,180,As Soon As Possible,385
+70, Programar talleres de requerimientos de Entidad,0,31/01/2019,31/01/2019,31/01/2019,31/01/2019,180FF,No,181,As Soon As Possible,386
+70, Sesiones de Requerimientos del Entidad,0,31/01/2019,08/02/2019,31/01/2019,08/02/2019,179FF,No,182,As Soon As Possible,387
+70, Conducir Sesiones de Requerimientos,0,31/01/2019,07/02/2019,31/01/2019,07/02/2019,,No,183,As Soon As Possible,388
+70, Crear Documento de Características del Entidad,0,07/02/2019,08/02/2019,07/02/2019,08/02/2019,183FF,No,184,As Soon As Possible,389
+70, Revisar el Documento de Características del Entidad,0,08/02/2019,08/02/2019,08/02/2019,08/02/2019,182FF,No,185,As Soon As Possible,390
+70, Revisar el Documento de Características del Entidad,0,08/02/2019,08/02/2019,08/02/2019,08/02/2019,,No,186,As Soon As Possible,391
+70, Revisar el Plan del Proyecto,0,08/02/2019,08/02/2019,08/02/2019,08/02/2019,186FF,No,187,As Soon As Possible,392
+70, Revisar la ETAPA del Proyecto,0,08/02/2019,11/02/2019,08/02/2019,11/02/2019,185FF,No,188,As Soon As Possible,393
+70, HITO: FINALIZACION ETAPA 2,0,11/02/2019,11/02/2019,11/02/2019,11/02/2019,188FF,No,189,As Soon As Possible,394
+70,"ETAPA 3:  Migración de Datos, Configuración y Pruebas de Operación de Módulos - Módulos PRI",0,11/02/2019,25/03/2019,11/02/2019,25/03/2019,178FF,No,190,As Soon As Possible,395
+70, Gestión General del Proyecto,0,11/02/2019,13/02/2019,11/02/2019,13/02/2019,,No,191,As Soon As Possible,396
+70, Planificar cambio Organizacional,0,11/02/2019,12/02/2019,11/02/2019,12/02/2019,,No,192,As Soon As Possible,397
+70, Planificar Entrenamiento a Usuarios Finales,0,12/02/2019,12/02/2019,12/02/2019,12/02/2019,192FF,No,193,As Soon As Possible,398
+70, Definir y Preparar la Migración de Datos,0,12/02/2019,13/02/2019,12/02/2019,13/02/2019,193FF,No,194,As Soon As Possible,399
+70, Configuración del Sistema en Producción,0,13/02/2019,08/03/2019,13/02/2019,08/03/2019,191FF,No,195,As Soon As Possible,400
+70, Instalar el SIIM en Producción,0,13/02/2019,13/02/2019,13/02/2019,13/02/2019,,No,196,As Soon As Possible,401
+70, Configurar Inicialización del Sistema,0,13/02/2019,14/02/2019,13/02/2019,14/02/2019,196FF,No,197,As Soon As Possible,402
+70, Realizar la Migración de Datos,0,14/02/2019,01/03/2019,14/02/2019,01/03/2019,197FF,No,198,As Soon As Possible,403
+70, Desarrollar Adaptaciones al Software,0,01/03/2019,05/03/2019,01/03/2019,05/03/2019,198FF,No,199,As Soon As Possible,404
+70, Configuración del Sistema en base al Documento de Características del Entidad,0,05/03/2019,06/03/2019,05/03/2019,06/03/2019,199FF,No,200,As Soon As Possible,405
+70, Configurar Interfaces,0,06/03/2019,07/03/2019,06/03/2019,07/03/2019,200FF,No,201,As Soon As Possible,406
+70, Configurar Usuarios y Autorizaciones,0,07/03/2019,08/03/2019,07/03/2019,08/03/2019,201FF,No,202,As Soon As Possible,407
+70, Gestión del Cambio Organizacional,0,08/03/2019,08/03/2019,08/03/2019,08/03/2019,195FF,No,203,As Soon As Possible,408
+70, Conducir la comunicación de la Gestión de Cambios (si es aplicable),0,08/03/2019,08/03/2019,08/03/2019,08/03/2019,,No,204,As Soon As Possible,409
+70, Pruebas de validación del Sistema,0,08/03/2019,14/03/2019,08/03/2019,14/03/2019,203FF,No,205,As Soon As Possible,410
+70, Mantener la Lista Maestra de Procesos de Entidad,0,08/03/2019,11/03/2019,08/03/2019,11/03/2019,,No,206,As Soon As Possible,411
+70, Conducir Talleres de Validación,0,11/03/2019,14/03/2019,11/03/2019,14/03/2019,206FF,No,207,As Soon As Possible,412
+70,2.1 Administración Técnica,0,11/03/2019,11/03/2019,11/03/2019,11/03/2019,,No,208,As Soon As Possible,632
+70,2.2 Salud Ocupacional y Riesgos,0,11/03/2019,11/03/2019,11/03/2019,11/03/2019,208FF,No,209,As Soon As Possible,633
+70,3.2 Adquisiciones,0,11/03/2019,12/03/2019,11/03/2019,12/03/2019,209FF,No,210,As Soon As Possible,634
+70,6.1 Administración de Bienes,0,12/03/2019,12/03/2019,12/03/2019,12/03/2019,210FF,No,211,As Soon As Possible,635
+70,8.1  Contabilidad,0,12/03/2019,13/03/2019,12/03/2019,13/03/2019,211FF,No,212,As Soon As Possible,637
+70,8.2  Presupuestos,0,13/03/2019,13/03/2019,13/03/2019,13/03/2019,212FF,No,213,As Soon As Possible,638
+70,13   CRM para Urbanizaciones,0,13/03/2019,13/03/2019,13/03/2019,13/03/2019,213FF,No,214,As Soon As Possible,640
+70,14 Dirección de Planificación Institucional (Incluye control de proyectos de Obras Públicas),0,13/03/2019,14/03/2019,13/03/2019,14/03/2019,214FF,No,215,As Soon As Possible,641
+70,15.6 BI Servicios Corporativos,0,14/03/2019,14/03/2019,14/03/2019,14/03/2019,215FF,No,216,As Soon As Possible,642
+70,15.8 BI Planificación Institucional,0,14/03/2019,14/03/2019,14/03/2019,14/03/2019,216FF,No,217,As Soon As Possible,643
+70, Pruebas de aceptacion del Sistema,0,14/03/2019,21/03/2019,14/03/2019,21/03/2019,205FF,No,218,As Soon As Possible,413
+70, Definir casos de prueba y alcance,0,14/03/2019,14/03/2019,14/03/2019,14/03/2019,,No,219,As Soon As Possible,414
+70, Preparar ambiente de pruebas,0,14/03/2019,15/03/2019,14/03/2019,15/03/2019,219FF,No,220,As Soon As Possible,415
+70, Ejecutar el plan de pruebas,0,15/03/2019,21/03/2019,15/03/2019,21/03/2019,220FF,No,221,As Soon As Possible,416
+70,2.1 Administración Técnica,0,15/03/2019,18/03/2019,15/03/2019,18/03/2019,,No,222,As Soon As Possible,645
+70,2.2 Salud Ocupacional y Riesgos,0,18/03/2019,18/03/2019,18/03/2019,18/03/2019,222FF,No,223,As Soon As Possible,646
+70,3.2 Adquisiciones,0,18/03/2019,19/03/2019,18/03/2019,19/03/2019,223FF,No,224,As Soon As Possible,647
+70,6.1 Administración de Bienes,0,19/03/2019,19/03/2019,19/03/2019,19/03/2019,224FF,No,225,As Soon As Possible,648
+70,8.1  Contabilidad,0,19/03/2019,19/03/2019,19/03/2019,19/03/2019,225FF,No,226,As Soon As Possible,650
+70,8.2  Presupuestos,0,19/03/2019,20/03/2019,19/03/2019,20/03/2019,226FF,No,227,As Soon As Possible,651
+70,13   CRM para Urbanizaciones,0,20/03/2019,20/03/2019,20/03/2019,20/03/2019,227FF,No,228,As Soon As Possible,653
+70,14 Dirección de Planificación Institucional (Incluye control de proyectos de Obras Públicas),0,20/03/2019,20/03/2019,20/03/2019,20/03/2019,228FF,No,229,As Soon As Possible,654
+70,15.6 BI Servicios Corporativos,0,20/03/2019,21/03/2019,20/03/2019,21/03/2019,229FF,No,230,As Soon As Possible,655
+70,15.8 BI Planificación Institucional,0,21/03/2019,21/03/2019,21/03/2019,21/03/2019,230FF,No,231,As Soon As Possible,656
+70, Revisar los resultados de las pruebas y necesidades de cambios,0,14/03/2019,15/03/2019,14/03/2019,15/03/2019,,No,232,As Soon As Possible,417
+70, Planificar Salida a Producción y Soporte,0,21/03/2019,22/03/2019,21/03/2019,22/03/2019,218FF,No,233,As Soon As Possible,418
+70, Definir Plan de Salida a Producción,0,21/03/2019,21/03/2019,21/03/2019,21/03/2019,,No,234,As Soon As Possible,419
+70, Planificar Estrategia de Soporte,0,21/03/2019,22/03/2019,21/03/2019,22/03/2019,234FF,No,235,As Soon As Possible,420
+70, Planificar Administración del Sistema,0,22/03/2019,22/03/2019,22/03/2019,22/03/2019,235FF,No,236,As Soon As Possible,421
+70, Revisar la ETAPA del Proyecto,0,22/03/2019,25/03/2019,22/03/2019,25/03/2019,233FF,No,237,As Soon As Possible,422
+70, HITO: FINALIZACION ETAPA 3,0,25/03/2019,25/03/2019,25/03/2019,25/03/2019,237FF,No,238,As Soon As Possible,423
+70,ETAPA 4:  Preparación Final previo Despliegue en Producción - Módulos PRI,0,25/03/2019,08/04/2019,25/03/2019,08/04/2019,190FF,No,239,As Soon As Possible,424
+70, Gestión General del Proyecto,0,25/03/2019,26/03/2019,25/03/2019,26/03/2019,,No,240,As Soon As Possible,425
+70, Confirmar el Plan de Entrenamiento,0,25/03/2019,25/03/2019,25/03/2019,25/03/2019,,No,241,As Soon As Possible,426
+70, Finalizar plan de Salida a Producción,0,25/03/2019,26/03/2019,25/03/2019,26/03/2019,241FF,No,242,As Soon As Possible,427
+70, Entrenamiento,0,26/03/2019,02/04/2019,26/03/2019,02/04/2019,240FF,No,243,As Soon As Possible,428
+70, Entrenamiento de Usuarios Funcionales y Certificación de Procesos,0,26/03/2019,29/03/2019,26/03/2019,29/03/2019,,No,244,As Soon As Possible,429
+70,2.1 Administración Técnica,0,26/03/2019,26/03/2019,26/03/2019,26/03/2019,,No,245,As Soon As Possible,619
+70,2.2 Salud Ocupacional y Riesgos,0,26/03/2019,27/03/2019,26/03/2019,27/03/2019,245FF,No,246,As Soon As Possible,620
+70,3.2 Adquisiciones,0,27/03/2019,27/03/2019,27/03/2019,27/03/2019,246FF,No,247,As Soon As Possible,621
+70,6.1 Administración de Bienes,0,27/03/2019,27/03/2019,27/03/2019,27/03/2019,247FF,No,248,As Soon As Possible,622
+70,8.1  Contabilidad,0,27/03/2019,28/03/2019,27/03/2019,28/03/2019,248FF,No,249,As Soon As Possible,624
+70,8.2  Presupuestos,0,28/03/2019,28/03/2019,28/03/2019,28/03/2019,249FF,No,250,As Soon As Possible,625
+70,13   CRM para Urbanizaciones,0,28/03/2019,29/03/2019,28/03/2019,29/03/2019,250FF,No,251,As Soon As Possible,627
+70,14 Dirección de Planificación Institucional (Incluye control de proyectos de Obras Públicas),0,29/03/2019,29/03/2019,29/03/2019,29/03/2019,251FF,No,252,As Soon As Possible,628
+70,15.6 BI Servicios Corporativos,0,29/03/2019,29/03/2019,29/03/2019,29/03/2019,252FF,No,253,As Soon As Possible,629
+70,15.8 BI Planificación Institucional,0,29/03/2019,29/03/2019,29/03/2019,29/03/2019,253FF,No,254,As Soon As Possible,630
+70, Entrenamiento de Usuario Técnicos,0,26/03/2019,02/04/2019,26/03/2019,02/04/2019,,No,255,As Soon As Possible,430
+70, Preparación del Sistema,0,02/04/2019,03/04/2019,02/04/2019,03/04/2019,243FF,No,256,As Soon As Possible,431
+70, Completar la Administración del Sistema,0,02/04/2019,03/04/2019,02/04/2019,03/04/2019,,No,257,As Soon As Possible,432
+70, Comprobación de la Puesta a Producción,0,03/04/2019,03/04/2019,03/04/2019,03/04/2019,257FF,No,258,As Soon As Possible,433
+70, Transición,0,03/04/2019,08/04/2019,03/04/2019,08/04/2019,256FF,No,259,As Soon As Possible,434
+70, Finalizar Procesamiento de Sistemas Legados,0,03/04/2019,04/04/2019,03/04/2019,04/04/2019,,No,260,As Soon As Possible,435
+70, Realizar la Salida a Producción - Carga Inicial y Configuración Inicial,0,04/04/2019,08/04/2019,04/04/2019,08/04/2019,260FF,No,261,As Soon As Possible,436
+70,  Revisar la ETAPA del Proyecto,0,08/04/2019,08/04/2019,08/04/2019,08/04/2019,259FF,No,262,As Soon As Possible,437
+70, HITO: FINALIZACION ETAPA 4,0,08/04/2019,08/04/2019,08/04/2019,08/04/2019,262FF,No,263,As Soon As Possible,438
+70,ETAPA 5:  Despliegue en Producción y Soporte Técnico - Módulos PRI,0,08/04/2019,14/05/2019,08/04/2019,14/05/2019,239FF,No,264,As Soon As Possible,439
+70, Soporte en Producción,0,08/04/2019,25/04/2019,08/04/2019,25/04/2019,,No,265,As Soon As Possible,440
+70, Soporte durante la Salida a Producción,0,08/04/2019,25/04/2019,08/04/2019,25/04/2019,,No,266,As Soon As Possible,441
+70, Resolver incidentes críticos,0,08/04/2019,25/04/2019,08/04/2019,25/04/2019,262FF,No,267,As Soon As Possible,442
+70, Entregar el soporte y Administración al cliente,0,08/04/2019,10/04/2019,08/04/2019,10/04/2019,262FF,No,268,As Soon As Possible,443
+70, Mejora Continua,0,25/04/2019,14/05/2019,25/04/2019,14/05/2019,265FF,No,269,As Soon As Possible,444
+70, Monitoreo del Sistema y Acompañamiento ETAPA2,0,25/04/2019,14/05/2019,25/04/2019,14/05/2019,262FF,No,270,As Soon As Possible,445
+70, Ajustes y Configuraciones finales al Software acorde a necesidades Entidad,0,25/04/2019,14/05/2019,25/04/2019,14/05/2019,262FF,No,271,As Soon As Possible,446
+70, Cierre de la FASE 2,0,14/05/2019,14/05/2019,14/05/2019,14/05/2019,269FF,No,272,As Soon As Possible,447
+70, Reunión de Cierre de la FASE 2,0,14/05/2019,14/05/2019,14/05/2019,14/05/2019,,No,273,As Soon As Possible,448
+70, HITO: FIN DE LA FASE 2,0,14/05/2019,14/05/2019,14/05/2019,14/05/2019,272FF,No,274,As Soon As Possible,449
+70,FASE 3: Implementación de Módulos de Planificación de Recursos Institucionales - PRI,0,08/04/2019,10/07/2019,08/04/2019,10/07/2019,,No,275,As Soon As Possible,450
+70, ETAPA 1: Instalación del SIIM - Módulos PRI,0,08/04/2019,12/04/2019,08/04/2019,12/04/2019,,No,276,As Soon As Possible,451
+70,  Entrega e Instalación del Software,0,08/04/2019,11/04/2019,08/04/2019,11/04/2019,,No,277,As Soon As Possible,452
+70,  Instalar SIIM en Servidor,0,08/04/2019,10/04/2019,08/04/2019,10/04/2019,,No,278,As Soon As Possible,453
+70,  Instalar Módulos PRI,0,08/04/2019,10/04/2019,08/04/2019,10/04/2019,263FF,No,279,As Soon As Possible,454
+70,  Entrega de Software,0,10/04/2019,11/04/2019,10/04/2019,11/04/2019,278FF,No,280,As Soon As Possible,455
+70,  Revisar la ETAPA del Proyecto,0,11/04/2019,12/04/2019,11/04/2019,12/04/2019,277FF,No,281,As Soon As Possible,456
+70,  HITO: FINALIZACION ETAPA 1,0,12/04/2019,12/04/2019,12/04/2019,12/04/2019,281FF,No,282,As Soon As Possible,457
+70, ETAPA 2:  Levantamiento de Características Institucionales - Módulos PRI,0,12/04/2019,23/04/2019,12/04/2019,23/04/2019,276FF,No,283,As Soon As Possible,458
+70,  Actividades de Gestión del Proyecto,0,12/04/2019,12/04/2019,12/04/2019,12/04/2019,,No,284,As Soon As Possible,459
+70,  Revisión del Plan del Proyecto,0,12/04/2019,12/04/2019,12/04/2019,12/04/2019,,No,285,As Soon As Possible,460
+70,  Programar talleres de requerimientos de Entidad,0,12/04/2019,12/04/2019,12/04/2019,12/04/2019,285FF,No,286,As Soon As Possible,461
+70,  Sesiones de Requerimientos del Entidad,0,12/04/2019,19/04/2019,12/04/2019,19/04/2019,284FF,No,287,As Soon As Possible,462
+70,  Conducir Sesiones de Requerimientos,0,12/04/2019,17/04/2019,12/04/2019,17/04/2019,,No,288,As Soon As Possible,463
+70,  Crear Documento de Características del Entidad,0,17/04/2019,19/04/2019,17/04/2019,19/04/2019,288FF,No,289,As Soon As Possible,464
+70,  Revisar el Documento de Características del Entidad,0,19/04/2019,22/04/2019,19/04/2019,22/04/2019,287FF,No,290,As Soon As Possible,465
+70,  Revisar el Documento de Características del Entidad,0,19/04/2019,22/04/2019,19/04/2019,22/04/2019,,No,291,As Soon As Possible,466
+70,  Revisar el Plan del Proyecto,0,22/04/2019,22/04/2019,22/04/2019,22/04/2019,291FF,No,292,As Soon As Possible,467
+70,  Revisar la ETAPA del Proyecto,0,22/04/2019,23/04/2019,22/04/2019,23/04/2019,290FF,No,293,As Soon As Possible,468
+70,  HITO: FINALIZACION ETAPA 2,0,23/04/2019,23/04/2019,23/04/2019,23/04/2019,293FF,No,294,As Soon As Possible,469
+70," ETAPA 3:  Migración de Datos, Configuración y Pruebas de Operación de Módulos - Módulos PRI",0,23/04/2019,03/06/2019,23/04/2019,03/06/2019,283FF,No,295,As Soon As Possible,470
+70,  Gestión General del Proyecto,0,23/04/2019,24/04/2019,23/04/2019,24/04/2019,,No,296,As Soon As Possible,471
+70,  Planificar cambio Organizacional,0,23/04/2019,23/04/2019,23/04/2019,23/04/2019,,No,297,As Soon As Possible,472
+70,  Planificar Entrenamiento a Usuarios Finales,0,23/04/2019,24/04/2019,23/04/2019,24/04/2019,297FF,No,298,As Soon As Possible,473
+70,  Definir y Preparar la Migración de Datos,0,24/04/2019,24/04/2019,24/04/2019,24/04/2019,298FF,No,299,As Soon As Possible,474
+70,  Configuración del Sistema en Producción,0,24/04/2019,20/05/2019,24/04/2019,20/05/2019,296FF,No,300,As Soon As Possible,475
+70,  Instalar el SIIM en Producción,0,24/04/2019,25/04/2019,24/04/2019,25/04/2019,,No,301,As Soon As Possible,476
+70,  Configurar Inicialización del Sistema,0,25/04/2019,26/04/2019,25/04/2019,26/04/2019,301FF,No,302,As Soon As Possible,477
+70,  Realizar la Migración de Datos,0,26/04/2019,09/05/2019,26/04/2019,09/05/2019,302FF,No,303,As Soon As Possible,478
+70,  Desarrollar Adaptaciones al Software,0,09/05/2019,15/05/2019,09/05/2019,15/05/2019,303FF,No,304,As Soon As Possible,479
+70,  Configuración del Sistema en base al Documento de Características del Entidad,0,15/05/2019,17/05/2019,15/05/2019,17/05/2019,304FF,No,305,As Soon As Possible,480
+70,  Configurar Interfaces,0,17/05/2019,20/05/2019,17/05/2019,20/05/2019,305FF,No,306,As Soon As Possible,481
+70,  Configurar Usuarios y Autorizaciones,0,20/05/2019,20/05/2019,20/05/2019,20/05/2019,306FF,No,307,As Soon As Possible,482
+70,  Gestión del Cambio Organizacional,0,20/05/2019,22/05/2019,20/05/2019,22/05/2019,300FF,No,308,As Soon As Possible,483
+70,  Conducir la comunicación de la Gestión de Cambios (si es aplicable),0,20/05/2019,22/05/2019,20/05/2019,22/05/2019,,No,309,As Soon As Possible,484
+70,  Pruebas de validación/aceptación del Sistema,0,22/05/2019,24/05/2019,22/05/2019,24/05/2019,308FF,No,310,As Soon As Possible,485
+70,  Mantener la Lista Maestra de Procesos de Entidad,0,22/05/2019,23/05/2019,22/05/2019,23/05/2019,,No,311,As Soon As Possible,486
+70,  Conducir Talleres de Validación,0,23/05/2019,24/05/2019,23/05/2019,24/05/2019,311FF,No,312,As Soon As Possible,487
+70,3.1 Compras Públicas,0,23/05/2019,23/05/2019,23/05/2019,23/05/2019,,No,313,As Soon As Possible,667
+70,6.2 Servicios Generales,0,23/05/2019,23/05/2019,23/05/2019,23/05/2019,313FF,No,314,As Soon As Possible,668
+70,8.5 Gestión Jurídica - Financiera,0,23/05/2019,23/05/2019,23/05/2019,23/05/2019,314FF,No,315,As Soon As Possible,669
+70,15.2 BI Financiero,0,23/05/2019,24/05/2019,23/05/2019,24/05/2019,315FF,No,316,As Soon As Possible,670
+70,15.3 BI Administración del Talento Humano,0,24/05/2019,24/05/2019,24/05/2019,24/05/2019,316FF,No,317,As Soon As Possible,671
+70,15.4 BI Compras Públicas,0,24/05/2019,24/05/2019,24/05/2019,24/05/2019,317FF,No,318,As Soon As Possible,672
+70,15.9 Tablero de Control,0,24/05/2019,24/05/2019,24/05/2019,24/05/2019,318FF,No,319,As Soon As Possible,673
+70,  Pruebas de aceptacion del Sistema,0,24/05/2019,30/05/2019,24/05/2019,30/05/2019,310FF,No,320,As Soon As Possible,488
+70,  Definir casos de prueba y alcance,0,24/05/2019,27/05/2019,24/05/2019,27/05/2019,,No,321,As Soon As Possible,489
+70,  Preparar ambiente de pruebas,0,27/05/2019,28/05/2019,27/05/2019,28/05/2019,321FF,No,322,As Soon As Possible,490
+70,  Ejecutar el plan de pruebas,0,28/05/2019,29/05/2019,28/05/2019,29/05/2019,322FF,No,323,As Soon As Possible,491
+70,3.1 Compras Públicas,0,28/05/2019,28/05/2019,28/05/2019,28/05/2019,,No,324,As Soon As Possible,663
+70,6.2 Servicios Generales,0,28/05/2019,28/05/2019,28/05/2019,28/05/2019,324FF,No,325,As Soon As Possible,664
+70,8.5 Gestión Jurídica - Financiera,0,28/05/2019,28/05/2019,28/05/2019,28/05/2019,325FF,No,326,As Soon As Possible,666
+70,15.2 BI Financiero,0,28/05/2019,29/05/2019,28/05/2019,29/05/2019,326FF,No,327,As Soon As Possible,665
+70,15.3 BI Administración del Talento Humano,0,29/05/2019,29/05/2019,29/05/2019,29/05/2019,327FF,No,328,As Soon As Possible,661
+70,15.4 BI Compras Públicas,0,29/05/2019,29/05/2019,29/05/2019,29/05/2019,328FF,No,329,As Soon As Possible,662
+70,15.9 Tablero de Control,0,29/05/2019,29/05/2019,29/05/2019,29/05/2019,329FF,No,330,As Soon As Possible,660
+70,  Revisar los resultados de las pruebas y necesidades de cambios,0,29/05/2019,30/05/2019,29/05/2019,30/05/2019,"330FF,319FF",No,331,As Soon As Possible,492
+70,  Planificar Salida a Producción y Soporte,0,30/05/2019,31/05/2019,30/05/2019,31/05/2019,320FF,No,332,As Soon As Possible,493
+70,  Definir Plan de Salida a Producción,0,30/05/2019,31/05/2019,30/05/2019,31/05/2019,,No,333,As Soon As Possible,494
+70,  Planificar Estrategia de Soporte,0,31/05/2019,31/05/2019,31/05/2019,31/05/2019,333FF,No,334,As Soon As Possible,495
+70,  Planificar Administración del Sistema,0,31/05/2019,31/05/2019,31/05/2019,31/05/2019,334FF,No,335,As Soon As Possible,496
+70,  Revisar la ETAPA del Proyecto,0,31/05/2019,03/06/2019,31/05/2019,03/06/2019,332FF,No,336,As Soon As Possible,497
+70,  HITO: FINALIZACION ETAPA 3,0,03/06/2019,03/06/2019,03/06/2019,03/06/2019,336FF,No,337,As Soon As Possible,498
+70, ETAPA 4:  Preparación Final previo Despliegue en Producción - Módulos PRI,0,03/06/2019,18/06/2019,03/06/2019,18/06/2019,295FF,No,338,As Soon As Possible,499
+70,  Gestión General del Proyecto,0,03/06/2019,04/06/2019,03/06/2019,04/06/2019,,No,339,As Soon As Possible,500
+70,  Confirmar el Plan de Entrenamiento,0,03/06/2019,04/06/2019,03/06/2019,04/06/2019,,No,340,As Soon As Possible,501
+70,  Finalizar plan de Salida a Producción,0,04/06/2019,04/06/2019,04/06/2019,04/06/2019,340FF,No,341,As Soon As Possible,502
+70,  Entrenamiento,0,04/06/2019,12/06/2019,04/06/2019,12/06/2019,339FF,No,342,As Soon As Possible,503
+70,  Entrenamiento de Usuarios Funcionales y Certificación de Procesos,0,04/06/2019,10/06/2019,04/06/2019,10/06/2019,,No,343,As Soon As Possible,504
+70,3.1 Compras Públicas,0,04/06/2019,05/06/2019,04/06/2019,05/06/2019,,No,344,As Soon As Possible,697
+70,6.2 Servicios Generales,0,05/06/2019,05/06/2019,05/06/2019,05/06/2019,344FF,No,345,As Soon As Possible,698
+70,8.5 Gestión Jurídica - Financiera,0,05/06/2019,06/06/2019,05/06/2019,06/06/2019,345FF,No,346,As Soon As Possible,699
+70,15.2 BI Financiero,0,06/06/2019,06/06/2019,06/06/2019,06/06/2019,346FF,No,347,As Soon As Possible,700
+70,15.3 BI Administración del Talento Humano,0,06/06/2019,07/06/2019,06/06/2019,07/06/2019,347FF,No,348,As Soon As Possible,701
+70,15.4 BI Compras Públicas,0,07/06/2019,07/06/2019,07/06/2019,07/06/2019,348FF,No,349,As Soon As Possible,702
+70,15.9 Tablero de Control,0,07/06/2019,10/06/2019,07/06/2019,10/06/2019,349FF,No,350,As Soon As Possible,703
+70,  Entrenamiento de Usuario Técnicos,0,10/06/2019,12/06/2019,10/06/2019,12/06/2019,350FF,No,351,As Soon As Possible,505
+70,  Preparación del Sistema,0,12/06/2019,14/06/2019,12/06/2019,14/06/2019,342FF,No,352,As Soon As Possible,506
+70,  Completar la Administración del Sistema,0,12/06/2019,13/06/2019,12/06/2019,13/06/2019,,No,353,As Soon As Possible,507
+70,  Comprobación de la Puesta a Producción,0,13/06/2019,14/06/2019,13/06/2019,14/06/2019,353FF,No,354,As Soon As Possible,508
+70,  Transición,0,14/06/2019,18/06/2019,14/06/2019,18/06/2019,352FF,No,355,As Soon As Possible,509
+70,  Finalizar Procesamiento de Sistemas Legados,0,14/06/2019,14/06/2019,14/06/2019,14/06/2019,,No,356,As Soon As Possible,510
+70,  Realizar la Salida a Producción - Carga Inicial y Configuración Inicial,0,14/06/2019,18/06/2019,14/06/2019,18/06/2019,356FF,No,357,As Soon As Possible,511
+70,   Revisar la ETAPA del Proyecto,0,18/06/2019,18/06/2019,18/06/2019,18/06/2019,355FF,No,358,As Soon As Possible,512
+70,  HITO: FINALIZACION ETAPA 4,0,18/06/2019,18/06/2019,18/06/2019,18/06/2019,358FF,No,359,As Soon As Possible,513
+70, ETAPA 5:  Despliegue en Producción y Soporte Técnico - Módulos PRI,0,21/06/2019,10/07/2019,21/06/2019,10/07/2019,338FF,No,360,As Soon As Possible,514
+70,  Soporte en Producción,0,21/06/2019,04/07/2019,21/06/2019,04/07/2019,,No,361,As Soon As Possible,515
+70,  Soporte durante la Salida a Producción,0,21/06/2019,28/06/2019,21/06/2019,28/06/2019,,No,362,As Soon As Possible,516
+70,  Resolver incidentes críticos,0,28/06/2019,02/07/2019,28/06/2019,02/07/2019,362FF,No,363,As Soon As Possible,517
+70,  Entregar el soporte y Administración al cliente,0,02/07/2019,04/07/2019,02/07/2019,04/07/2019,363FF,No,364,As Soon As Possible,518
+70,  Mejora Continua,0,21/06/2019,10/07/2019,21/06/2019,10/07/2019,338FF,No,365,As Soon As Possible,519
+70,  Monitoreo del Sistema y Acompañamiento,0,21/06/2019,10/07/2019,21/06/2019,10/07/2019,,No,366,As Soon As Possible,520
+70,  Ajustes y Configuraciones finales al Software acorde a necesidades Entidad,0,21/06/2019,10/07/2019,21/06/2019,10/07/2019,338FF,No,367,As Soon As Possible,521
+70,  Cierre de la FASE 3 y Proyecto,0,10/07/2019,10/07/2019,10/07/2019,10/07/2019,365FF,No,368,As Soon As Possible,522
+70,  Reunión de Cierre de la FASE 3 y Proyecto,0,10/07/2019,10/07/2019,10/07/2019,10/07/2019,,No,369,As Soon As Possible,523
+70,  HITO: FIN DE LA FASE 3 y Proyecto,0,10/07/2019,10/07/2019,10/07/2019,10/07/2019,365FF,No,370,As Soon As Possible,524
