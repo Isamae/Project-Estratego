@@ -73,8 +73,6 @@ public class RestProjectFileMpp {
                 (project.getTaskByID(json.getInt("id"))).setName(json.getString("name"));
                 (project.getTaskByID(json.getInt("id"))).setUniqueID(json.getInt("uniqueID"));
                 (project.getTaskByID(json.getInt("id"))).setActive(json.getBoolean("estado"));
-                (project.getTaskByID(json.getInt("id"))).setStart(val);
-                (project.getTaskByID(json.getInt("id"))).setFinish(date);
                 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -202,9 +200,9 @@ public class RestProjectFileMpp {
             + "     "  +field.getFieldType().getUnitsType()
             + "     "  +field.getFieldType().getFieldTypeClass());
         }
-        //project.getProjectProperties();
-        //project.getProjectConfig();
-        //project.getEventManager();
+        project.getProjectProperties();
+        project.getProjectConfig();
+        project.getEventManager();
 
         System.out.println("El tamanao de los campos personalizados es:"+ project.getCustomFields().size());
 

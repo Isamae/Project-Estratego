@@ -43,47 +43,50 @@ public class RestProjectFileMpp {
         ProjectReader reader = new MPPReader();  
         ProjectFile projectObj = reader.read(file);
         JSONObject jsonObject= new JSONObject(payload);
-       
+        System.out.print("Filtros:" + projectObj.getFilters());
+        FilterContainer filtros = projectObj.getFilters();
+        for(Filter filter:filtros.getResourceFilters() ){
+            System.out.println("Filter name : " + filter.getName());
+
+        }
+        
+        
+        
+    
+        
         //fields.getCustomField(field.getFieldType()).setAlias("hola");
         //System.out.println("Estas son las clases que se muestran: " + field.getFieldType().getDataType());
         //System.out.println("Estas son las clases que se : " + field.getFieldType().getName());
-       
-        projectObj = addColumnas(projectObj,jsonObject);
-        projectObj =  addRecursos(projectObj,jsonObject);
-        projectObj = addTarea(projectObj,jsonObject);
-        //projectObj = aaddDataTablas(projectObj,jsonObject);
         
-
-        System.out.println("Columnas: "+ projectObj.getTables().get(0).getColumns());
-        //System.out.println("Recursos: "+projectObj.getAllResources());
-        //System.out.println("Tareas: " + projectObj.getAllTasks());
-        ProjectWriter writer = ProjectWriterUtility.getProjectWriter("HOLA.mpx");  
-        writer.write(projectObj,"HOLA.mpx");
-
-        return "Hola Mundo";
-    }
-
-    public static ProjectFile addTarea(ProjectFile project,JSONObject jsonObject) throws JSONException {
+        
+        
+        System.out.println("Agregado Todas la Columans: "+ addColumnas(projectObj,jsonObject).getTables().get(0).getColumns());
+        
         for(int i=0;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
 
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
 
-                (project.addTask()).setID(json.getInt("id"));
-                (project.getTaskByID(json.getInt("id"))).setName(json.getString("name"));
-                (project.getTaskByID(json.getInt("id"))).setUniqueID(json.getInt("uniqueID"));
-                (project.getTaskByID(json.getInt("id"))).setActive(json.getBoolean("estado"));
-                (project.getTaskByID(json.getInt("id"))).setStart(val);
-                (project.getTaskByID(json.getInt("id"))).setFinish(date);
+                (projectObj.addTask()).setID(json.getInt("id"));
+                (projectObj.getTaskByID(json.getInt("id"))).setName(json.getString("name"));
+                (projectObj.getTaskByID(json.getInt("id"))).setUniqueID(json.getInt("uniqueID"));
+                (projectObj.getTaskByID(json.getInt("id"))).setActive(json.getBoolean("estado"));
                 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
-        return project;
-    }
+       
+       
+        //addDataTablas(projectObj,jsonObject);
+        System.out.println("Agregado Recursos "+ addResursos(projectObj,jsonObject).getAllResources());
+        //System.out.println("Este es dato agregado:"+projectObj.getAllTasks());
+        ProjectWriter writer = ProjectWriterUtility.getProjectWriter("HOLA.mpx");  
+        writer.write(projectObj,"HOLA.mpx");
 
-    public static ProjectFile addRecursos(ProjectFile project,JSONObject jsonObject){
+        return "Hola Mundo";
+    }
+    public static ProjectFile addResursos(ProjectFile project,JSONObject jsonObject){
         try {
             JSONArray array = (JSONArray) jsonObject.get("recursos");
             for(int i=0; i< array.length();i++){
@@ -99,6 +102,7 @@ public class RestProjectFileMpp {
         return project;
     }
 
+
     public static ProjectFile addColumnas(ProjectFile project,JSONObject jsonObject) throws Exception
     {
         
@@ -106,20 +110,30 @@ public class RestProjectFileMpp {
         System.out.println("Estas son las tabla:" +  project.getTables().get(0));
         CustomFieldContainer fields = project.getCustomFields();
         System.out.println("El tamanao de los campos personalizados es:"+ fields.size());
-        //CustomFieldValueItem customFieldValueItem = new CustomFieldValueItem(617);
-        //fields.registerValue(customFieldValueItem);
-    
-       
+        
+        
+
+
+        for (CustomField field :project.getCustomFields())
+        {
+            //fields.getCustomField(field.getFieldType()).setAlias("hola");
+            System.out.println("Field: " + field);
+            System.out.println("Typo, Name,value,unidades: " + field.getFieldType().getDataType() 
+            + "     "  +field.getFieldType().getName()
+            + "     "  +field.getFieldType().getValue()
+            + "     "  +field.getFieldType().getUnitsType());
+        }
+        
         FieldType fieldType = new FieldType(){
         
             @Override
             public int getValue() {
-                return 62;
+                return 0;
             }
         
             @Override
             public String name() {
-                return "RESOURCE_NAMES";
+                return "name";
             }
         
             @Override
@@ -129,17 +143,17 @@ public class RestProjectFileMpp {
         
             @Override
             public String getName(Locale locale) {
-                return locale.getDisplayName();
+                return null;
             }
         
             @Override
             public String getName() {
-                return "Resource Names";
+                return null;
             }
         
             @Override
             public FieldTypeClass getFieldTypeClass() {
-                return FieldTypeClass.TASK;
+                return null;
             }
         
             @Override
@@ -147,81 +161,12 @@ public class RestProjectFileMpp {
                 return DataType.STRING;
             }
         };
-        CustomField customField = new CustomField(fieldType, project.getCustomFields());
-        
-        /*FieldContainer container = new FieldContainer(){
-        
-            @Override
-            public void set(FieldType field, Object value) {
-                
-            }
-        
-            @Override
-            public void removeFieldListener(FieldListener listener) {
-                
-            }
-        
-            @Override
-            public Object getCurrentValue(FieldType field) {
-                return null;
-            }
-        
-            @Override
-            public Object getCachedValue(FieldType field) {
-                return null;
-            }
-        
-            @Override
-            public void addFieldListener(FieldListener listener) {
-                
-            }
-        };*/
-       
-       
+        CustomField ad = new CustomField(fieldType, fields);
+        CustomFieldValueItem item = new CustomFieldValueItem(8);
+        fields.registerValue(item);
 
-        
-        Column column = new Column(project);
-        column.setFieldType(customField.getFieldType());
-        column.setTitle("Hola Mundo");
-        column.setWidth(14);
-        project.getTables().get(0).getColumns().add(column);
-        
-        /*CustomFieldValueItem item = new CustomFieldValueItem(7);
-        item.setDescription("hola Mundo");
-        item.setParent(200);*/
-        fields.getCustomField(fieldType);
 
-        for (CustomField field :project.getCustomFields())
-        {
-            //fields.getCustomField(field.getFieldType()).setAlias("hola");
-            System.out.println("Field: " + field);
-            System.out.println("Typo, getName , name,  value , unidades , clase: " + field.getFieldType().getDataType() 
-            + "     "  +field.getFieldType().getName()
-            + "     "  +field.getFieldType().name()
-            + "     "  +field.getFieldType().getValue()
-            + "     "  +field.getFieldType().getUnitsType()
-            + "     "  +field.getFieldType().getFieldTypeClass());
-        }
-        //project.getProjectProperties();
-        //project.getProjectConfig();
-        //project.getEventManager();
-
-        System.out.println("El tamanao de los campos personalizados es:"+ project.getCustomFields().size());
-
-        
-        /*for (CustomField field :project.getCustomFields())
-        {
-            //fields.getCustomField(field.getFieldType()).setAlias("hola");
-            System.out.println("Field: " + field);
-            System.out.println("Typo, getName , name,  value , unidades , clase: " + field.getFieldType().getDataType() 
-            + "     "  +field.getFieldType().getName()
-            + "     "  +field.getFieldType().name()
-            + "     "  +field.getFieldType().getValue()
-            + "     "  +field.getFieldType().getUnitsType()
-            + "     "  +field.getFieldType().getFieldTypeClass());
-        }*/
-
-        /*Table table = project.getTables().get(0);
+        Table table = project.getTables().get(0);
         project.getTables().remove(table);
         
 
@@ -238,7 +183,7 @@ public class RestProjectFileMpp {
             //column.setFieldType(fieldType);
             table2.addColumn(column);
         }
-        project.getTables().add(table2);*/
+        project.getTables().add(table2);
         return project;
         
     }
@@ -267,7 +212,6 @@ public class RestProjectFileMpp {
         }
         return project;
     }
-   
     public static int containsPalabra(JSONArray findArray, String palabra) {
         int result = -1;
         

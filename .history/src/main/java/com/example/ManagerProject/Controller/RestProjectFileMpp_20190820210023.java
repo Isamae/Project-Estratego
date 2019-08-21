@@ -49,8 +49,8 @@ public class RestProjectFileMpp {
         //System.out.println("Estas son las clases que se : " + field.getFieldType().getName());
        
         projectObj = addColumnas(projectObj,jsonObject);
-        projectObj =  addRecursos(projectObj,jsonObject);
-        projectObj = addTarea(projectObj,jsonObject);
+        //projectObj =  addRecursos(projectObj,jsonObject);
+        //projectObj = addTarea(projectObj,jsonObject);
         //projectObj = aaddDataTablas(projectObj,jsonObject);
         
 
@@ -73,8 +73,6 @@ public class RestProjectFileMpp {
                 (project.getTaskByID(json.getInt("id"))).setName(json.getString("name"));
                 (project.getTaskByID(json.getInt("id"))).setUniqueID(json.getInt("uniqueID"));
                 (project.getTaskByID(json.getInt("id"))).setActive(json.getBoolean("estado"));
-                (project.getTaskByID(json.getInt("id"))).setStart(val);
-                (project.getTaskByID(json.getInt("id"))).setFinish(date);
                 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -108,18 +106,32 @@ public class RestProjectFileMpp {
         System.out.println("El tamanao de los campos personalizados es:"+ fields.size());
         //CustomFieldValueItem customFieldValueItem = new CustomFieldValueItem(617);
         //fields.registerValue(customFieldValueItem);
-    
-       
+        
+        
+
+
+        for (CustomField field :project.getCustomFields())
+        {
+            //fields.getCustomField(field.getFieldType()).setAlias("hola");
+            System.out.println("Field: " + field);
+            System.out.println("Typo, getName , name,  value , unidades , clase: " + field.getFieldType().getDataType() 
+            + "     "  +field.getFieldType().getName()
+            + "     "  +field.getFieldType().name()
+            + "     "  +field.getFieldType().getValue()
+            + "     "  +field.getFieldType().getUnitsType()
+            + "     "  +field.getFieldType().getFieldTypeClass());
+        }
+        
         FieldType fieldType = new FieldType(){
         
             @Override
             public int getValue() {
-                return 62;
+                return 617;
             }
         
             @Override
             public String name() {
-                return "RESOURCE_NAMES";
+                return "DURATION_TEXT";
             }
         
             @Override
@@ -134,7 +146,7 @@ public class RestProjectFileMpp {
         
             @Override
             public String getName() {
-                return "Resource Names";
+                return "Duration";
             }
         
             @Override
@@ -147,66 +159,22 @@ public class RestProjectFileMpp {
                 return DataType.STRING;
             }
         };
-        CustomField customField = new CustomField(fieldType, project.getCustomFields());
-        
-        /*FieldContainer container = new FieldContainer(){
-        
-            @Override
-            public void set(FieldType field, Object value) {
-                
-            }
-        
-            @Override
-            public void removeFieldListener(FieldListener listener) {
-                
-            }
-        
-            @Override
-            public Object getCurrentValue(FieldType field) {
-                return null;
-            }
-        
-            @Override
-            public Object getCachedValue(FieldType field) {
-                return null;
-            }
-        
-            @Override
-            public void addFieldListener(FieldListener listener) {
-                
-            }
-        };*/
-       
-       
+        CustomField customField = new CustomField(fieldType, fields);
+        System.out.println("El tamanao de los campos personalizados es:"+ fields.size());
 
         
-        Column column = new Column(project);
+       /* Column column = new Column(project);
+        System.out.println("ViSTA: "+ project.getViews().get(0));
+
         column.setFieldType(customField.getFieldType());
         column.setTitle("Hola Mundo");
         column.setWidth(14);
         project.getTables().get(0).getColumns().add(column);
         
-        /*CustomFieldValueItem item = new CustomFieldValueItem(7);
+        CustomFieldValueItem item = new CustomFieldValueItem(2131232);
         item.setDescription("hola Mundo");
-        item.setParent(200);*/
-        fields.getCustomField(fieldType);
-
-        for (CustomField field :project.getCustomFields())
-        {
-            //fields.getCustomField(field.getFieldType()).setAlias("hola");
-            System.out.println("Field: " + field);
-            System.out.println("Typo, getName , name,  value , unidades , clase: " + field.getFieldType().getDataType() 
-            + "     "  +field.getFieldType().getName()
-            + "     "  +field.getFieldType().name()
-            + "     "  +field.getFieldType().getValue()
-            + "     "  +field.getFieldType().getUnitsType()
-            + "     "  +field.getFieldType().getFieldTypeClass());
-        }
-        //project.getProjectProperties();
-        //project.getProjectConfig();
-        //project.getEventManager();
-
-        System.out.println("El tamanao de los campos personalizados es:"+ project.getCustomFields().size());
+        item.setParent(200);
+        fields.registerValue(item);*/
 
         
         /*for (CustomField field :project.getCustomFields())
