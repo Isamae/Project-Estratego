@@ -29,7 +29,10 @@ public class Project  {
 
             if(resource.getName() ==null) {}
             else{
-                recursos = recursos + "{ " + " 'name' :'" + resource.getName() +"' , "+ " 'id' : '" + resource.getID()  +"' }"  + ",";
+                recursos = recursos + "{ " + " 'name' :'" + resource.getName() 
+                +"' , "+ " 'id' : '" + resource.getID()  
+                +"' , "+ " 'idUni' : '" + resource.getUniqueID() 
+                +"' }"  + ",";
             }
             
         }
@@ -48,6 +51,8 @@ public class Project  {
     
         for (Task task : project.getAllTasks())
         {
+            
+
             if(task.getName() ==null || task.getID() ==null) {}
             else{
                 tareas = tareas  
@@ -55,9 +60,28 @@ public class Project  {
                 + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getID())  
                 + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getID())
                 + " , " + " 'duracion': " + "'" + task.getDuration()+"'" 
-                + " , " + " 'fechaInicio': " + "'" +task.getStart()+"'" 
+                + " , " + " 'AfechaInicio': " + "'" +task.getActualStart() +"'" 
+                + " , " + " 'AfechaFin': " + "'" + task.getActualFinish() + "'" 
+                + " , " + " 'TfechaInicio': " + "'" +task.getStartText() +"'" 
+                + " , " + " 'TfechaFin': " + "'" + task.getFinishText() + "'" 
+                + " , " + " 'fechaInicio': " + "'" +task.getStart() +"'" 
                 + " , " + " 'fechaFin': " + "'" + task.getFinish() + "'" 
+                + " , " + " 'hijos': " +  getHijos(task) 
+                + " , " + " 'LevelAssignments': " + "'"+ task.getLevelAssignments() +"'"
+                + " , " + " 'OutlineLevel': " + "'"+ task.getOutlineLevel() +"'"
+                + " , " + " 'OutlineNumber': " + "'"+ task.getOutlineNumber() +"'"
+                + " , " + " 'Priority': " + "'"+ task.getPriority() +"'"
+                + " , " + " 'Sucesores': " + relacionesSucesorasTareas(project,task.getID())
+                + " , " + " 'Type': " + "'"+ task.getType() +"'"
+                + " , " + " 'ActualDuration': " + "'"+ task.getActualDuration() +"'"
+                + " , " + " 'ActualWork': " + "'"+ task.getActualWork() +"'"
+                + " , " + " 'BaselineDuration': " + "'"+ task.getBaselineDurationText() +"'"
+                + " , " + " 'DurationText': " + "'"+ task.getDurationText() +"'"
+                + " , " + " 'BaselineFinish': " + "'"+ task.getBaselineFinish() +"'"
+                + " , " + " 'BaselineStart': " + "'"+ task.getBaselineStart() +"'"
+
                 + " }"  + " ,";
+           
             }
         }
 
@@ -69,6 +93,34 @@ public class Project  {
         tareas = tareas + "]" ;
 
         return tareas;
+    }
+    public static String getHijos(Task task){
+        String tareas = "[";
+
+        List<Task> hijos = task.getChildTasks();
+        for (int i = 0 ; i< hijos.size(); i++){
+            Task tarea = hijos.get(i);
+            tareas = tareas + "{ " 
+            + "'id'" + ":" + tarea.getID() + ","
+            + "'idUnique'" + ":" + tarea.getUniqueID() +  "," 
+            + "'name'" + ":" + "'"+ tarea.getName()+ "'" +  ","
+            + " 'LevelAssignments': " + "'"+ task.getLevelAssignments()+"'" +  "," 
+            + " 'OutlineLevel': " + "'"+ task.getOutlineLevel() +"'" +  ","
+            + " 'OutlineNumber': " + "'"+ task.getOutlineNumber() +"'" +  ","
+            + " 'Priority': " + "'"+ task.getPriority() +  "'"+ ","
+            + " 'Successors': " + "'"+ task.getSuccessors() + "'"+   ","
+            + " 'Type': " +  "'" +task.getType() +"'"
+            + "}" +",";
+
+
+        }
+        if(tareas.length()>1){
+            tareas = tareas.substring(0, tareas.length()-1) ;
+        }
+        else{}
+        tareas = tareas + "]";
+        return tareas;
+
     }
 
     public static String asignacionesRecursos(ProjectFile project)  throws Exception{
@@ -178,6 +230,38 @@ public class Project  {
         return tareasH;
     }
 
+    public static String relacionesSucesorasTareas(ProjectFile project, int  idTask) throws Exception
+    {
+        String relacionSucesora = "[";
+
+        Task task = project.getTaskByID(idTask);
+        if(task == null){}
+        else{
+            List<Relation> sucesoras = task.getSuccessors();
+            if (sucesoras != null && sucesoras.isEmpty() == false)
+            {
+                for (Relation relation : sucesoras)
+                {
+                    relacionSucesora = relacionSucesora + 
+                    " { " + " 'taskId': " + project.getTaskByID((relation.getTargetTask()).getID()).getID()
+                    +" , " + " 'type':" + "'"+ relation.getType()+ "'"
+                    + " , " + " 'lag': " + "'"+ relation.getTargetTask().getDuration()+"'"
+                    + " } " + " ,";
+                }
+            }
+            else{}
+            
+            
+            if(relacionSucesora.length()>1){
+                relacionSucesora = relacionSucesora.substring(0, relacionSucesora.length()-1) ;
+            }
+            else{}
+        }
+        relacionSucesora = relacionSucesora + "]" ;
+
+        return relacionSucesora;
+    }
+
     public static String relacionesPredecesoraTareas(ProjectFile project, int  idTask) throws Exception
     {
         String relacionPrecedecesora = "[";
@@ -215,29 +299,30 @@ public class Project  {
         List<Table> tables= project.getTables();
         Iterator iter = tables.iterator();
         Table table = (Table)iter.next();
-        String dataTable = " [ " ;
-        List resources = project.getAllTasks();
-        Iterator resourceIter = resources.iterator();
+        String dataTable = " { " ;
+        List tasks = project.getAllTasks();
+        Iterator resourceIter = tasks.iterator();
         while (resourceIter.hasNext()){
-            Task resource = (Task)resourceIter.next();
+            Task tarea = (Task)resourceIter.next();
             List columns = table.getColumns();
 			Iterator columnIter = columns.iterator();
             Object columnValue = null;
-            dataTable = dataTable  + " { " ; 
+            dataTable = dataTable + "'"+ tarea.getID() +"'"+ ":" +  " { " ; 
             while (columnIter.hasNext()){
                 
                 Column column = (Column)columnIter.next();
                 
 				if (column.getFieldType().toString().equalsIgnoreCase("Duration")){
-					columnValue = resource.getDuration();
+					columnValue = tarea.getDuration();
 				}else if (column.getFieldType().toString().equalsIgnoreCase("Start")){
-					columnValue = resource.getStart();
+					columnValue = tarea.getStart();
 				}else if (column.getFieldType().toString().equalsIgnoreCase("Finish")){
-					columnValue = resource.getFinish();
+					columnValue = tarea.getFinish();
 				}else {
-					columnValue = resource.getCachedValue(column.getFieldType());
+					columnValue = tarea.getCachedValue(column.getFieldType());
                 }
-                dataTable = dataTable  + "'"+column.getFieldType().toString()+"'" + " : " + "'"+columnValue+"'" + " ,";
+                dataTable = dataTable  + "'"+column.getFieldType().toString()+"'" + " : " + "'"+columnValue+"'" + " ,"
+                + "'"+"idTarea"+"'" + " : " + "'"+tarea.getID()+"'" + " ,";
             
             }
             if(dataTable.length()>1){
@@ -252,7 +337,7 @@ public class Project  {
         }
         else{}
 
-        dataTable = dataTable + "]" ;
+        dataTable = dataTable + "}" ;
         return dataTable;
             
     }

@@ -29,13 +29,20 @@ public class ProjectController{
 		System.out.print("Este es el archivo usado:"+ file);
         ProjectReader reader = new UniversalProjectReader();
 		ProjectFile archivo = reader.read(file); 
-
+		
+		
+        
+		
 		String jsonString = "{ ";
 		jsonString = jsonString + " 'calendarios' : " +getCalendarios(project,archivo)
 		+ " , " + " 'recursos' : " + project.getRecursos(archivo)
 		+ " , " + " 'tareas' : " + project.getTareas(archivo)
 		+ " , " + " asigRecursos : " + project.asignacionesRecursos(archivo)
 		+ " , " + " allColum : " + project.columnasTask(archivo)
+		+ " , " + " FinishDate : " + "'" +archivo.getFinishDate() +"'"
+		+ " , " + " StartDate : " + "'" +archivo.getStartDate() +"'"
+		+ " , " + " PStartDate : " + "'" +archivo.getProjectProperties().getFinishDate() +"'"
+		+ " , " + " PFinishDate : " + "'" +archivo.getProjectProperties().getFinishDate() +"'"
 		+ "}";
 		
 		JSONObject jsonObject= new JSONObject(jsonString);
