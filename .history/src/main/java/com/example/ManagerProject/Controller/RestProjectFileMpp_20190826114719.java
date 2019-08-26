@@ -53,9 +53,8 @@ public class RestProjectFileMpp {
         projectObj =  addRecursos(projectObj,jsonObject);
         //projectObj = addDuracionProyecto(projectObj,jsonObject);
         projectObj = addTarea(projectObj,jsonObject);
-        projectObj = addPredecesoras(projectObj,jsonObject);
         projectObj = addDuracionTareas(projectObj,jsonObject);
-        
+        projectObj = addPredecesoras(projectObj,jsonObject);
         //projectObj = addFechasTareas(projectObj,jsonObject);
         
         //projectObj = addHijosTarea(projectObj,jsonObject);
@@ -185,6 +184,8 @@ public class RestProjectFileMpp {
                 else{
 
                 }
+                
+                
 
             } catch (JSONException e) {
                 e.printStackTrace();

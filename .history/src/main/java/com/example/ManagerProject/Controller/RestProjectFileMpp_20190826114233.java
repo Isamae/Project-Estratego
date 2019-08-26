@@ -53,9 +53,8 @@ public class RestProjectFileMpp {
         projectObj =  addRecursos(projectObj,jsonObject);
         //projectObj = addDuracionProyecto(projectObj,jsonObject);
         projectObj = addTarea(projectObj,jsonObject);
-        projectObj = addPredecesoras(projectObj,jsonObject);
         projectObj = addDuracionTareas(projectObj,jsonObject);
-        
+        projectObj = addPredecesoras(projectObj,jsonObject);
         //projectObj = addFechasTareas(projectObj,jsonObject);
         
         //projectObj = addHijosTarea(projectObj,jsonObject);
@@ -181,10 +180,13 @@ public class RestProjectFileMpp {
                     project.getTaskByID(json.getInt("id")).setActualDuration(duracionA);
                     project.getTaskByID(json.getInt("id")).setActualWork(actualT);
                     project.getTaskByID(json.getInt("id")).setDurationText(duracion);
+                    System.out.println("ID :" +json.getInt("id") +"-> " + project.getTaskByID(json.getInt("id")).getDate(2));
                 }
                 else{
-
+                    
                 }
+                
+                
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -526,9 +528,12 @@ public class RestProjectFileMpp {
             JSONArray array = (JSONArray) jsonObject.get("recursos");
             for(int i=0; i< array.length();i++){
                 Resource resource = project.addResource();
+                System.out.println(resource);
                 resource.setName(((JSONObject)array.get(i)).getString("name"));
                 resource.setID(((JSONObject)array.get(i)).getInt("id"));
                 resource.setUniqueID(((JSONObject)array.get(i)).getInt("idUni"));
+
+                
             }
         } catch (JSONException e) {
             // TODO Auto-generated catch block

@@ -53,9 +53,8 @@ public class RestProjectFileMpp {
         projectObj =  addRecursos(projectObj,jsonObject);
         //projectObj = addDuracionProyecto(projectObj,jsonObject);
         projectObj = addTarea(projectObj,jsonObject);
-        projectObj = addPredecesoras(projectObj,jsonObject);
         projectObj = addDuracionTareas(projectObj,jsonObject);
-        
+        projectObj = addPredecesoras(projectObj,jsonObject);
         //projectObj = addFechasTareas(projectObj,jsonObject);
         
         //projectObj = addHijosTarea(projectObj,jsonObject);
@@ -93,98 +92,96 @@ public class RestProjectFileMpp {
         for(int i=0 ;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
-                if(json.getJSONArray("hijos").length() == 0){
-                    String duracion = json.getString("duracion");
-                    Duration duracionD;
-                    if(duracion.contains("h")){
-                        duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("h", "")), TimeUnit.HOURS);
-                    }
+                if(json.getJSONArray("hijos"))
+                
+                String duracion = json.getString("duracion");
+                Duration duracionD;
+                if(duracion.contains("h")){
+                    duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("h", "")), TimeUnit.HOURS);
+                }
 
-                    else if(duracion.contains("m")){
-                        duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("m", "")), TimeUnit.MINUTES);
-                    }
+                else if(duracion.contains("m")){
+                    duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("m", "")), TimeUnit.MINUTES);
+                }
 
-                    else if(duracion.contains("d")){
-                        duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("d", "")), TimeUnit.DAYS);
-                    }
-                    else if(duracion.contains("w")){
-                        duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("w", "")), TimeUnit.WEEKS);
-                    }
+                else if(duracion.contains("d")){
+                    duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("d", "")), TimeUnit.DAYS);
+                }
+                else if(duracion.contains("w")){
+                    duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("w", "")), TimeUnit.WEEKS);
+                }
 
-                    else if(duracion.contains("M")){
-                        duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("M", "")), TimeUnit.MONTHS);
-                    }
-                    else if(duracion.contains("y")){
-                        duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("y", "")), TimeUnit.YEARS);
-                    }
-                    else{
-                        duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("p", "")), TimeUnit.PERCENT);
-                    }
-
-
-                    String Actualduracion = json.getString("ActualDuration");
-                    Duration duracionA;
-                    if(Actualduracion.contains("h")){
-                        duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("h", "")), TimeUnit.HOURS);
-                    }
-
-                    else if(Actualduracion.contains("m")){
-                        duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("m", "")), TimeUnit.MINUTES);
-                    }
-
-                    else if(Actualduracion.contains("d")){
-                        duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("d", "")), TimeUnit.DAYS);
-                    }
-                    else if(Actualduracion.contains("w")){
-                        duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("w", "")), TimeUnit.WEEKS);
-                    }
-
-                    else if(Actualduracion.contains("M")){
-                        duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("M", "")), TimeUnit.MONTHS);
-                    }
-                    else if(Actualduracion.contains("y")){
-                        duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("y", "")), TimeUnit.YEARS);
-                    }
-                    else{
-                        duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("p", "")), TimeUnit.PERCENT);
-                    }
-
-                    String ActualTrabajo = json.getString("ActualDuration");
-                    Duration actualT;
-                    if(ActualTrabajo.contains("h")){
-                        actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("h", "")), TimeUnit.HOURS);
-                    }
-
-                    else if(ActualTrabajo.contains("m")){
-                        actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("m", "")), TimeUnit.MINUTES);
-                    }
-
-                    else if(ActualTrabajo.contains("d")){
-                        actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("d", "")), TimeUnit.DAYS);
-                    }
-                    else if(ActualTrabajo.contains("w")){
-                        actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("w", "")), TimeUnit.WEEKS);
-                    }
-
-                    else if(ActualTrabajo.contains("M")){
-                        actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("M", "")), TimeUnit.MONTHS);
-                    }
-                    else if(ActualTrabajo.contains("y")){
-                        actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("y", "")), TimeUnit.YEARS);
-                    }
-                    else{
-                        actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("p", "")), TimeUnit.PERCENT);
-                    }
-
-                    System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
-                    project.getTaskByID(json.getInt("id")).setDuration(duracionD);
-                    project.getTaskByID(json.getInt("id")).setActualDuration(duracionA);
-                    project.getTaskByID(json.getInt("id")).setActualWork(actualT);
-                    project.getTaskByID(json.getInt("id")).setDurationText(duracion);
+                else if(duracion.contains("M")){
+                    duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("M", "")), TimeUnit.MONTHS);
+                }
+                else if(duracion.contains("y")){
+                    duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("y", "")), TimeUnit.YEARS);
                 }
                 else{
-
+                    duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("p", "")), TimeUnit.PERCENT);
                 }
+
+
+                String Actualduracion = json.getString("ActualDuration");
+                Duration duracionA;
+                if(Actualduracion.contains("h")){
+                    duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("h", "")), TimeUnit.HOURS);
+                }
+
+                else if(Actualduracion.contains("m")){
+                    duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("m", "")), TimeUnit.MINUTES);
+                }
+
+                else if(Actualduracion.contains("d")){
+                    duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("d", "")), TimeUnit.DAYS);
+                }
+                else if(Actualduracion.contains("w")){
+                    duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("w", "")), TimeUnit.WEEKS);
+                }
+
+                else if(Actualduracion.contains("M")){
+                    duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("M", "")), TimeUnit.MONTHS);
+                }
+                else if(Actualduracion.contains("y")){
+                    duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("y", "")), TimeUnit.YEARS);
+                }
+                else{
+                    duracionA = Duration.getInstance(Double.parseDouble(Actualduracion.replace("p", "")), TimeUnit.PERCENT);
+                }
+
+                String ActualTrabajo = json.getString("ActualDuration");
+                Duration actualT;
+                if(ActualTrabajo.contains("h")){
+                    actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("h", "")), TimeUnit.HOURS);
+                }
+
+                else if(ActualTrabajo.contains("m")){
+                    actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("m", "")), TimeUnit.MINUTES);
+                }
+
+                else if(ActualTrabajo.contains("d")){
+                    actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("d", "")), TimeUnit.DAYS);
+                }
+                else if(ActualTrabajo.contains("w")){
+                    actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("w", "")), TimeUnit.WEEKS);
+                }
+
+                else if(ActualTrabajo.contains("M")){
+                    actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("M", "")), TimeUnit.MONTHS);
+                }
+                else if(ActualTrabajo.contains("y")){
+                    actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("y", "")), TimeUnit.YEARS);
+                }
+                else{
+                    actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("p", "")), TimeUnit.PERCENT);
+                }
+
+                System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
+                project.getTaskByID(json.getInt("id")).setDuration(duracionD);
+                project.getTaskByID(json.getInt("id")).setActualDuration(duracionA);
+                project.getTaskByID(json.getInt("id")).setActualWork(actualT);
+                project.getTaskByID(json.getInt("id")).setDurationText(duracion);
+                System.out.println("ID :" +json.getInt("id") +"-> " + project.getTaskByID(json.getInt("id")).getDate(2));
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -526,9 +523,12 @@ public class RestProjectFileMpp {
             JSONArray array = (JSONArray) jsonObject.get("recursos");
             for(int i=0; i< array.length();i++){
                 Resource resource = project.addResource();
+                System.out.println(resource);
                 resource.setName(((JSONObject)array.get(i)).getString("name"));
                 resource.setID(((JSONObject)array.get(i)).getInt("id"));
                 resource.setUniqueID(((JSONObject)array.get(i)).getInt("idUni"));
+
+                
             }
         } catch (JSONException e) {
             // TODO Auto-generated catch block

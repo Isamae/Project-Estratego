@@ -30,8 +30,8 @@ public class Project  {
             if(resource.getName() ==null) {}
             else{
                 recursos = recursos + "{ " + " 'name' :'" + resource.getName() 
-                +"' , "+ " 'id' : '" + resource.getID()  
-                +"' , "+ " 'idUni' : '" + resource.getUniqueID() 
+                +"' , "+ " 'id' : '" + resource.getID() +"'"  
+                +"' , "+ " 'idUni' : '" + resource.getID() 
                 +"' }"  + ",";
             }
             
