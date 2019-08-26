@@ -51,14 +51,17 @@ public class ProjectController{
 		for(ProjectCalendar calendar : calendars){
 
 			calendarios = calendarios 
-			+ " { " + " 'nombre' : " + " ' " + calendar.getName() + " ' "
+			+ " { " + " 'nombre' : " + "'" + calendar.getName() + "'"
 			+ " , " + " 'diaslab' : " + (project.getDiasCalendario (calendar, DayType.WORKING)).toString() 
 			+ " , " + " 'diasnolab' : " + (project.getDiasCalendario (calendar, DayType.NON_WORKING)).toString() 
 			+ " , " + " 'calenderDefault' :" + (project.getDiasCalendario (calendar, DayType.DEFAULT)).toString() 
 			+ " , " + " 'calenderHorario' :" + (project.getHorasCalendario (calendar, project.getDiasCalendario (calendar, DayType.WORKING))).toString() 
 			+ " , " + " 'calenderExcepciones' :" + (project.getExcepcionesCalendario (calendar)).toString()
+			+ " , " + " 'calenderBase' : " + "'" + (project.getCalendarioBase(calendar, archivo)).toString() + "'"
+			+ " , " + " 'calenderID' : " + "'" + (calendar.getUniqueID().toString()) + "'"
+			+ " , " + " 'recursos' : " + "'" + (project.getRecursos(calendar)).toString() + "'"
 			+ " } " + " ,";
-
+			
 		}
 		if(calendarios.length()>1){
             calendarios = calendarios.substring(0, calendarios.length()-1) ;

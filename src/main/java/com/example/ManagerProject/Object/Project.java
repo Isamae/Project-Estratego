@@ -257,6 +257,18 @@ public class Project  {
             
     }
 
+    public String getRecursos (ProjectCalendar calendar){
+        String recursos = "";
+        System.out.println( "RECURSOS");
+        if (calendar.getResource() != null){
+            recursos =  calendar.getResource().getID().toString();
+        }else{
+            recursos = "null";
+        }
+
+        return recursos;
+    }
+
 	public ArrayList <Day> getDiasCalendario (ProjectCalendar calendar, DayType dT){
 		DayType days [] = calendar.getDays();
 		ArrayList <Day> dias = new ArrayList<Day>();
@@ -285,7 +297,21 @@ public class Project  {
 			horario = "'";
 		}
 		return horarioCalendario;
-	}
+    }
+    public String getCalendarioBase (ProjectCalendar calendar, ProjectFile file){
+        
+        System.out.println(calendar.getName() + ", " + file.getDefaultCalendar().getName());
+        
+        String nombreCalendario = "";
+        if (calendar.getParent() == null){
+            nombreCalendario = calendar.getName();
+            System.out.println(nombreCalendario);
+        }else{
+            nombreCalendario = file.getDefaultCalendar().getName();
+            System.out.println(nombreCalendario);
+        }
+        return nombreCalendario;
+    }
 
 	public ArrayList <String> getExcepcionesCalendario (ProjectCalendar calendar){
 		ArrayList <String> excepcionesCalendario = new ArrayList<String>();
