@@ -59,7 +59,7 @@ public class ProjectController{
 			+ " , " + " 'calenderExcepciones' :" + (project.getExcepcionesCalendario (calendar)).toString()
 			+ " , " + " 'calenderBase' : " + "'" + (project.getCalendarioBase(calendar, archivo)).toString() + "'"
 			+ " , " + " 'calenderID' : " + "'" + (calendar.getUniqueID().toString()) + "'"
-			+ " , " + " 'recursos' : " + "'" + (project.getRecursos(calendar)).toString() + "'"
+			+ " , " + " 'recursoID' : " + "'" + (project.getRecursos(calendar)).toString() + "'"
 			+ " } " + " ,";
 			
 		}
