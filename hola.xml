@@ -70,12 +70,12 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>09:00:00</FromTime>
-                            <ToTime>13:00:00</ToTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
-                            <FromTime>15:00:00</FromTime>
-                            <ToTime>19:00:00</ToTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
@@ -84,12 +84,12 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>09:00:00</FromTime>
-                            <ToTime>13:00:00</ToTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
-                            <FromTime>15:00:00</FromTime>
-                            <ToTime>19:00:00</ToTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
@@ -98,12 +98,12 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>09:00:00</FromTime>
-                            <ToTime>13:00:00</ToTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
-                            <FromTime>15:00:00</FromTime>
-                            <ToTime>19:00:00</ToTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
@@ -112,12 +112,12 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>09:00:00</FromTime>
-                            <ToTime>13:00:00</ToTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
-                            <FromTime>15:00:00</FromTime>
-                            <ToTime>19:00:00</ToTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
@@ -126,12 +126,262 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>09:00:00</FromTime>
-                            <ToTime>13:00:00</ToTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
-                            <FromTime>15:00:00</FromTime>
-                            <ToTime>19:00:00</ToTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>7</DayType>
+                    <DayWorking>0</DayWorking>
+                </WeekDay>
+            </WeekDays>
+        </Calendar>
+        <Calendar>
+            <UID>1</UID>
+            <Name>Standard</Name>
+            <IsBaseCalendar>1</IsBaseCalendar>
+            <BaseCalendarUID>-1</BaseCalendarUID>
+            <WeekDays>
+                <WeekDay>
+                    <DayType>1</DayType>
+                    <DayWorking>0</DayWorking>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>2</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>3</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>4</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>5</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>6</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>7</DayType>
+                    <DayWorking>0</DayWorking>
+                </WeekDay>
+            </WeekDays>
+        </Calendar>
+        <Calendar>
+            <UID>2</UID>
+            <Name>Unnamed Resource</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>6</UID>
+            <Name>Administrador de Contrato - Cliente</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>7</UID>
+            <Name>Líder Técnico - Cliente</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>8</UID>
+            <Name>Líder Funcional - Usuario Experto - Cliente</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>9</UID>
+            <Name>Funcionarios Técnicos - Cliente</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>10</UID>
+            <Name>Usuarios Finales - Cliente</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>48</UID>
+            <Name>Desarrollador PlanERP</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>49</UID>
+            <Name>Gerente de Proyecto PlanERP</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>50</UID>
+            <Name>Líder del Proyecto/Desarrollo PlanERP</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>51</UID>
+            <Name>Analista Procesos PlanERP</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>56</UID>
+            <Name>Analista de Calidad PlanERP</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>57</UID>
+            <Name>Especialista Base de Datos PlanERP</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>58</UID>
+            <Name>Consultor Especialista en Procesos de GADs PlanERP</Name>
+            <IsBaseCalendar>0</IsBaseCalendar>
+            <BaseCalendarUID>1</BaseCalendarUID>
+        </Calendar>
+        <Calendar>
+            <UID>59</UID>
+            <Name>Compras Publicas</Name>
+            <IsBaseCalendar>1</IsBaseCalendar>
+            <BaseCalendarUID>-1</BaseCalendarUID>
+            <WeekDays>
+                <WeekDay>
+                    <DayType>1</DayType>
+                    <DayWorking>0</DayWorking>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>2</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>3</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>4</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>5</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
+                        </WorkingTime>
+                    </WorkingTimes>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>6</DayType>
+                    <DayWorking>1</DayWorking>
+                    <WorkingTimes>
+                        <WorkingTime>
+                            <FromTime>08:00:00</FromTime>
+                            <ToTime>12:00:00</ToTime>
+                        </WorkingTime>
+                        <WorkingTime>
+                            <FromTime>13:00:00</FromTime>
+                            <ToTime>17:00:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
