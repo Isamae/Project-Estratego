@@ -441,41 +441,23 @@ public class RestProjectFileMpp {
                     }
                     else if(lag.contains("h")){
                         Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
+                        Relation arg0 = new Relation(sourceTask, targetTask, type, lag);
                         task.getSuccessors().add(arg0);
+                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
                     }
                     else if(lag.contains("y")){
-                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                        task.getSuccessors().add(arg0);
-
                         task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
                     }
                     else if(lag.contains("w")){
-                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                        task.getSuccessors().add(arg0);
-
-
                         task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
                     }
                     else if(lag.contains("m")){
-                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                        task.getSuccessors().add(arg0);
-
-
                         task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MINUTES));
                     }
                     else if(lag.contains("M")){
-                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                        task.getSuccessors().add(arg0);
-
                         task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("M", "")),TimeUnit.MONTHS));
                     }
                     else{
-                        
                         task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
                     }
 
