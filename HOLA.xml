@@ -603,8 +603,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT6H0M0S</ActualDuration>
-            <ActualWork>PT6H0M0S</ActualWork>
             <RemainingDuration>PT6H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -616,7 +614,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>6.0h</DurationText>
         </Task>
         <Task>
             <UID>16</UID>
@@ -642,8 +639,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -662,7 +657,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>17</UID>
@@ -688,8 +682,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT6H0M0S</ActualDuration>
-            <ActualWork>PT6H0M0S</ActualWork>
             <RemainingDuration>PT6H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -708,7 +700,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>6.0h</DurationText>
         </Task>
         <Task>
             <UID>18</UID>
@@ -769,8 +760,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -789,7 +778,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>20</UID>
@@ -815,8 +803,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -835,7 +821,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>21</UID>
@@ -896,8 +881,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -916,7 +899,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>46</UID>
@@ -1019,8 +1001,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1032,7 +1012,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>591</UID>
@@ -1058,8 +1037,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1078,7 +1055,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>592</UID>
@@ -1104,8 +1080,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1124,7 +1098,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>593</UID>
@@ -1150,8 +1123,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1170,7 +1141,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>594</UID>
@@ -1196,8 +1166,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1216,7 +1184,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>595</UID>
@@ -1242,8 +1209,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1262,7 +1227,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>596</UID>
@@ -1288,8 +1252,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1308,7 +1270,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>597</UID>
@@ -1334,8 +1295,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1354,7 +1313,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>598</UID>
@@ -1380,8 +1338,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1400,7 +1356,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>599</UID>
@@ -1426,8 +1381,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1446,7 +1399,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>600</UID>
@@ -1472,8 +1424,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1492,7 +1442,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>601</UID>
@@ -1518,8 +1467,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1538,7 +1485,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>602</UID>
@@ -1564,8 +1510,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1584,7 +1528,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>603</UID>
@@ -1610,8 +1553,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1630,7 +1571,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>604</UID>
@@ -1656,8 +1596,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1676,7 +1614,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>605</UID>
@@ -1702,8 +1639,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1722,7 +1657,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>270</UID>
@@ -1748,8 +1682,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1768,7 +1700,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>51</UID>
@@ -1794,8 +1725,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1814,7 +1743,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>50</UID>
@@ -1857,7 +1785,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>23</UID>
@@ -1960,8 +1887,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -1980,7 +1905,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>27</UID>
@@ -2006,8 +1930,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2026,7 +1948,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>28</UID>
@@ -2087,8 +2008,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT80H0M0S</ActualDuration>
-            <ActualWork>PT80H0M0S</ActualWork>
             <RemainingDuration>PT80H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2107,7 +2026,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>10.0d</DurationText>
         </Task>
         <Task>
             <UID>59</UID>
@@ -2133,8 +2051,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT16H0M0S</ActualDuration>
-            <ActualWork>PT16H0M0S</ActualWork>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2153,7 +2069,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0d</DurationText>
         </Task>
         <Task>
             <UID>58</UID>
@@ -2214,8 +2129,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2234,7 +2147,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>56</UID>
@@ -2260,8 +2172,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2280,7 +2190,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>55</UID>
@@ -2306,8 +2215,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2326,7 +2233,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>61</UID>
@@ -2369,7 +2275,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>62</UID>
@@ -2472,8 +2377,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2492,7 +2395,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>65</UID>
@@ -2518,8 +2420,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2538,7 +2438,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>66</UID>
@@ -2564,8 +2463,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2584,7 +2481,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>67</UID>
@@ -2645,8 +2541,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2665,7 +2559,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>69</UID>
@@ -2691,8 +2584,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2711,7 +2602,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>187</UID>
@@ -2737,8 +2627,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT432H0M0S</ActualDuration>
-            <ActualWork>PT432H0M0S</ActualWork>
             <RemainingDuration>PT432H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2757,7 +2645,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>54.0d</DurationText>
         </Task>
         <Task>
             <UID>247</UID>
@@ -2783,8 +2670,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT80H0M0S</ActualDuration>
-            <ActualWork>PT80H0M0S</ActualWork>
             <RemainingDuration>PT80H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2803,7 +2688,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>10.0d</DurationText>
         </Task>
         <Task>
             <UID>244</UID>
@@ -2829,8 +2713,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT24H0M0S</ActualDuration>
-            <ActualWork>PT24H0M0S</ActualWork>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2849,7 +2731,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0d</DurationText>
         </Task>
         <Task>
             <UID>72</UID>
@@ -2875,8 +2756,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2895,7 +2774,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>73</UID>
@@ -2921,8 +2799,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -2941,7 +2817,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>74</UID>
@@ -3002,8 +2877,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3022,7 +2895,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>82</UID>
@@ -3083,8 +2955,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3103,7 +2973,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>83</UID>
@@ -3171,8 +3040,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3184,7 +3051,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>574</UID>
@@ -3210,8 +3076,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3230,7 +3094,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>575</UID>
@@ -3256,8 +3119,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3276,7 +3137,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>576</UID>
@@ -3302,8 +3162,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3322,7 +3180,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>577</UID>
@@ -3348,8 +3205,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3368,7 +3223,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>578</UID>
@@ -3394,8 +3248,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3414,7 +3266,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>579</UID>
@@ -3440,8 +3291,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3460,7 +3309,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>580</UID>
@@ -3486,8 +3334,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3506,7 +3352,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>581</UID>
@@ -3532,8 +3377,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3552,7 +3395,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>582</UID>
@@ -3578,8 +3420,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3598,7 +3438,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>583</UID>
@@ -3624,8 +3463,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3644,7 +3481,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>584</UID>
@@ -3670,8 +3506,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3690,7 +3524,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>585</UID>
@@ -3716,8 +3549,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3736,7 +3567,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>586</UID>
@@ -3762,8 +3592,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3782,7 +3610,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>587</UID>
@@ -3808,8 +3635,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3828,7 +3653,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>588</UID>
@@ -3854,8 +3678,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3874,7 +3696,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>76</UID>
@@ -3935,8 +3756,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -3962,7 +3781,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>78</UID>
@@ -3988,8 +3806,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4008,7 +3824,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>79</UID>
@@ -4076,8 +3891,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4089,7 +3902,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>558</UID>
@@ -4115,8 +3927,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4135,7 +3945,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>559</UID>
@@ -4161,8 +3970,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4181,7 +3988,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>560</UID>
@@ -4207,8 +4013,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4227,7 +4031,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>561</UID>
@@ -4253,8 +4056,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4273,7 +4074,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>562</UID>
@@ -4299,8 +4099,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4319,7 +4117,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>563</UID>
@@ -4345,8 +4142,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4365,7 +4160,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>564</UID>
@@ -4391,8 +4185,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4411,7 +4203,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>565</UID>
@@ -4437,8 +4228,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4457,7 +4246,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>566</UID>
@@ -4483,8 +4271,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4503,7 +4289,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>567</UID>
@@ -4529,8 +4314,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4549,7 +4332,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>568</UID>
@@ -4575,8 +4357,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4595,7 +4375,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>569</UID>
@@ -4621,8 +4400,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4641,7 +4418,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>570</UID>
@@ -4667,8 +4443,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4687,7 +4461,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>571</UID>
@@ -4713,8 +4486,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4733,7 +4504,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>572</UID>
@@ -4759,8 +4529,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4779,7 +4547,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>80</UID>
@@ -4805,8 +4572,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4839,7 +4604,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>84</UID>
@@ -4900,8 +4664,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4920,7 +4682,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>86</UID>
@@ -4946,8 +4707,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -4966,7 +4725,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>87</UID>
@@ -4992,8 +4750,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5012,7 +4768,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>88</UID>
@@ -5038,8 +4793,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5058,7 +4811,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>251</UID>
@@ -5101,7 +4853,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>90</UID>
@@ -5197,8 +4948,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5217,7 +4966,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>93</UID>
@@ -5243,8 +4991,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5263,7 +5009,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>94</UID>
@@ -5373,8 +5118,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5386,7 +5129,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>545</UID>
@@ -5412,8 +5154,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5432,7 +5172,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>546</UID>
@@ -5458,8 +5197,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5478,7 +5215,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>548</UID>
@@ -5504,8 +5240,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5524,7 +5258,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>550</UID>
@@ -5550,8 +5283,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5570,7 +5301,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>551</UID>
@@ -5596,8 +5326,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5616,7 +5344,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.5d</DurationText>
         </Task>
         <Task>
             <UID>552</UID>
@@ -5642,8 +5369,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5662,7 +5387,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.5d</DurationText>
         </Task>
         <Task>
             <UID>553</UID>
@@ -5688,8 +5412,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5708,7 +5430,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.5d</DurationText>
         </Task>
         <Task>
             <UID>554</UID>
@@ -5734,8 +5455,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5754,7 +5473,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>555</UID>
@@ -5780,8 +5498,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5800,7 +5516,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.5d</DurationText>
         </Task>
         <Task>
             <UID>556</UID>
@@ -5826,8 +5541,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5846,7 +5559,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>549</UID>
@@ -5872,8 +5584,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5892,7 +5602,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.5d</DurationText>
         </Task>
         <Task>
             <UID>541</UID>
@@ -5918,8 +5627,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5938,7 +5645,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.5d</DurationText>
         </Task>
         <Task>
             <UID>542</UID>
@@ -5964,8 +5670,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -5984,7 +5688,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.5d</DurationText>
         </Task>
         <Task>
             <UID>543</UID>
@@ -6010,8 +5713,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6030,7 +5731,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>540</UID>
@@ -6056,8 +5756,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6076,7 +5774,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.5d</DurationText>
         </Task>
         <Task>
             <UID>96</UID>
@@ -6102,8 +5799,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT32H0M0S</ActualDuration>
-            <ActualWork>PT32H0M0S</ActualWork>
             <RemainingDuration>PT32H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6143,7 +5838,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0d</DurationText>
         </Task>
         <Task>
             <UID>97</UID>
@@ -6211,8 +5905,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT3H0M0S</ActualDuration>
-            <ActualWork>PT3H0M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6224,7 +5916,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>99</UID>
@@ -6250,8 +5941,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT3H0M0S</ActualDuration>
-            <ActualWork>PT3H0M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6270,7 +5959,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>100</UID>
@@ -6338,8 +6026,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H0M0S</ActualDuration>
-            <ActualWork>PT1H0M0S</ActualWork>
             <RemainingDuration>PT1H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6351,7 +6037,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0h</DurationText>
         </Task>
         <Task>
             <UID>102</UID>
@@ -6377,8 +6062,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT16H0M0S</ActualDuration>
-            <ActualWork>PT16H0M0S</ActualWork>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6397,7 +6080,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0d</DurationText>
         </Task>
         <Task>
             <UID>103</UID>
@@ -6423,8 +6105,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6443,7 +6123,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>252</UID>
@@ -6486,7 +6165,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>105</UID>
@@ -6589,8 +6267,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT240H0M0S</ActualDuration>
-            <ActualWork>PT240H0M0S</ActualWork>
             <RemainingDuration>PT240H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6609,7 +6285,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>30.0d</DurationText>
         </Task>
         <Task>
             <UID>108</UID>
@@ -6635,8 +6310,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT160H0M0S</ActualDuration>
-            <ActualWork>PT160H0M0S</ActualWork>
             <RemainingDuration>PT160H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6655,7 +6328,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>20.0d</DurationText>
         </Task>
         <Task>
             <UID>109</UID>
@@ -6681,8 +6353,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6694,7 +6364,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>112</UID>
@@ -6755,8 +6424,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT80H0M0S</ActualDuration>
-            <ActualWork>PT80H0M0S</ActualWork>
             <RemainingDuration>PT80H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6775,7 +6442,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>10.0d</DurationText>
         </Task>
         <Task>
             <UID>246</UID>
@@ -6801,8 +6467,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT80H0M0S</ActualDuration>
-            <ActualWork>PT80H0M0S</ActualWork>
             <RemainingDuration>PT80H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6821,7 +6485,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>10.0d</DurationText>
         </Task>
         <Task>
             <UID>184</UID>
@@ -6882,8 +6545,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -6902,7 +6563,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>253</UID>
@@ -6945,7 +6605,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>525</UID>
@@ -7006,8 +6665,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT240H0M0S</ActualDuration>
-            <ActualWork>PT240H0M0S</ActualWork>
             <RemainingDuration>PT240H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7026,7 +6683,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>30.0d</DurationText>
         </Task>
         <Task>
             <UID>532</UID>
@@ -7052,8 +6708,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT240H0M0S</ActualDuration>
-            <ActualWork>PT240H0M0S</ActualWork>
             <RemainingDuration>PT240H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7072,7 +6726,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>30.0d</DurationText>
         </Task>
         <Task>
             <UID>530</UID>
@@ -7098,8 +6751,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT240H0M0S</ActualDuration>
-            <ActualWork>PT240H0M0S</ActualWork>
             <RemainingDuration>PT240H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7118,7 +6769,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>30.0d</DurationText>
         </Task>
         <Task>
             <UID>531</UID>
@@ -7144,8 +6794,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT160H0M0S</ActualDuration>
-            <ActualWork>PT160H0M0S</ActualWork>
             <RemainingDuration>PT160H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7157,7 +6805,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>20.0d</DurationText>
         </Task>
         <Task>
             <UID>533</UID>
@@ -7183,8 +6830,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT160H0M0S</ActualDuration>
-            <ActualWork>PT160H0M0S</ActualWork>
             <RemainingDuration>PT160H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7196,7 +6841,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>20.0d</DurationText>
         </Task>
         <Task>
             <UID>528</UID>
@@ -7222,8 +6866,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT160H0M0S</ActualDuration>
-            <ActualWork>PT160H0M0S</ActualWork>
             <RemainingDuration>PT160H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7235,7 +6877,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>20.0d</DurationText>
         </Task>
         <Task>
             <UID>534</UID>
@@ -7261,8 +6902,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT200H0M0S</ActualDuration>
-            <ActualWork>PT200H0M0S</ActualWork>
             <RemainingDuration>PT200H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7281,7 +6920,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>25.0d</DurationText>
         </Task>
         <Task>
             <UID>535</UID>
@@ -7342,8 +6980,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7362,7 +6998,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>537</UID>
@@ -7405,7 +7040,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>362</UID>
@@ -7613,8 +7247,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7626,7 +7258,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>611</UID>
@@ -7652,8 +7283,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7672,7 +7301,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>612</UID>
@@ -7698,8 +7326,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7718,7 +7344,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>614</UID>
@@ -7744,8 +7369,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7764,7 +7387,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>616</UID>
@@ -7790,8 +7412,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7810,7 +7430,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>617</UID>
@@ -7836,8 +7455,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7856,7 +7473,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>613</UID>
@@ -7882,8 +7498,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7902,7 +7516,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>608</UID>
@@ -7928,8 +7541,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7948,7 +7559,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>609</UID>
@@ -7974,8 +7584,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -7994,7 +7602,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>606</UID>
@@ -8020,8 +7627,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8040,7 +7645,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>380</UID>
@@ -8066,8 +7670,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8086,7 +7688,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>381</UID>
@@ -8112,8 +7713,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8132,7 +7731,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>382</UID>
@@ -8175,7 +7773,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>383</UID>
@@ -8278,8 +7875,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8291,7 +7886,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>386</UID>
@@ -8317,8 +7911,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8337,7 +7929,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>387</UID>
@@ -8405,8 +7996,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT40H0M0S</ActualDuration>
-            <ActualWork>PT40H0M0S</ActualWork>
             <RemainingDuration>PT40H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8418,7 +8007,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>5.0d</DurationText>
         </Task>
         <Task>
             <UID>389</UID>
@@ -8444,8 +8032,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8464,7 +8050,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>390</UID>
@@ -8532,8 +8117,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8545,7 +8128,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>392</UID>
@@ -8571,8 +8153,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT3H0M0S</ActualDuration>
-            <ActualWork>PT3H0M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8591,7 +8171,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>393</UID>
@@ -8617,8 +8196,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8637,7 +8214,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>394</UID>
@@ -8680,7 +8256,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>395</UID>
@@ -8783,8 +8358,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT3H0M0S</ActualDuration>
-            <ActualWork>PT3H0M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8796,7 +8369,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>398</UID>
@@ -8822,8 +8394,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8842,7 +8412,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>399</UID>
@@ -8868,8 +8437,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8888,7 +8455,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>400</UID>
@@ -8956,8 +8522,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -8969,7 +8533,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>402</UID>
@@ -8995,8 +8558,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -9015,7 +8576,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>403</UID>
@@ -9041,8 +8601,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT52H0M0S</ActualDuration>
-            <ActualWork>PT52H0M0S</ActualWork>
             <RemainingDuration>PT104H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -9061,7 +8619,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>13.0d</DurationText>
         </Task>
         <Task>
             <UID>404</UID>
@@ -9087,8 +8644,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -9107,7 +8662,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0d</DurationText>
         </Task>
         <Task>
             <UID>405</UID>
@@ -9133,8 +8687,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -9153,7 +8705,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>406</UID>
@@ -9179,8 +8730,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -9199,7 +8748,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>407</UID>
@@ -9225,8 +8773,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -9245,7 +8791,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>408</UID>
@@ -9313,8 +8858,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -9326,7 +8869,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>410</UID>
@@ -9394,8 +8936,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -9407,7 +8947,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>412</UID>
@@ -9486,7 +9025,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>633</UID>
@@ -9530,7 +9068,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>634</UID>
@@ -9574,7 +9111,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>635</UID>
@@ -9618,7 +9154,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>637</UID>
@@ -9662,7 +9197,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>638</UID>
@@ -9706,7 +9240,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>640</UID>
@@ -9750,7 +9283,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>641</UID>
@@ -9794,7 +9326,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>642</UID>
@@ -9838,7 +9369,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>643</UID>
@@ -9882,7 +9412,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>413</UID>
@@ -9950,8 +9479,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H30M0S</ActualDuration>
-            <ActualWork>PT1H30M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -9963,7 +9490,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>415</UID>
@@ -9989,8 +9515,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -10009,7 +9533,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>416</UID>
@@ -10088,7 +9611,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>646</UID>
@@ -10132,7 +9654,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>647</UID>
@@ -10176,7 +9697,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>648</UID>
@@ -10220,7 +9740,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>650</UID>
@@ -10264,7 +9783,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>651</UID>
@@ -10308,7 +9826,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>653</UID>
@@ -10352,7 +9869,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>654</UID>
@@ -10396,7 +9912,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>655</UID>
@@ -10440,7 +9955,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>656</UID>
@@ -10484,7 +9998,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>417</UID>
@@ -10521,7 +10034,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>418</UID>
@@ -10589,8 +10101,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT3H0M0S</ActualDuration>
-            <ActualWork>PT3H0M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -10602,7 +10112,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>420</UID>
@@ -10628,8 +10137,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT3H0M0S</ActualDuration>
-            <ActualWork>PT3H0M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -10648,7 +10155,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>421</UID>
@@ -10674,8 +10180,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT3H0M0S</ActualDuration>
-            <ActualWork>PT3H0M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -10694,7 +10198,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>422</UID>
@@ -10720,8 +10223,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -10740,7 +10241,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>423</UID>
@@ -10783,7 +10283,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>424</UID>
@@ -10886,8 +10385,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -10899,7 +10396,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>427</UID>
@@ -10925,8 +10421,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -10945,7 +10439,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>428</UID>
@@ -11059,7 +10552,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>620</UID>
@@ -11103,7 +10595,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>621</UID>
@@ -11147,7 +10638,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>622</UID>
@@ -11191,7 +10681,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>624</UID>
@@ -11235,7 +10724,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>625</UID>
@@ -11279,7 +10767,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>627</UID>
@@ -11323,7 +10810,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>628</UID>
@@ -11367,7 +10853,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>629</UID>
@@ -11411,7 +10896,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>630</UID>
@@ -11455,7 +10939,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>430</UID>
@@ -11492,7 +10975,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>6.0d</DurationText>
         </Task>
         <Task>
             <UID>431</UID>
@@ -11560,8 +11042,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H30M0S</ActualDuration>
-            <ActualWork>PT2H30M0S</ActualWork>
             <RemainingDuration>PT5H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -11573,7 +11053,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>5.0h</DurationText>
         </Task>
         <Task>
             <UID>433</UID>
@@ -11599,8 +11078,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H30M0S</ActualDuration>
-            <ActualWork>PT2H30M0S</ActualWork>
             <RemainingDuration>PT5H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -11619,7 +11096,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>5.0h</DurationText>
         </Task>
         <Task>
             <UID>434</UID>
@@ -11687,8 +11163,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -11700,7 +11174,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>436</UID>
@@ -11726,8 +11199,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -11746,7 +11217,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0d</DurationText>
         </Task>
         <Task>
             <UID>437</UID>
@@ -11772,8 +11242,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -11792,7 +11260,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>438</UID>
@@ -11835,7 +11302,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>439</UID>
@@ -11938,8 +11404,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT120H0M0S</ActualDuration>
-            <ActualWork>PT120H0M0S</ActualWork>
             <RemainingDuration>PT120H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -11951,7 +11415,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>15.0d</DurationText>
         </Task>
         <Task>
             <UID>442</UID>
@@ -11977,8 +11440,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT120H0M0S</ActualDuration>
-            <ActualWork>PT120H0M0S</ActualWork>
             <RemainingDuration>PT120H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -11997,7 +11458,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>15.0d</DurationText>
         </Task>
         <Task>
             <UID>443</UID>
@@ -12041,7 +11501,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0d</DurationText>
         </Task>
         <Task>
             <UID>444</UID>
@@ -12109,8 +11568,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT120H0M0S</ActualDuration>
-            <ActualWork>PT120H0M0S</ActualWork>
             <RemainingDuration>PT120H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12129,7 +11586,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>15.0d</DurationText>
         </Task>
         <Task>
             <UID>446</UID>
@@ -12155,8 +11611,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT120H0M0S</ActualDuration>
-            <ActualWork>PT120H0M0S</ActualWork>
             <RemainingDuration>PT120H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12175,7 +11629,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>15.0d</DurationText>
         </Task>
         <Task>
             <UID>447</UID>
@@ -12243,8 +11696,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT1H30M0S</ActualDuration>
-            <ActualWork>PT1H30M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12256,7 +11707,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>449</UID>
@@ -12299,7 +11749,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>450</UID>
@@ -12465,8 +11914,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT24H0M0S</ActualDuration>
-            <ActualWork>PT24H0M0S</ActualWork>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12485,7 +11932,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0d</DurationText>
         </Task>
         <Task>
             <UID>455</UID>
@@ -12511,8 +11957,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12531,7 +11975,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>456</UID>
@@ -12557,8 +12000,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12577,7 +12018,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>457</UID>
@@ -12620,7 +12060,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>458</UID>
@@ -12723,8 +12162,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12736,7 +12173,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>461</UID>
@@ -12762,8 +12198,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT2H0M0S</ActualDuration>
-            <ActualWork>PT2H0M0S</ActualWork>
             <RemainingDuration>PT2H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12782,7 +12216,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>462</UID>
@@ -12850,8 +12283,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT24H0M0S</ActualDuration>
-            <ActualWork>PT24H0M0S</ActualWork>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12863,7 +12294,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0d</DurationText>
         </Task>
         <Task>
             <UID>464</UID>
@@ -12889,8 +12319,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT24H0M0S</ActualDuration>
-            <ActualWork>PT24H0M0S</ActualWork>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12909,7 +12337,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0d</DurationText>
         </Task>
         <Task>
             <UID>465</UID>
@@ -12977,8 +12404,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -12990,7 +12415,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>467</UID>
@@ -13016,8 +12440,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT3H0M0S</ActualDuration>
-            <ActualWork>PT3H0M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13036,7 +12458,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>468</UID>
@@ -13062,8 +12483,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13082,7 +12501,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>469</UID>
@@ -13125,7 +12543,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>470</UID>
@@ -13228,8 +12645,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT3H0M0S</ActualDuration>
-            <ActualWork>PT3H0M0S</ActualWork>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13241,7 +12656,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>473</UID>
@@ -13267,8 +12681,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13287,7 +12699,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>474</UID>
@@ -13313,8 +12724,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13333,7 +12742,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>475</UID>
@@ -13401,8 +12809,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13414,7 +12820,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>477</UID>
@@ -13440,8 +12845,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13460,7 +12863,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>478</UID>
@@ -13504,7 +12906,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>10.0d</DurationText>
         </Task>
         <Task>
             <UID>479</UID>
@@ -13530,8 +12931,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT20H0M0S</ActualDuration>
-            <ActualWork>PT20H0M0S</ActualWork>
             <RemainingDuration>PT40H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13550,7 +12949,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>5.0d</DurationText>
         </Task>
         <Task>
             <UID>480</UID>
@@ -13576,8 +12974,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13596,7 +12992,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0d</DurationText>
         </Task>
         <Task>
             <UID>481</UID>
@@ -13622,8 +13017,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13642,7 +13035,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>482</UID>
@@ -13668,8 +13060,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT8H0M0S</ActualDuration>
-            <ActualWork>PT8H0M0S</ActualWork>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13688,7 +13078,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>483</UID>
@@ -13756,8 +13145,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT16H0M0S</ActualDuration>
-            <ActualWork>PT16H0M0S</ActualWork>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13769,7 +13156,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0d</DurationText>
         </Task>
         <Task>
             <UID>485</UID>
@@ -13837,8 +13223,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualDuration>PT4H0M0S</ActualDuration>
-            <ActualWork>PT4H0M0S</ActualWork>
             <RemainingDuration>PT4H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -13850,7 +13234,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>487</UID>
@@ -13929,7 +13312,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>668</UID>
@@ -13973,7 +13355,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>669</UID>
@@ -14017,7 +13398,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>670</UID>
@@ -14061,7 +13441,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>671</UID>
@@ -14105,7 +13484,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>672</UID>
@@ -14149,7 +13527,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>673</UID>
@@ -14193,7 +13570,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>488</UID>
@@ -14272,7 +13648,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>490</UID>
@@ -14316,7 +13691,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>491</UID>
@@ -14395,7 +13769,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>664</UID>
@@ -14439,7 +13812,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>666</UID>
@@ -14483,7 +13855,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>665</UID>
@@ -14527,7 +13898,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>661</UID>
@@ -14571,7 +13941,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>662</UID>
@@ -14615,7 +13984,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>660</UID>
@@ -14659,7 +14027,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>492</UID>
@@ -14710,7 +14077,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>493</UID>
@@ -14789,7 +14155,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>495</UID>
@@ -14833,7 +14198,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>496</UID>
@@ -14877,7 +14241,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>497</UID>
@@ -14921,7 +14284,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>1.0d</DurationText>
         </Task>
         <Task>
             <UID>498</UID>
@@ -14964,7 +14326,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>499</UID>
@@ -15078,7 +14439,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>502</UID>
@@ -15122,7 +14482,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>503</UID>
@@ -15236,7 +14595,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>698</UID>
@@ -15280,7 +14638,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>699</UID>
@@ -15324,7 +14681,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>700</UID>
@@ -15368,7 +14724,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>701</UID>
@@ -15412,7 +14767,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>702</UID>
@@ -15456,7 +14810,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>703</UID>
@@ -15500,7 +14853,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>505</UID>
@@ -15544,7 +14896,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0d</DurationText>
         </Task>
         <Task>
             <UID>506</UID>
@@ -15623,7 +14974,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>5.0h</DurationText>
         </Task>
         <Task>
             <UID>508</UID>
@@ -15667,7 +15017,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>5.0h</DurationText>
         </Task>
         <Task>
             <UID>509</UID>
@@ -15746,7 +15095,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>4.0h</DurationText>
         </Task>
         <Task>
             <UID>511</UID>
@@ -15790,7 +15138,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0d</DurationText>
         </Task>
         <Task>
             <UID>512</UID>
@@ -15834,7 +15181,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0h</DurationText>
         </Task>
         <Task>
             <UID>513</UID>
@@ -15877,7 +15223,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
         <Task>
             <UID>514</UID>
@@ -15991,7 +15336,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>5.0d</DurationText>
         </Task>
         <Task>
             <UID>517</UID>
@@ -16035,7 +15379,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0d</DurationText>
         </Task>
         <Task>
             <UID>518</UID>
@@ -16079,7 +15422,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>2.0d</DurationText>
         </Task>
         <Task>
             <UID>519</UID>
@@ -16158,7 +15500,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>15.0d</DurationText>
         </Task>
         <Task>
             <UID>521</UID>
@@ -16202,7 +15543,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>15.0d</DurationText>
         </Task>
         <Task>
             <UID>522</UID>
@@ -16281,7 +15621,6 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>3.0h</DurationText>
         </Task>
         <Task>
             <UID>524</UID>
@@ -16324,7 +15663,6 @@
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
-            <DurationText>0.0d</DurationText>
         </Task>
     </Tasks>
     <Resources>
