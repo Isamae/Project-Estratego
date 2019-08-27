@@ -295,7 +295,7 @@ public class RestProjectFileMpp {
                             /*if(project.getTaskByID(json.getInt("id"))!=null){
                                 taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
                             }
-                            else{}*/
+                            else{}/
                             
                             taskhijo.generateOutlineNumber(project.getTaskByID(json.getInt("id")));
                         }
@@ -435,7 +435,9 @@ public class RestProjectFileMpp {
                         relationType = RelationType.START_FINISH;
                     }
 
-                    if(json.getString("id").compareToIgnoreCase(idH) ==1) {}
+                    if(json.getString("id") == idH) {
+
+                    }
                     else{
                         if(lag.contains("d")){
                         
@@ -474,6 +476,9 @@ public class RestProjectFileMpp {
                             task.getSuccessors().add(arg0);
                         }
                     }
+
+                    
+
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

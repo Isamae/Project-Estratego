@@ -54,6 +54,8 @@ public class RestProjectFileMpp {
             e.printStackTrace();
         }        
 
+        //addColumnas(projectObj, jsonObject).getAllTasks();
+
         //projectObj = addColumnas(projectObj,jsonObject);
         
         projectObj = addDuracionProyecto(projectObj,jsonObject);
@@ -62,12 +64,13 @@ public class RestProjectFileMpp {
         projectObj = addCalendario(projectObj,jsonObject);
         projectObj = addPredecesoras(projectObj,jsonObject);
         projectObj = addSucesores(projectObj,jsonObject);
+        
+        
         projectObj = addFechasTareas(projectObj,jsonObject);
         projectObj = addDuracionTareas(projectObj,jsonObject);
         
         /*ProjectWriter writer = ProjectWriterUtility.getProjectWriter("HOLA.mpx");  
         writer.write(projectObj,"HOLA.mpx");*/
-
         MSPDIWriter writer = new MSPDIWriter();
         writer.write(projectObj, "hola.xml");
         return "Hola Mundo";
@@ -79,6 +82,7 @@ public class RestProjectFileMpp {
         for(int i=0 ;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
+                if(json.getJSONArray("hijos").length() == 0){
                     String duracion = json.getString("duracion");
                     Duration duracionD = null;
                     if(duracion.contains("h")){
@@ -161,11 +165,13 @@ public class RestProjectFileMpp {
                         actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("p", "")), TimeUnit.PERCENT);
                     }
 
-                    //System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
+                    System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
                     project.getTaskByID(json.getInt("id")).setDuration(duracionD);
-                    project.getTaskByID(json.getInt("id")).setActualDuration(duracionA);
+                    //project.getTaskByID(json.getInt("id")).setActualDuration(duracionA);
                     //project.getTaskByID(json.getInt("id")).setActualWork(actualT);
                     //project.getTaskByID(json.getInt("id")).setDurationText(duracion);
+                }
+                else{}
             } catch (JSONException e) {
                 e.printStackTrace();
             } 
@@ -209,8 +215,7 @@ public class RestProjectFileMpp {
                     if(json.getString("TfechaFin") != "null"){
                         project.getTaskByID(json.getInt("id")).setFinishText(json.getString("TfechaFin"));
                     }*/
-                }
-                else{
+                }else{
                     project.getTaskByID(json.getInt("id")).getStart();
                     project.getTaskByID(json.getInt("id")).getFinish();
                     if(json.getString("AfechaInicio") != "null"){
@@ -292,11 +297,7 @@ public class RestProjectFileMpp {
                         if(json.getInt("id") == 0){
                         }
                         else{
-                            /*if(project.getTaskByID(json.getInt("id"))!=null){
-                                taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
-                            }
-                            else{}*/
-                            
+                            //taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
                             taskhijo.generateOutlineNumber(project.getTaskByID(json.getInt("id")));
                         }
 
@@ -332,10 +333,7 @@ public class RestProjectFileMpp {
                         if(json.getInt("id") == 0){
                         }
                         else{
-                            /*if(project.getTaskByID(json.getInt("id"))!=null){
-                                taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
-                            }
-                            else{}*/
+                            //taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
                             taskhijo.generateOutlineNumber(project.getTaskByID(json.getInt("id")));
                         }
                         project.getTaskByID(json.getInt("id")).addChildTask(taskhijo);
@@ -435,45 +433,41 @@ public class RestProjectFileMpp {
                         relationType = RelationType.START_FINISH;
                     }
 
-                    if(json.getString("id").compareToIgnoreCase(idH) ==1) {}
-                    else{
-                        if(lag.contains("d")){
-                        
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("h")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("y")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("w")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("m")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MINUTES));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("M")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("M", "")),TimeUnit.MONTHS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else{
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
-                            task.getSuccessors().add(arg0);
-                        }
+
+                    if(lag.contains("d")){
+                        //task.getSuccessors().add ( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
                     }
+                    else if(lag.contains("h")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else if(lag.contains("y")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else if(lag.contains("w")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else if(lag.contains("m")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MINUTES));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else if(lag.contains("M")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("M", "")),TimeUnit.MONTHS));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else{
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
+                        task.getSuccessors().add(arg0);
+                    }
+
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

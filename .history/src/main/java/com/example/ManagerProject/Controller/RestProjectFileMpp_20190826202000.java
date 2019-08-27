@@ -61,7 +61,7 @@ public class RestProjectFileMpp {
         projectObj = addTarea(projectObj,jsonObject);
         projectObj = addCalendario(projectObj,jsonObject);
         projectObj = addPredecesoras(projectObj,jsonObject);
-        projectObj = addSucesores(projectObj,jsonObject);
+        //projectObj = addSucesores(projectObj,jsonObject);
         projectObj = addFechasTareas(projectObj,jsonObject);
         projectObj = addDuracionTareas(projectObj,jsonObject);
         
@@ -435,7 +435,7 @@ public class RestProjectFileMpp {
                         relationType = RelationType.START_FINISH;
                     }
 
-                    if(json.getString("id").compareToIgnoreCase(idH) ==1) {}
+                    if(json.getString("id") == idH) {}
                     else{
                         if(lag.contains("d")){
                         

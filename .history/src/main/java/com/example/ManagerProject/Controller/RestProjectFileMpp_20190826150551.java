@@ -54,33 +54,57 @@ public class RestProjectFileMpp {
             e.printStackTrace();
         }        
 
+        //addColumnas(projectObj, jsonObject).getAllTasks();
+
         //projectObj = addColumnas(projectObj,jsonObject);
         
-        projectObj = addDuracionProyecto(projectObj,jsonObject);
+        //projectObj = addDuracionProyecto(projectObj,jsonObject);
         projectObj =  addRecursos(projectObj,jsonObject);
         projectObj = addTarea(projectObj,jsonObject);
         projectObj = addCalendario(projectObj,jsonObject);
         projectObj = addPredecesoras(projectObj,jsonObject);
         projectObj = addSucesores(projectObj,jsonObject);
-        projectObj = addFechasTareas(projectObj,jsonObject);
         projectObj = addDuracionTareas(projectObj,jsonObject);
+        projectObj = addFechasTareas(projectObj,jsonObject);
         
+        //projectObj = addHijosTarea(projectObj,jsonObject);
+        
+                                
         /*ProjectWriter writer = ProjectWriterUtility.getProjectWriter("HOLA.mpx");  
         writer.write(projectObj,"HOLA.mpx");*/
-
         MSPDIWriter writer = new MSPDIWriter();
         writer.write(projectObj, "hola.xml");
         return "Hola Mundo";
     }
     
-   
+    public static ProjectFile addHijosTarea(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException {
+        
+        for(int i=0;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
+            try {
+
+                JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
+                JSONArray hijos = json.getJSONArray("hijos");
+                for(int j=0; j <hijos.length() ; j++){
+                    JSONObject hijo = hijos.getJSONObject(j);
+                    Task taskhijo = project.getTaskByID(hijo.getInt("id"));
+                    (project.getTaskByID(json.getInt("id"))).addChildTask(taskhijo);
+                }
+                
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } 
+        }
+        project.updateStructure();
+        return project;
+    }
 
     public static ProjectFile addDuracionTareas(ProjectFile project,JSONObject jsonObject) throws JSONException{
         for(int i=0 ;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
+                if(json.getJSONArray("hijos").length() == 0){
                     String duracion = json.getString("duracion");
-                    Duration duracionD = null;
+                    Duration duracionD;
                     if(duracion.contains("h")){
                         duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("h", "")), TimeUnit.HOURS);
                     }
@@ -161,11 +185,13 @@ public class RestProjectFileMpp {
                         actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("p", "")), TimeUnit.PERCENT);
                     }
 
-                    //System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
+                    System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
                     project.getTaskByID(json.getInt("id")).setDuration(duracionD);
                     project.getTaskByID(json.getInt("id")).setActualDuration(duracionA);
-                    //project.getTaskByID(json.getInt("id")).setActualWork(actualT);
-                    //project.getTaskByID(json.getInt("id")).setDurationText(duracion);
+                    project.getTaskByID(json.getInt("id")).setActualWork(actualT);
+                    project.getTaskByID(json.getInt("id")).setDurationText(duracion);
+                }
+                else{}
             } catch (JSONException e) {
                 e.printStackTrace();
             } 
@@ -181,43 +207,26 @@ public class RestProjectFileMpp {
             try {
                 
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
-                
-                if(json.getJSONArray("hijos").length() == 0){
-                    project.getTaskByID(json.getInt("id")).getStart();
-                    project.getTaskByID(json.getInt("id")).getFinish();
-
-
-                    if(json.getString("AfechaInicio") != "null"){
-                        project.getTaskByID(json.getInt("id")).setActualStart(df.parse(json.getString("fechaInicio")));
-                    }
-                    /*if(json.getString("fechaInicio") != "null"){
-                        project.getTaskByID(json.getInt("id")).setStart(df.parse(json.getString("fechaInicio")));
-                    }
-                    if(json.getString("TfechaInicio") != "null"){
-                        project.getTaskByID(json.getInt("id")).setStartText(json.getString("TfechaInicio"));
-                    }*/
-
-                    
-                    if(json.getString("AfechaFin") != "null"){
-                        project.getTaskByID(json.getInt("id")).setActualFinish(df.parse(json.getString("fechaFin")));
-                    }
-
-
-                    /*if(json.getString("fechaFin") != "null"){
-                        project.getTaskByID(json.getInt("id")).setFinish(df.parse(json.getString("fechaFin")));
-                    }
-                    if(json.getString("TfechaFin") != "null"){
-                        project.getTaskByID(json.getInt("id")).setFinishText(json.getString("TfechaFin"));
-                    }*/
+                project.getTaskByID(json.getInt("id")).getStart();
+                project.getTaskByID(json.getInt("id")).getFinish();
+                if(json.getString("AfechaInicio") != "null"){
+                    project.getTaskByID(json.getInt("id")).setActualStart(df.parse(json.getString("fechaInicio")));
                 }
-                else{
-                    project.getTaskByID(json.getInt("id")).getStart();
-                    project.getTaskByID(json.getInt("id")).getFinish();
-                    if(json.getString("AfechaInicio") != "null"){
-                        project.getTaskByID(json.getInt("id")).setActualStart(df.parse(json.getString("fechaInicio")));
-                    }
+                /*if(json.getString("fechaInicio") != "null"){
+                    project.getTaskByID(json.getInt("id")).setStart(df.parse(json.getString("fechaInicio")));
                 }
-                
+                if(json.getString("TfechaInicio") != "null"){
+                    project.getTaskByID(json.getInt("id")).setStartText(json.getString("TfechaInicio"));
+                }*/
+                if(json.getString("AfechaFin") != "null"){
+                    project.getTaskByID(json.getInt("id")).setActualFinish(df.parse(json.getString("fechaFin")));
+                }
+                /*if(json.getString("fechaFin") != "null"){
+                    project.getTaskByID(json.getInt("id")).setFinish(df.parse(json.getString("fechaFin")));
+                }
+                if(json.getString("TfechaFin") != "null"){
+                    project.getTaskByID(json.getInt("id")).setFinishText(json.getString("TfechaFin"));
+                }*/
                 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -292,11 +301,7 @@ public class RestProjectFileMpp {
                         if(json.getInt("id") == 0){
                         }
                         else{
-                            /*if(project.getTaskByID(json.getInt("id"))!=null){
-                                taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
-                            }
-                            else{}*/
-                            
+                            //taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
                             taskhijo.generateOutlineNumber(project.getTaskByID(json.getInt("id")));
                         }
 
@@ -332,10 +337,7 @@ public class RestProjectFileMpp {
                         if(json.getInt("id") == 0){
                         }
                         else{
-                            /*if(project.getTaskByID(json.getInt("id"))!=null){
-                                taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
-                            }
-                            else{}*/
+                            //taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
                             taskhijo.generateOutlineNumber(project.getTaskByID(json.getInt("id")));
                         }
                         project.getTaskByID(json.getInt("id")).addChildTask(taskhijo);
@@ -410,6 +412,8 @@ public class RestProjectFileMpp {
     }
 
     public static ProjectFile addSucesores(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException{
+        SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
+        JSONObject jsonObject2 = ((JSONObject)(jsonObject.get("allColum")));
         for(int i=0;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
@@ -435,45 +439,50 @@ public class RestProjectFileMpp {
                         relationType = RelationType.START_FINISH;
                     }
 
-                    if(json.getString("id").compareToIgnoreCase(idH) ==1) {}
-                    else{
-                        if(lag.contains("d")){
-                        
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("h")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("y")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("w")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("m")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MINUTES));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("M")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("M", "")),TimeUnit.MONTHS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else{
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
-                            task.getSuccessors().add(arg0);
-                        }
+
+                    if(lag.contains("d")){
+                        //task.getSuccessors().add ( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
                     }
+                    else if(lag.contains("h")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else if(lag.contains("y")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
+                        task.getSuccessors().add(arg0);
+
+                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
+                    }
+                    else if(lag.contains("w")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
+                        task.getSuccessors().add(arg0);
+
+
+                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
+                    }
+                    else if(lag.contains("m")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
+                        task.getSuccessors().add(arg0);
+
+
+                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MINUTES));
+                    }
+                    else if(lag.contains("M")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
+                        task.getSuccessors().add(arg0);
+
+                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("M", "")),TimeUnit.MONTHS));
+                    }
+                    else{
+                        
+                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
+                    }
+
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -484,34 +493,44 @@ public class RestProjectFileMpp {
     }
 
     public static  ProjectFile addDuracionProyecto(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException{
-
         
         SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
-        project.getTaskByID(0).setStart(df.parse(jsonObject.getString("StartDate")));
-       
-        System.out.println( project.getProjectProperties().getDefaultOvertimeRate());
-        project.getProjectProperties().getDefaultStartTime().setHours(6);
-        project.getProjectProperties().getDefaultEndTime().setHours(19);
-        System.out.println( project.getProjectProperties().getDefaultStartTime());
-        System.out.println( project.getProjectProperties().getDefaultEndTime());
+        
+        /*
+        ProjectReader mppReader = new MPPReader();
+        ProjectFile project = mppReader.read(filePath);
+        ProjectHeader projectHeader = project.getProjectHeader();
+        projectHeader.setStartDate("currentDate");*/
+        
+        System.out.println(project.getProjectProperties().getStartDate());
 
         if(jsonObject.getString("StartDate")!="null"){
             
-            /*project.getStartDate().setTime(df.parse(jsonObject.getString("StartDate")).getTime());
-            project.getStartDate().setSeconds(df.parse(jsonObject.getString("StartDate")).getSeconds());
-            project.getStartDate().setMinutes(df.parse(jsonObject.getString("StartDate")).getMinutes());
-            project.getStartDate().setHours(df.parse(jsonObject.getString("StartDate")).getHours());
-            project.getStartDate().setMonth(df.parse(jsonObject.getString("StartDate")).getMonth());
-            project.getStartDate().setYear(Integer.parseInt(jsonObject.getString("StartDate").split(" ")[5]));*/            
+            //project.getStartDate().setTime(df.parse(jsonObject.getString("StartDate")).getTime());
+            //project.getStartDate().setSeconds(df.parse(jsonObject.getString("StartDate")).getSeconds());
+            //project.getStartDate().setMinutes(df.parse(jsonObject.getString("StartDate")).getMinutes());
+            //project.getStartDate().setHours(df.parse(jsonObject.getString("StartDate")).getHours());
+            //project.getStartDate().setMonth(df.parse(jsonObject.getString("StartDate")).getMonth());
+            //project.getStartDate().setYear(Integer.parseInt(jsonObject.getString("StartDate").split(" ")[5]));            
+            
+            //project.getStartDate().before(df.parse(jsonObject.getString("StartDate")));
+            
+            //System.out.println(df.parse(jsonObject.getString("StartDate")).getTime());
+            //System.out.println(df.parse(jsonObject.getString("StartDate")).getSeconds());
+            //System.out.println(df.parse(jsonObject.getString("StartDate")).getMinutes());
+            //System.out.println(df.parse(jsonObject.getString("StartDate")).getHours());
+            //System.out.println(df.parse(jsonObject.getString("StartDate")).getMonth());
+            //System.out.println(df.parse(jsonObject.getString("StartDate")).getYear());
+            
 
         }
         if(jsonObject.getString("FinishDate")!="null"){
-            /*project.getFinishDate().setTime(df.parse(jsonObject.getString("FinishDate")).getTime());
-            project.getFinishDate().setSeconds(df.parse(jsonObject.getString("FinishDate")).getSeconds());
-            project.getFinishDate().setMinutes(df.parse(jsonObject.getString("FinishDate")).getMinutes());
-            project.getFinishDate().setHours(df.parse(jsonObject.getString("FinishDate")).getHours());
-            project.getFinishDate().setMonth(df.parse(jsonObject.getString("FinishDate")).getMonth());
-            project.getFinishDate().setYear(df.parse(jsonObject.getString("FinishDate")).getYear());*/
+            //project.getFinishDate().setTime(df.parse(jsonObject.getString("FinishDate")).getTime());
+            //project.getFinishDate().setSeconds(df.parse(jsonObject.getString("FinishDate")).getSeconds());
+            //project.getFinishDate().setMinutes(df.parse(jsonObject.getString("FinishDate")).getMinutes());
+            //project.getFinishDate().setHours(df.parse(jsonObject.getString("FinishDate")).getHours());
+            //project.getFinishDate().setMonth(df.parse(jsonObject.getString("FinishDate")).getMonth());
+            //project.getFinishDate().setYear(df.parse(jsonObject.getString("FinishDate")).getYear());
         }
         if(jsonObject.getString("PStartDate")!="null"){
             project.getProjectProperties().getStartDate().setTime(df.parse(jsonObject.getString("StartDate")).getTime());
@@ -529,7 +548,11 @@ public class RestProjectFileMpp {
            project.getProjectProperties().getFinishDate().setMonth(df.parse(jsonObject.getString("FinishDate")).getMonth());
            project.getProjectProperties().getFinishDate().setYear(df.parse(jsonObject.getString("FinishDate")).getYear());
         }
-        
+        System.out.println(project.getProjectProperties().getStartDate());
+        //System.out.println(project.getProjectProperties().getStartDate());
+        //System.out.println(project.getProjectProperties().getFinishDate());
+        //System.out.println(project.getFinishDate());
+        //System.out.println(project.getStartDate());
         project.updateStructure();
         return project;
     }
@@ -547,6 +570,7 @@ public class RestProjectFileMpp {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        System.out.print("Si actualiza");
         project.updateStructure();
         return project;
     }
@@ -758,9 +782,9 @@ public class RestProjectFileMpp {
     }
 
     public ProjectFile setDefaultCalendario (ProjectFile project, JSONArray calendariosJson) throws Exception {
-        //System.out.println("\n\t SET CALENDARIO DEFAULT\n"); 
+        System.out.println("\n\t SET CALENDARIO DEFAULT\n"); 
         ProjectCalendar defaultCalendario = project.getDefaultCalendar();
-        //System.out.println("DEFAULT CALENDAR NAME --> " + defaultCalendario.getName());
+        System.out.println("DEFAULT CALENDAR NAME --> " + defaultCalendario.getName());
         JSONObject defCalendarioJson = getDefaultCalendario(calendariosJson, defaultCalendario.getName());
         JSONObject parentJson = null;
         setCalendario(defaultCalendario, defCalendarioJson, parentJson);
@@ -780,23 +804,23 @@ public class RestProjectFileMpp {
     }
 
     public ProjectFile addCalendarios(ProjectFile project, JSONArray calendariosJson) throws JSONException {
-        //System.out.println("\n\t ADD CALENDARIOS"); 
+        System.out.println("\n\t ADD CALENDARIOS"); 
         //ProjectCalendarContainer projectCalendars = project.getCalendars();
         ProjectCalendar defaultCalendario = project.getDefaultCalendar();
         for(int i=0; i< calendariosJson.length(); i++){
             JSONObject json = calendariosJson.getJSONObject(i);
             if (!json.getString("nombre").equalsIgnoreCase(defaultCalendario.getName())){
-                //System.out.println("\n\t add new calendar");
-                //System.out.println("\n" + json.getString("nombre"));
+                System.out.println("\n\t add new calendar");
+                System.out.println("\n" + json.getString("nombre"));
                 ProjectCalendar calendar = project.addCalendar();
                 //addCalendario(calendar, calJson);
                 try {
                     // set calenderName
                     calendar.setName(json.getString("nombre"));
-                    //System.out.println("setName " + calendar.getName());
+                    System.out.println("setName " + calendar.getName());
                     //set calender id
                     calendar.setUniqueID(json.getInt("calenderID"));
-                    //System.out.println("setUniqueID " + calendar.getUniqueID());
+                    System.out.println("setUniqueID " + calendar.getUniqueID());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -806,7 +830,7 @@ public class RestProjectFileMpp {
     }
 
     public ProjectFile linkCalendarioRecurso (ProjectFile project, JSONArray calendariosJson) throws JSONException {
-        //System.out.println("\n\t ADD RESOURCES"); 
+        System.out.println("\n\t ADD RESOURCES"); 
         ProjectCalendarContainer calendarContainer = project.getCalendars();
         String id = "";
         for (int i=0; i<calendarContainer.size(); i++){
@@ -822,9 +846,9 @@ public class RestProjectFileMpp {
                 resource = project.getResourceByID(Integer.parseInt(id));
                 if (resource != null){
                     calendar.setResource(resource);
-                    //System.out.println("set resource: " + calendar.getResource().getName());
+                    System.out.println("set resource: " + calendar.getResource().getName());
                 }else{
-                    ///System.out.println("resource null");
+                    System.out.println("resource null");
                 }
             }
         }
@@ -832,12 +856,12 @@ public class RestProjectFileMpp {
     }
 
     public ProjectFile setCalendariosBase (ProjectFile project, JSONArray calendariosJson) throws JSONException {
-        //System.out.println("\n\t SET CALENDARIOS BASE\n");
+        System.out.println("\n\t SET CALENDARIOS BASE\n");
         ProjectCalendarContainer calendarContainer = project.getCalendars();
         ProjectCalendar calendarParent = null;
         for (int i=0; i<calendarContainer.size(); i++){
             ProjectCalendar calendar = calendarContainer.get(i);
-            //System.out.println("calendar name: " + calendar.getName());
+            System.out.println("calendar name: " + calendar.getName());
             for (int j=0; j<calendariosJson.length(); j++){
                 JSONObject json = calendariosJson.getJSONObject(j);
                 if (calendar.getName().equalsIgnoreCase(json.getString("nombre"))){
@@ -847,22 +871,22 @@ public class RestProjectFileMpp {
                     if (calendar.getParent() != null){
                         System.out.println(calendar.getParent().getName());
                     }else{
-                        //System.out.println("calendar.getParent().getName() = null");
+                        System.out.println("calendar.getParent().getName() = null");
                     }
                 }
             }
             calendarContainer.set(i, calendar);
-            //System.out.println("calendar name: " + calendarContainer.get(i).getName());
+            System.out.println("calendar name: " + calendarContainer.get(i).getName());
         }
         return project;
     }
 
     public ProjectFile setCalendarios (ProjectFile project, JSONArray calendariosJson) throws Exception {
-        //System.out.println("\n\t SET CALENDARIOS\n");
+        System.out.println("\n\t SET CALENDARIOS\n");
         ProjectCalendarContainer calendarContainer = project.getCalendars();
         JSONObject jsonParent = null;
         for (int i=0; i<calendarContainer.size(); i++){
-            //System.out.println("\n\t set calendar");
+            System.out.println("\n\t set calendar");
             ProjectCalendar calendar = calendarContainer.get(i);
             for (int j=0; j<calendariosJson.length(); j++){
                 JSONObject json = calendariosJson.getJSONObject(j);
@@ -871,13 +895,13 @@ public class RestProjectFileMpp {
                         setCalendario(calendar, json, jsonParent);
                     }else{
                         jsonParent = getDefaultCalendario(calendariosJson, calendar.getParent().getName());
-                        ///System.out.println("jsonParent: " + jsonParent.getString("nombre"));
+                        System.out.println("jsonParent: " + jsonParent.getString("nombre"));
                         setCalendario(calendar, json, jsonParent);
                     }
                 }
             }
             calendarContainer.set(i, calendar);
-            //System.out.println("calendar name: " + calendarContainer.get(i).getName());
+            System.out.println("calendar name: " + calendarContainer.get(i).getName());
         }
         return project;
     }
@@ -893,7 +917,7 @@ public class RestProjectFileMpp {
             // setHours
             JSONArray horariosCalendario = json.getJSONArray("calenderHorario");
             if (horariosCalendario.length() == 0){
-                //System.out.println(jsonParent.getString("nombre"));
+                System.out.println(jsonParent.getString("nombre"));
                 horariosCalendario = jsonParent.getJSONArray("calenderHorario");
                 setHorario (horariosCalendario, calendar);
             }else{
@@ -912,17 +936,17 @@ public class RestProjectFileMpp {
     }
 
     public ProjectCalendar setDayType (JSONArray dias, ProjectCalendar calendario, DayType dT) throws JSONException {
-        //System.out.println("=========== setDayType ===========");
+        System.out.println("=========== setDayType ===========");
         for (int i=0; i<dias.length(); i++){
             Day day = Day.valueOf(dias.get(i).toString());
             calendario.setWorkingDay(day, dT);         
         }
-        //System.out.println(dT);
+        System.out.println(dT);
         return calendario;      
     }
 
     public ProjectCalendar setHorario (JSONArray horarioCalendario, ProjectCalendar calendario) throws JSONException, ParseException {
-        //System.out.println("=========== setHorario ===========");
+        System.out.println("=========== setHorario ===========");
         for (int  i=0; i<horarioCalendario.length(); i++){
             // get horario from horarioCalendario
             String horarioStr = horarioCalendario.getString(i);
@@ -942,7 +966,7 @@ public class RestProjectFileMpp {
         ProjectCalendarHours horas [] = calendario.getHours();
         for (ProjectCalendarHours hora : horas){
             if (hora!= null){
-                //System.out.println(hora.getDay().toString() + "\n" + hora.getParentCalendar());
+                System.out.println(hora.getDay().toString() + "\n" + hora.getParentCalendar());
             }
         }
         /* ** */
@@ -951,7 +975,7 @@ public class RestProjectFileMpp {
     }
 
     public ProjectCalendar setExcepciones (JSONArray excepcionesCalendario, ProjectCalendar calendario) throws JSONException, ParseException {
-        //System.out.println("=========== setExcepciones ===========");
+        System.out.println("=========== setExcepciones ===========");
         for (int  i=0; i<excepcionesCalendario.length(); i++){
             String exStr = excepcionesCalendario.getString(i);
             String[] excepcion = exStr.split("/");           

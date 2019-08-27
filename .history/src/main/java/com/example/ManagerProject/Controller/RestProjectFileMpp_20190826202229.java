@@ -435,7 +435,7 @@ public class RestProjectFileMpp {
                         relationType = RelationType.START_FINISH;
                     }
 
-                    if(json.getString("id").compareToIgnoreCase(idH) ==1) {}
+                    if(json.getString("id") == idH) {}
                     else{
                         if(lag.contains("d")){
                         

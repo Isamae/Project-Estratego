@@ -161,7 +161,7 @@ public class RestProjectFileMpp {
                         actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("p", "")), TimeUnit.PERCENT);
                     }
 
-                    //System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
+                    System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
                     project.getTaskByID(json.getInt("id")).setDuration(duracionD);
                     project.getTaskByID(json.getInt("id")).setActualDuration(duracionA);
                     //project.getTaskByID(json.getInt("id")).setActualWork(actualT);
@@ -295,7 +295,7 @@ public class RestProjectFileMpp {
                             /*if(project.getTaskByID(json.getInt("id"))!=null){
                                 taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
                             }
-                            else{}*/
+                            else{}/
                             
                             taskhijo.generateOutlineNumber(project.getTaskByID(json.getInt("id")));
                         }
@@ -435,45 +435,42 @@ public class RestProjectFileMpp {
                         relationType = RelationType.START_FINISH;
                     }
 
-                    if(json.getString("id").compareToIgnoreCase(idH) ==1) {}
-                    else{
-                        if(lag.contains("d")){
-                        
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("h")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("y")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("w")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("m")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MINUTES));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else if(lag.contains("M")){
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("M", "")),TimeUnit.MONTHS));
-                            task.getSuccessors().add(arg0);
-                        }
-                        else{
-                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
-                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
-                            task.getSuccessors().add(arg0);
-                        }
+                    if(lag.contains("d")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
+                        task.getSuccessors().add(arg0);
                     }
+                    else if(lag.contains("h")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else if(lag.contains("y")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else if(lag.contains("w")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else if(lag.contains("m")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MINUTES));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else if(lag.contains("M")){
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("M", "")),TimeUnit.MONTHS));
+                        task.getSuccessors().add(arg0);
+                    }
+                    else{
+                        Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                        Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
+                        task.getSuccessors().add(arg0);
+                    }
+
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
