@@ -3,8 +3,10 @@ package com.example.ManagerProject.Object;
 
 
 import net.sf.mpxj.Column;
+import net.sf.mpxj.CustomField;
 import net.sf.mpxj.Day;
 import net.sf.mpxj.DayType;
+import net.sf.mpxj.FieldType;
 import net.sf.mpxj.ProjectCalendar;
 import net.sf.mpxj.ProjectCalendarException;
 import net.sf.mpxj.ProjectCalendarHours;
@@ -21,6 +23,7 @@ import java.util.List;
 
 
 import net.sf.mpxj.Task;
+import net.sf.mpxj.common.FieldTypeHelper;
 public class Project  {
 
     public String getRecursos(ProjectFile project) throws Exception{
@@ -45,14 +48,104 @@ public class Project  {
         recursos = recursos + "]" ;
         return recursos;
     }
+    public static String getColumnaTable1(ProjectFile project)  throws Exception{
+        String columnas = "[";
+        List<Column> iter2 =  project.getTables().get(0).getColumns();
+        
+        for(int i = 0 ; i < iter2.size(); i++){
+            columnas =  columnas + " { " 
+            + "'FieldTypeName'" + ":" + "'" + iter2.get(i).getFieldType().getName() +"'"
+            + "," + "'FieldTypeClass'" + ":" + "'" +    iter2.get(i).getFieldType().name() +"'"
+            + "," + "'FieldTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getValue() +"'"
+            + "," + "'FieldTypeDataTypeString'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().toString() +"'"
+            + "," + "'FieldTypeDataTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().getValue() +"'"
+            + "," + "'FieldTypeID'" + ":" + "'" +FieldTypeHelper.getFieldID(iter2.get(i).getFieldType()) +"'"
+            + "," + "'ColumTitulo'" + ":" + "'" + iter2.get(i).getTitle() +"'"
+            + "}" + "," ;
+           
+
+        }
+        if(columnas.length()>1){
+            columnas = columnas.substring(0, columnas.length()-1) ;
+        }
+        else{}
+
+        columnas = columnas + "]" ;
+        return columnas ;         
+    }
+    public static String getCamposPersonalizados(ProjectFile project) throws Exception{
+        String campospersonalizados = "[";
+        
+        Iterator<CustomField> iter =  project.getCustomFields().iterator();
+        while(iter.hasNext()) {
+            CustomField customField = iter.next();
+            campospersonalizados =  campospersonalizados + " { " 
+            + "'AliasCampo'" + ":" + "'" +customField.getAlias() +"'"
+            + "," + "'FieldTypeName'" + ":" + "'" +customField.getFieldType().getName() +"'"
+            + "," + "'FieldTypeValue'" + ":" + "'" +customField.getFieldType().getValue() +"'"
+            + "," + "'FieldTypeDataTypeString'" + ":" + "'" +customField.getFieldType().getDataType().toString() +"'"
+            + "," + "'FieldTypeDataTypeValue'" + ":" + "'" +customField.getFieldType().getDataType().getValue() +"'"
+            + "," + "'FieldTypeID'" + ":" + "'" +FieldTypeHelper.getFieldID(customField.getFieldType()) +"'"
+            + "}" + "," ;
+            
+           
+        }
+        if(campospersonalizados.length()>1){
+            campospersonalizados = campospersonalizados.substring(0, campospersonalizados.length()-1) ;
+        }
+        else{}
+
+        campospersonalizados = campospersonalizados + "]" ;
+        return campospersonalizados ;  
+    }
     
     public static String getTareas(ProjectFile project)  throws Exception{
-        String tareas ="[";
+        ArrayList<FieldType> types = new ArrayList<FieldType>();
     
-        for (Task task : project.getTasks())
+        Iterator<CustomField> iter =  project.getCustomFields().iterator();
+        while(iter.hasNext()) {
+            CustomField customField = iter.next();
+            if(types.contains(customField.getFieldType())){}
+            else{
+                 types.add(customField.getFieldType());
+            }
+        }
+        List<Column> iter2 =  project.getTables().get(0).getColumns();
+        for(int i = 0 ; i < iter2.size(); i++){
+            if(types.contains(iter2.get(i).getFieldType())){}
+            else{
+                 types.add(iter2.get(i).getFieldType());
+            }
+        }
+        String tareas ="[";
+        for (Task task : project.getAllTasks())
         {
+            String valores = "[" ;
+            for(int y = 0 ; y< types.size(); y ++){
+                if(types.get(y).getName().compareTo("ID")==0 || types.get(y).getName().compareTo("Task Name")==0 
+                || types.get(y).getName().compareTo("Duration")==0 || types.get(y).getName().compareTo("Start")==0
+                || types.get(y).getName().compareTo("Finish")==0 || types.get(y).getName().compareTo("Predecessors")==0
+                || types.get(y).getName().compareTo("Resource Names")==0 || types.get(y).getName().compareTo("Resource Names")==0){
+                }
+                else{
+                    valores = valores + "{"
+                    + "'FieldTypeName'" + ":" + "'" +    types.get(y).getName() +"'"
+                    + "," + "'FieldTypeClass'" + ":" + "'" +    types.get(y).name() +"'"
+                    + "," + "'FieldTypeValue'" + ":" + "'" + types.get(y).getValue() +"'"
+                    + "," + "'FieldTypeDataTypeString'" + ":" + "'" + types.get(y).getDataType().toString() +"'"
+                    + "," + "'FieldTypeDataTypeValue'" + ":" + "'" + types.get(y).getDataType().getValue() +"'"
+                    + "," + "'FieldTypeID'" + ":" + "'" + FieldTypeHelper.getFieldID(types.get(y)) +"'"
+                    + "," + "'ValorCampo'" + ":" + "'" + task.getCurrentValue(types.get(y)) +"'"
+                    + "}" + "," ;
+                }
+            }
+            if(valores.length()>1){
+                valores = valores.substring(0, valores.length()-1) ;
+            }
+            else{}
+    
+            valores = valores + "]" ; 
             
-
             if(task.getName() ==null || task.getID() ==null) {}
             else{
                 tareas = tareas  
@@ -79,6 +172,8 @@ public class Project  {
                 + " , " + " 'DurationText': " + "'"+ task.getDurationText() +"'"
                 + " , " + " 'BaselineFinish': " + "'"+ task.getBaselineFinish() +"'"
                 + " , " + " 'BaselineStart': " + "'"+ task.getBaselineStart() +"'"
+                + " , " + " 'Columnas': " + valores
+                + " , " + " 'CalendarioUniqueID': " + task.getCalendarUniqueID()
 
                 + " }"  + " ,";
            
@@ -128,6 +223,7 @@ public class Project  {
 
         for (ResourceAssignment assignment : project.getAllResourceAssignments()){
             Task task = assignment.getTask();
+
             int taskId;
             if (task == null){
                 taskId = -1;
@@ -147,7 +243,19 @@ public class Project  {
 
             if(taskId == -1 || resourceId == -1) {}
             else{
-                asignaciones = asignaciones  + "{ " + "'idTask' :" +  taskId +" , "+ " 'idResource' : " + resourceId +" }"  + ",";
+                asignaciones = asignaciones  + "{ " + "'idTask' :" +  taskId 
+                +" , "+ " 'idResource' : " + resourceId 
+                +" , "+ " 'Delay' : " + "'" + assignment.getDelay() + "'"
+                +" , "+ " 'ActualFinish' : " + "'" +assignment.getActualFinish() + "'"
+                +" , "+ " 'ActualStart' : " + "'" +assignment.getActualStart() + "'"
+                +" , "+ " 'ActualWork' : " + "'" +assignment.getActualWork() + "'"
+                +" , "+ " 'Cost' : " + "'" + assignment.getCost() + "'"
+                +" , "+ " 'CreateDate' : " + "'" +assignment.getCreateDate() + "'"
+                +" , "+ " 'Finish' : " + "'" +assignment.getFinish() + "'"
+                +" , "+ " 'Start' : " + "'" + assignment.getStart() + "'"
+                +" , "+ " 'Units' : " + "'" + assignment.getUnits()+ "'"
+                +" , "+ " 'UniqueID' : " + "'" + assignment.getUniqueID()+ "'"
+                +" }"  + ",";
             }
 
         }

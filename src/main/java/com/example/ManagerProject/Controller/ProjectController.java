@@ -38,7 +38,8 @@ public class ProjectController{
 		+ " , " + " 'recursos' : " + project.getRecursos(archivo)
 		+ " , " + " 'tareas' : " + project.getTareas(archivo)
 		+ " , " + " asigRecursos : " + project.asignacionesRecursos(archivo)
-		+ " , " + " allColum : " + project.columnasTask(archivo)
+		+ " , " + " ColumnasTabla1 : " + project.getColumnaTable1(archivo)
+		+ " , " + " CamposPersonalizados : " + project.getCamposPersonalizados(archivo)
 		+ " , " + " FinishDate : " + "'" +archivo.getFinishDate() +"'"
 		+ " , " + " StartDate : " + "'" +archivo.getStartDate() +"'"
 		+ " , " + " PStartDate : " + "'" +archivo.getProjectProperties().getStartDate() +"'"

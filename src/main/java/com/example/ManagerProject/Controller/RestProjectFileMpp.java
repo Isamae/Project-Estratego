@@ -3,7 +3,7 @@ import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-
+//import org.apache.poi.sl.usermodel.TextRun.FieldType;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
@@ -22,11 +22,14 @@ import net.sf.mpxj.mspdi.MSPDIWriter;
 import net.sf.mpxj.mspdi.SaveVersion;
 //import net.sf.mpxj.writer.*;  
 import net.sf.mpxj.Task;
+import net.sf.mpxj.common.FieldTypeHelper;
 import net.sf.mpxj.mspdi.MSPDIWriter;
 import net.sf.mpxj.reader.UniversalProjectReader;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Locale;
 
 
@@ -57,24 +60,26 @@ public class RestProjectFileMpp {
 
         //projectObj = addColumnas(projectObj,jsonObject);
 
-        projectObj = setPropiedades(projectObj, jsonObject);
+        projectObj = setPropiedades(projectObj, jsonObject);        
 
-        projectObj =  addRecursos(projectObj,jsonObject);
-        //projectObj = addDuracionProyecto(projectObj,jsonObject);
+        //projectObj = addColumnas(projectObj,jsonObject);
+        projectObj = addCamposPersonalizados(projectObj,jsonObject);
+        projectObj = addDuracionProyecto(projectObj,jsonObject);
+        projectObj = addRecursos(projectObj,jsonObject);
         projectObj = addTarea(projectObj,jsonObject);
-
         projectObj = addCalendario(projectObj,jsonObject);
-
+        //projectObj = addCalendarioTarea(projectObj,jsonObject);
+        projectObj = addAsignacionesRecursos(projectObj,jsonObject);
         projectObj = addPredecesoras(projectObj,jsonObject);
+        projectObj = addSucesores(projectObj,jsonObject);
+        projectObj = addFechasTareas(projectObj,jsonObject);
         projectObj = addDuracionTareas(projectObj,jsonObject);
+        projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
         
-        //projectObj = addFechasTareas(projectObj,jsonObject);
         
-        //projectObj = addHijosTarea(projectObj,jsonObject);
-        
-                                
         /*ProjectWriter writer = ProjectWriterUtility.getProjectWriter("HOLA.mpx");  
         writer.write(projectObj,"HOLA.mpx");*/
+
         MSPDIWriter writer = new MSPDIWriter();
         writer.write(projectObj, "hola.xml");
         return "Hola Mundo";
@@ -108,34 +113,92 @@ public class RestProjectFileMpp {
         return project;
     }
     
-    public static ProjectFile addHijosTarea(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException {
+    public static ProjectFile addCamposPersonalizados(ProjectFile project,JSONObject jsonObject) throws JSONException{
         
-        for(int i=0;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
+        for(int i=0 ;i< ((JSONArray)(jsonObject.get("CamposPersonalizados"))).length();i++){
             try {
-
-                JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
-                JSONArray hijos = json.getJSONArray("hijos");
-                for(int j=0; j <hijos.length() ; j++){
-                    JSONObject hijo = hijos.getJSONObject(j);
-                    Task taskhijo = project.getTaskByID(hijo.getInt("id"));
-                    (project.getTaskByID(json.getInt("id"))).addChildTask(taskhijo);
+                JSONObject object  = ((JSONArray)(jsonObject.get("CamposPersonalizados"))).getJSONObject(i);
+                if(object.getString("AliasCampo").compareToIgnoreCase("null")== 0 || object.getInt("FieldTypeID")==-1){}
+                else{
+                    CustomFieldContainer fields = project.getCustomFields();
+                    FieldType fieldType = FieldTypeHelper.getInstance14(object.getInt("FieldTypeID")); 
+                    if(fieldType.getName() == null){}
+                    else{
+                        //CustomFieldValueItem item = new CustomFieldValueItem(object.getInt("FieldTypeValue"));
+                        CustomField customField = new CustomField( fieldType,  fields);
+                        customField.setAlias(object.getString("AliasCampo"));
+                        fields.getCustomField(fieldType);
+                        //fields.registerValue(item);
+                    }
+                   
                 }
                 
             } catch (JSONException e) {
                 e.printStackTrace();
             } 
         }
+        for(int i=0 ;i< ((JSONArray)(jsonObject.get("CamposPersonalizados"))).length();i++){
+            try {
+                JSONObject object  = ((JSONArray)(jsonObject.get("CamposPersonalizados"))).getJSONObject(i);
+                if(object.getString("AliasCampo").compareToIgnoreCase("null")==0 || object.getInt("FieldTypeID")==-1){
+
+                }
+                else{
+                    
+                    FieldType fieldType = FieldTypeHelper.getInstance14(object.getInt("FieldTypeID")); 
+                    
+                    if(fieldType.getName() == null){}
+                    else{
+                        project.getCustomFields().getCustomField(fieldType).setAlias(object.getString("AliasCampo"));
+                    }
+                   
+                }
+                
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } 
+        }
+        /*for(CustomField customField :  project.getCustomFields()){
+            System.out.println(customField.getAlias());
+        }*/
+       
         project.updateStructure();
         return project;
     }
 
+    public static ProjectFile addColumnas(ProjectFile project,JSONObject jsonObject) throws Exception{
+        
+        JSONArray json = jsonObject.getJSONArray("ColumnasTabla1");
+        if(project.getTables().size() !=0){
+            List<Column> iter = project.getTables().get(0).getColumns();
+            for(int i = iter.size()-1; i>0 ; i--){
+                project.getTables().get(0).getColumns().remove(i);
+            }   
+        }
+        else{
+            Table table = new Table();
+            table.setName("Tareas");
+            table.setID(1);
+            project.getTables().add(table);
+        }
+        for(int i = 0; i < json.length(); i ++ ){
+            Column column = new Column(project);
+            FieldType fieldType = FieldTypeHelper.getInstance14(json.getJSONObject(i).getInt("FieldTypeID"));
+            column.setFieldType(fieldType);
+            column.setTitle(json.getJSONObject(i).getString("ColumTitulo"));
+            project.getTables().get(0).getColumns().add(column);
+        }
+  
+        return project;
+        
+    }
+    
     public static ProjectFile addDuracionTareas(ProjectFile project,JSONObject jsonObject) throws JSONException{
         for(int i=0 ;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
-                if(json.getJSONArray("hijos").length() == 0){
                     String duracion = json.getString("duracion");
-                    Duration duracionD;
+                    Duration duracionD = null;
                     if(duracion.contains("h")){
                         duracionD = Duration.getInstance(Double.parseDouble(duracion.replace("h", "")), TimeUnit.HOURS);
                     }
@@ -216,16 +279,11 @@ public class RestProjectFileMpp {
                         actualT = Duration.getInstance(Double.parseDouble(ActualTrabajo.replace("p", "")), TimeUnit.PERCENT);
                     }
 
-                    System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
+                    //System.out.println("ID :" +json.getInt("id") +"-> " + duracionD);
                     project.getTaskByID(json.getInt("id")).setDuration(duracionD);
                     project.getTaskByID(json.getInt("id")).setActualDuration(duracionA);
-                    project.getTaskByID(json.getInt("id")).setActualWork(actualT);
-                    project.getTaskByID(json.getInt("id")).setDurationText(duracion);
-                }
-                else{
-
-                }
-
+                    //project.getTaskByID(json.getInt("id")).setActualWork(actualT);
+                    //project.getTaskByID(json.getInt("id")).setDurationText(duracion);
             } catch (JSONException e) {
                 e.printStackTrace();
             } 
@@ -241,19 +299,44 @@ public class RestProjectFileMpp {
             try {
                 
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
-                //System.out.println(project.getTaskByID(json.getInt("id")));
-                project.getTaskByID(json.getInt("id")).setActualStart(df.parse(json.getString("AfechaInicio")));
-                project.getTaskByID(json.getInt("id")).setStart(df.parse(json.getString("fechaInicio")));
-                project.getTaskByID(json.getInt("id")).setStartText(json.getString("TfechaInicio"));
-               
+                
+                if(json.getJSONArray("hijos").length() == 0){
+                    project.getTaskByID(json.getInt("id")).getStart();
+                    project.getTaskByID(json.getInt("id")).getFinish();
 
-                project.getTaskByID(json.getInt("id")).setActualFinish(df.parse(json.getString("AfechaFin")));
-                project.getTaskByID(json.getInt("id")).setFinish(df.parse(json.getString("fechaFin")));
-                project.getTaskByID(json.getInt("id")).setFinishText(json.getString("TfechaFin"));
+
+                    if(json.getString("AfechaInicio") != "null"){
+                        project.getTaskByID(json.getInt("id")).setActualStart(df.parse(json.getString("fechaInicio")));
+                    }
+                    /*if(json.getString("fechaInicio") != "null"){
+                        project.getTaskByID(json.getInt("id")).setStart(df.parse(json.getString("fechaInicio")));
+                    }
+                    if(json.getString("TfechaInicio") != "null"){
+                        project.getTaskByID(json.getInt("id")).setStartText(json.getString("TfechaInicio"));
+                    }*/
+
+                    
+                    if(json.getString("AfechaFin") != "null"){
+                        project.getTaskByID(json.getInt("id")).setActualFinish(df.parse(json.getString("fechaFin")));
+                    }
+
+
+                    /*if(json.getString("fechaFin") != "null"){
+                        project.getTaskByID(json.getInt("id")).setFinish(df.parse(json.getString("fechaFin")));
+                    }
+                    if(json.getString("TfechaFin") != "null"){
+                        project.getTaskByID(json.getInt("id")).setFinishText(json.getString("TfechaFin"));
+                    }*/
+                }
+                else{
+                    project.getTaskByID(json.getInt("id")).getStart();
+                    project.getTaskByID(json.getInt("id")).getFinish();
+                    if(json.getString("AfechaInicio") != "null"){
+                        project.getTaskByID(json.getInt("id")).setActualStart(df.parse(json.getString("fechaInicio")));
+                    }
+                }
                 
                 
-                //(project.getTaskByID(json.getInt("id"))).addRecurringTask().setFinishDate(df.parse(json.getString("fechaFin")));
-
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (ParseException e){
@@ -264,9 +347,52 @@ public class RestProjectFileMpp {
         return project;
     }
 
+    public static ProjectFile addValoresCamposPersonalizados(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException {
+
+        for(int i=0 ;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
+            try {
+                JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
+                JSONArray columnas = json.getJSONArray("Columnas");
+                for(int x = 0;  x < columnas.length(); x++){
+                    JSONObject datoObject  = columnas.getJSONObject(x);
+                    if(datoObject.getInt("FieldTypeID") == -1){}
+                    else{
+                        Task tarea = project.getTaskByID(json.getInt("id"));
+                        String tipodato = datoObject.getString("FieldTypeDataTypeString");
+                        Object seteadoValue = null;
+                        DataType dataType = DataType.valueOf(tipodato);
+                        
+                        if(datoObject.getString("ValorCampo").compareToIgnoreCase("null") ==0){
+                            seteadoValue = null;
+                        }
+                        else{
+                            if(tipodato.compareToIgnoreCase("STRING")==0){
+                                seteadoValue = datoObject.getString("ValorCampo");
+                            }
+                            else if(tipodato.compareToIgnoreCase("PERCENTAGE")==0){
+                                seteadoValue =  Double.parseDouble(datoObject.getString("ValorCampo")) ;
+                            }
+                            else{
+                                seteadoValue =  Double.parseDouble(datoObject.getString("ValorCampo")) ;
+                            }
+                        }       
+                        FieldType fieldType = FieldTypeHelper.getInstance14(datoObject.getInt("FieldTypeID"));
+                        tarea.getCurrentValue(fieldType);
+                        tarea.set(fieldType,seteadoValue);
+                    }
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (ClassCastException e) {
+                e.printStackTrace();
+            } 
+        }
+        project.updateStructure();
+        return project;
+    }
+
     public static ProjectFile addTarea(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException {
 
-        
         project.getAllTasks().get(0).setName(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getString("name"));
         project.getAllTasks().get(0).setUniqueID(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getInt("uniqueID"));
         project.getAllTasks().get(0).setActive(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getBoolean("estado"));
@@ -285,6 +411,7 @@ public class RestProjectFileMpp {
                     (project.getTaskByID(json.getInt("id"))).setOutlineNumber(json.getString("OutlineNumber"));
                     (project.getTaskByID(json.getInt("id"))).setOutlineLevel(json.getInt("OutlineLevel"));
                     TaskType taskType;
+
                     if(json.getString("Type").equalsIgnoreCase("FIXED_DURATION")){
                         taskType = TaskType.FIXED_DURATION;
                     }
@@ -296,7 +423,6 @@ public class RestProjectFileMpp {
                     }
 
                     (project.getTaskByID(json.getInt("id"))).setType(taskType);
-
                     
                     JSONArray hijos = json.getJSONArray("hijos");
                     for(int j=0; j <hijos.length() ; j++){
@@ -309,7 +435,6 @@ public class RestProjectFileMpp {
                         taskhijo.setOutlineNumber(hijo.getString("OutlineNumber"));
                         taskhijo.setOutlineLevel(hijo.getInt("OutlineLevel"));
                         
-                        
                         TaskType taskTypeH;
                         if(hijo.getString("Type").equalsIgnoreCase("FIXED_DURATION")){
                             taskTypeH = TaskType.FIXED_DURATION;
@@ -320,14 +445,17 @@ public class RestProjectFileMpp {
                         else{
                             taskTypeH = TaskType.FIXED_WORK;
                         }
-
                         taskhijo.setType(taskTypeH);
 
 
                         if(json.getInt("id") == 0){
                         }
                         else{
-                            //taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
+                            /*if(project.getTaskByID(json.getInt("id"))!=null){
+                                taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
+                            }
+                            else{}*/
+                            
                             taskhijo.generateOutlineNumber(project.getTaskByID(json.getInt("id")));
                         }
 
@@ -363,15 +491,142 @@ public class RestProjectFileMpp {
                         if(json.getInt("id") == 0){
                         }
                         else{
-                            //taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
+                            /*if(project.getTaskByID(json.getInt("id"))!=null){
+                                taskhijo.generateWBS(project.getTaskByID(json.getInt("id")));
+                            }
+                            else{}*/
                             taskhijo.generateOutlineNumber(project.getTaskByID(json.getInt("id")));
                         }
                         project.getTaskByID(json.getInt("id")).addChildTask(taskhijo);
 
                     }
                 }
-
+               
+                /*JSONArray columnas = json.getJSONArray("Columnas");
+                for(int x = 0;  x < columnas.length(); x++){
+                    JSONObject datoObject  = columnas.getJSONObject(x);
+                    if(datoObject.getInt("FieldTypeID") == -1){}
+                    else{
+                        Task tarea = project.getTaskByID(json.getInt("id"));
+                        String tipodato = datoObject.getString("FieldTypeDataTypeString");
+                        Object seteadoValue = null;
+                        DataType dataType;
+                        
+                        if(datoObject.getString("ValorCampo").compareToIgnoreCase("null") ==0){
+                            seteadoValue = null;
+                        }
+                        else{
+                            dataType =  DataType.valueOf(tipodato);
+                            if(tipodato.compareToIgnoreCase("STRING")==0){
+                                seteadoValue = datoObject.getString("ValorCampo");
+                            }
+                            else if(tipodato.compareToIgnoreCase("PERCENTAGE")==0){
+                                seteadoValue =  Double.parseDouble(datoObject.getString("ValorCampo")) ;
+                            }
+                            else{
+                                seteadoValue =  Double.parseDouble(datoObject.getString("ValorCampo")) ;
+                            }
+                        }       
+                        FieldType fieldType = FieldTypeHelper.getInstance14(datoObject.getInt("FieldTypeID"));
+                        tarea.getCurrentValue(fieldType);
+                        tarea.set(fieldType,seteadoValue);
+                       
+                        
+                    }
+                }
+                */
             } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (ClassCastException e) {
+                e.printStackTrace();
+            } 
+        }
+        project.updateStructure();
+        return project;
+    }
+
+    public static ProjectFile addCalendarioTarea(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException {
+       
+        for(int i=0 ;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
+            try {
+                JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
+                project.getTaskByID(json.getInt("id")).setCalendarUniqueID(json.getInt("CalendarioUniqueID"));;
+
+
+          
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (ClassCastException e) {
+                e.printStackTrace();
+            } 
+        }
+        project.updateStructure();
+        return project;
+    }
+
+    public static ProjectFile addAsignacionesRecursos(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException {
+        SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
+       
+        for(int i=0 ;i< ((JSONArray)(jsonObject.get("asigRecursos"))).length();i++){
+            try {
+                JSONObject json = ((JSONArray)(jsonObject.get("asigRecursos"))).getJSONObject(i);
+                Task task = project.getTaskByID(json.getInt("idTask"));
+                Resource resource = project.getResourceByID(json.getInt("idResource"));
+                ResourceAssignment assignment =  task.addResourceAssignment(resource);
+                assignment.setCost(json.getDouble("Cost"));
+
+                if(json.getString("ActualStart").compareToIgnoreCase("null")==0){}
+                else{
+                    assignment.getActualStart();
+                    assignment.setActualStart(df.parse(json.getString("ActualStart")));
+                }
+                if(json.getString("ActualFinish").compareToIgnoreCase("null")==0){}
+                else{
+                    assignment.getActualFinish();
+                    assignment.setActualFinish(df.parse(json.getString("ActualFinish")));
+                }
+
+
+                if(json.getString("Start").compareToIgnoreCase("null")==0){}
+                else{
+                    assignment.getStart();
+                    assignment.setStart(df.parse(json.getString("Start")));
+                }
+                if(json.getString("Finish").compareToIgnoreCase("null")==0){}
+                else{
+                    assignment.getFinish();
+                    assignment.setFinish(df.parse(json.getString("Finish")));
+                }
+                
+                
+                assignment.setUnits(json.getDouble("Units"));
+                assignment.setUniqueID(json.getInt("UniqueID"));
+
+                if(json.getString("ActualWork").contains("d")){
+                    assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("d", "")),TimeUnit.DAYS));
+                }
+                else if(json.getString("ActualWork").contains("h")){
+                    assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("h", "")),TimeUnit.HOURS));
+                }
+                else if(json.getString("ActualWork").contains("y")){
+                    assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("y", "")),TimeUnit.YEARS));
+                }
+                else if(json.getString("ActualWork").contains("w")){
+                    assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("w", "")),TimeUnit.WEEKS));
+                }
+                else if(json.getString("ActualWork").contains("m")){
+                    assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("m", "")),TimeUnit.MINUTES));
+                }
+                else if(json.getString("ActualWork").contains("M")){
+                    assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("M", "")),TimeUnit.MONTHS));
+                }
+                else{
+                    assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("p", "")),TimeUnit.PERCENT));
+                }
+                
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (ClassCastException e) {
                 e.printStackTrace();
             } 
         }
@@ -438,8 +693,6 @@ public class RestProjectFileMpp {
     }
 
     public static ProjectFile addSucesores(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException{
-        SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
-        JSONObject jsonObject2 = ((JSONObject)(jsonObject.get("allColum")));
         for(int i=0;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
@@ -465,27 +718,44 @@ public class RestProjectFileMpp {
                         relationType = RelationType.START_FINISH;
                     }
 
-
-                    if(lag.contains("d")){
-                        //task.getSuccessors().add ( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
-                    }
-                    else if(lag.contains("h")){
-                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
-                    }
-                    else if(lag.contains("y")){
-                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
-                    }
-                    else if(lag.contains("w")){
-                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
-                    }
-                    else if(lag.contains("m")){
-                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MINUTES));
-                    }
-                    else if(lag.contains("M")){
-                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("M", "")),TimeUnit.MONTHS));
-                    }
+                    if(json.getString("id").compareToIgnoreCase(idH) == 0) {}
                     else{
-                        task.addPredecessor( project.getTaskByID(Integer.parseInt(idH)), relationType,  Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
+                        if(lag.contains("d")){
+                        
+                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("d", "")),TimeUnit.DAYS));
+                            task.getSuccessors().add(arg0);
+                        }
+                        else if(lag.contains("h")){
+                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("h", "")),TimeUnit.HOURS));
+                            task.getSuccessors().add(arg0);
+                        }
+                        else if(lag.contains("y")){
+                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("y", "")),TimeUnit.YEARS));
+                            task.getSuccessors().add(arg0);
+                        }
+                        else if(lag.contains("w")){
+                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("w", "")),TimeUnit.WEEKS));
+                            task.getSuccessors().add(arg0);
+                        }
+                        else if(lag.contains("m")){
+                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                            Relation arg0 = new Relation(task, targetTask, relationType,  Duration.getInstance(Double.parseDouble(lag.replace("m", "")),TimeUnit.MINUTES));
+                            task.getSuccessors().add(arg0);
+                        }
+                        else if(lag.contains("M")){
+                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("M", "")),TimeUnit.MONTHS));
+                            task.getSuccessors().add(arg0);
+                        }
+                        else{
+                            Task targetTask = project.getTaskByID(Integer.parseInt(idH));
+                            Relation arg0 = new Relation(task, targetTask, relationType, Duration.getInstance(Double.parseDouble(lag.replace("p", "")),TimeUnit.PERCENT));
+                            task.getSuccessors().add(arg0);
+                        }
                     }
                 }
             } catch (JSONException e) {
@@ -497,44 +767,34 @@ public class RestProjectFileMpp {
     }
 
     public static  ProjectFile addDuracionProyecto(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException{
+
         
         SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
-        
-        /*
-        ProjectReader mppReader = new MPPReader();
-        ProjectFile project = mppReader.read(filePath);
-        ProjectHeader projectHeader = project.getProjectHeader();
-        projectHeader.setStartDate("currentDate");*/
-        
-        System.out.println(project.getProjectProperties().getStartDate());
+        project.getTaskByID(0).setStart(df.parse(jsonObject.getString("StartDate")));
+       
+        System.out.println( project.getProjectProperties().getDefaultOvertimeRate());
+        //project.getProjectProperties().getDefaultStartTime().setHours(6);
+        //project.getProjectProperties().getDefaultEndTime().setHours(19);
+        System.out.println( project.getProjectProperties().getDefaultStartTime());
+        System.out.println( project.getProjectProperties().getDefaultEndTime());
 
         if(jsonObject.getString("StartDate")!="null"){
             
-            //project.getStartDate().setTime(df.parse(jsonObject.getString("StartDate")).getTime());
-            //project.getStartDate().setSeconds(df.parse(jsonObject.getString("StartDate")).getSeconds());
-            //project.getStartDate().setMinutes(df.parse(jsonObject.getString("StartDate")).getMinutes());
-            //project.getStartDate().setHours(df.parse(jsonObject.getString("StartDate")).getHours());
-            //project.getStartDate().setMonth(df.parse(jsonObject.getString("StartDate")).getMonth());
-            //project.getStartDate().setYear(Integer.parseInt(jsonObject.getString("StartDate").split(" ")[5]));            
-            
-            //project.getStartDate().before(df.parse(jsonObject.getString("StartDate")));
-            
-            //System.out.println(df.parse(jsonObject.getString("StartDate")).getTime());
-            //System.out.println(df.parse(jsonObject.getString("StartDate")).getSeconds());
-            //System.out.println(df.parse(jsonObject.getString("StartDate")).getMinutes());
-            //System.out.println(df.parse(jsonObject.getString("StartDate")).getHours());
-            //System.out.println(df.parse(jsonObject.getString("StartDate")).getMonth());
-            //System.out.println(df.parse(jsonObject.getString("StartDate")).getYear());
-            
+            /*project.getStartDate().setTime(df.parse(jsonObject.getString("StartDate")).getTime());
+            project.getStartDate().setSeconds(df.parse(jsonObject.getString("StartDate")).getSeconds());
+            project.getStartDate().setMinutes(df.parse(jsonObject.getString("StartDate")).getMinutes());
+            project.getStartDate().setHours(df.parse(jsonObject.getString("StartDate")).getHours());
+            project.getStartDate().setMonth(df.parse(jsonObject.getString("StartDate")).getMonth());
+            project.getStartDate().setYear(Integer.parseInt(jsonObject.getString("StartDate").split(" ")[5]));*/            
 
         }
         if(jsonObject.getString("FinishDate")!="null"){
-            //project.getFinishDate().setTime(df.parse(jsonObject.getString("FinishDate")).getTime());
-            //project.getFinishDate().setSeconds(df.parse(jsonObject.getString("FinishDate")).getSeconds());
-            //project.getFinishDate().setMinutes(df.parse(jsonObject.getString("FinishDate")).getMinutes());
-            //project.getFinishDate().setHours(df.parse(jsonObject.getString("FinishDate")).getHours());
-            //project.getFinishDate().setMonth(df.parse(jsonObject.getString("FinishDate")).getMonth());
-            //project.getFinishDate().setYear(df.parse(jsonObject.getString("FinishDate")).getYear());
+            /*project.getFinishDate().setTime(df.parse(jsonObject.getString("FinishDate")).getTime());
+            project.getFinishDate().setSeconds(df.parse(jsonObject.getString("FinishDate")).getSeconds());
+            project.getFinishDate().setMinutes(df.parse(jsonObject.getString("FinishDate")).getMinutes());
+            project.getFinishDate().setHours(df.parse(jsonObject.getString("FinishDate")).getHours());
+            project.getFinishDate().setMonth(df.parse(jsonObject.getString("FinishDate")).getMonth());
+            project.getFinishDate().setYear(df.parse(jsonObject.getString("FinishDate")).getYear());*/
         }
         if(jsonObject.getString("PStartDate")!="null"){
             project.getProjectProperties().getStartDate().setTime(df.parse(jsonObject.getString("StartDate")).getTime());
@@ -552,11 +812,7 @@ public class RestProjectFileMpp {
            project.getProjectProperties().getFinishDate().setMonth(df.parse(jsonObject.getString("FinishDate")).getMonth());
            project.getProjectProperties().getFinishDate().setYear(df.parse(jsonObject.getString("FinishDate")).getYear());
         }
-        System.out.println(project.getProjectProperties().getStartDate());
-        //System.out.println(project.getProjectProperties().getStartDate());
-        //System.out.println(project.getProjectProperties().getFinishDate());
-        //System.out.println(project.getFinishDate());
-        //System.out.println(project.getStartDate());
+        
         project.updateStructure();
         return project;
     }
@@ -574,153 +830,8 @@ public class RestProjectFileMpp {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        System.out.print("Si actualiza");
         project.updateStructure();
         return project;
-    }
-
-    public static ProjectFile addColumnas(ProjectFile project,JSONObject jsonObject) throws Exception
-    {
-        
-        JSONObject json = ((JSONArray)(jsonObject.get("allColum"))).getJSONObject(0);
-        System.out.println("Estas son las tabla:" +  project.getTables().get(0));
-        CustomFieldContainer fields = project.getCustomFields();
-        System.out.println("El tamanao de los campos personalizados es:"+ fields.size());
-        //CustomFieldValueItem customFieldValueItem = new CustomFieldValueItem(617);
-        //fields.registerValue(customFieldValueItem);
-    
-       
-        FieldType fieldType = new FieldType(){
-        
-            @Override
-            public int getValue() {
-                return 62;
-            }
-        
-            @Override
-            public String name() {
-                return "RESOURCE_NAMES";
-            }
-        
-            @Override
-            public FieldType getUnitsType() {
-                return null;
-            }
-        
-            @Override
-            public String getName(Locale locale) {
-                return locale.getDisplayName();
-            }
-        
-            @Override
-            public String getName() {
-                return "Resource Names";
-            }
-        
-            @Override
-            public FieldTypeClass getFieldTypeClass() {
-                return FieldTypeClass.TASK;
-            }
-        
-            @Override
-            public DataType getDataType() {
-                return DataType.STRING;
-            }
-        };
-        CustomField customField = new CustomField(fieldType, project.getCustomFields());
-        
-        /*FieldContainer container = new FieldContainer(){
-        
-            @Override
-            public void set(FieldType field, Object value) {
-                
-            }
-        
-            @Override
-            public void removeFieldListener(FieldListener listener) {
-                
-            }
-        
-            @Override
-            public Object getCurrentValue(FieldType field) {
-                return null;
-            }
-        
-            @Override
-            public Object getCachedValue(FieldType field) {
-                return null;
-            }
-        
-            @Override
-            public void addFieldListener(FieldListener listener) {
-                
-            }
-        };*/
-       
-       
-
-        
-        Column column = new Column(project);
-        column.setFieldType(customField.getFieldType());
-        column.setTitle("Hola Mundo");
-        column.setWidth(14);
-        project.getTables().get(0).getColumns().add(column);
-        
-        /*CustomFieldValueItem item = new CustomFieldValueItem(7);
-        item.setDescription("hola Mundo");
-        item.setParent(200);*/
-        fields.getCustomField(fieldType);
-
-        for (CustomField field :project.getCustomFields())
-        {
-            //fields.getCustomField(field.getFieldType()).setAlias("hola");
-            System.out.println("Field: " + field);
-            System.out.println("Typo, getName , name,  value , unidades , clase: " + field.getFieldType().getDataType() 
-            + "     "  +field.getFieldType().getName()
-            + "     "  +field.getFieldType().name()
-            + "     "  +field.getFieldType().getValue()
-            + "     "  +field.getFieldType().getUnitsType()
-            + "     "  +field.getFieldType().getFieldTypeClass());
-        }
-        //project.getProjectProperties();
-        //project.getProjectConfig();
-        //project.getEventManager();
-
-        System.out.println("El tamanao de los campos personalizados es:"+ project.getCustomFields().size());
-
-        
-        /*for (CustomField field :project.getCustomFields())
-        {
-            //fields.getCustomField(field.getFieldType()).setAlias("hola");
-            System.out.println("Field: " + field);
-            System.out.println("Typo, getName , name,  value , unidades , clase: " + field.getFieldType().getDataType() 
-            + "     "  +field.getFieldType().getName()
-            + "     "  +field.getFieldType().name()
-            + "     "  +field.getFieldType().getValue()
-            + "     "  +field.getFieldType().getUnitsType()
-            + "     "  +field.getFieldType().getFieldTypeClass());
-        }*/
-
-        /*Table table = project.getTables().get(0);
-        project.getTables().remove(table);
-        
-
-        Table table2 = new Table();
-        table2.setName("Table1");
-        table2.setID(1);
-        for(int i = 0; i< json.names().length(); i ++){
-            Column column = new Column(project);
-          
-            column.setTitle((String)json.names().get(i));
-
-            
-            
-            //column.setFieldType(fieldType);
-            table2.addColumn(column);
-        }
-        project.getTables().add(table2);*/
-        return project;
-        
     }
     
     public static ProjectFile addDataTablas(ProjectFile project,JSONObject jsonObject) throws Exception{
@@ -974,17 +1085,17 @@ public class RestProjectFileMpp {
     }
 
     public ProjectCalendar setDayType (JSONArray dias, ProjectCalendar calendario, DayType dT) throws JSONException {
-        System.out.println("=========== setDayType ===========");
+        //System.out.println("=========== setDayType ===========");
         for (int i=0; i<dias.length(); i++){
             Day day = Day.valueOf(dias.get(i).toString());
             calendario.setWorkingDay(day, dT);         
         }
-        System.out.println(dT);
+        //System.out.println(dT);
         return calendario;      
     }
 
     public ProjectCalendar setHorario (JSONArray horarioCalendario, ProjectCalendar calendario) throws JSONException, ParseException {
-        System.out.println("=========== setHorario ===========");
+        //System.out.println("=========== setHorario ===========");
         for (int  i=0; i<horarioCalendario.length(); i++){
             // get horario from horarioCalendario
             String horarioStr = horarioCalendario.getString(i);
@@ -1003,7 +1114,7 @@ public class RestProjectFileMpp {
     }
 
     public ProjectCalendar setExcepciones (JSONArray excepcionesCalendario, ProjectCalendar calendario) throws JSONException, ParseException {
-        System.out.println("=========== setExcepciones ===========");
+        //System.out.println("=========== setExcepciones ===========");
         for (int  i=0; i<excepcionesCalendario.length(); i++){
             String exStr = excepcionesCalendario.getString(i);
             String[] excepcion = exStr.split("/");           
