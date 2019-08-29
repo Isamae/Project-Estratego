@@ -56,11 +56,13 @@ public class RestProjectFileMpp {
             e.printStackTrace();
         }        
 
+        //projectObj = addColumnas(projectObj,jsonObject);
         projectObj = addCamposPersonalizados(projectObj,jsonObject);
         projectObj = addDuracionProyecto(projectObj,jsonObject);
         projectObj = addRecursos(projectObj,jsonObject);
         projectObj = addTarea(projectObj,jsonObject);
         projectObj = addCalendario(projectObj,jsonObject);
+        //projectObj = addCalendarioTarea(projectObj,jsonObject);
         projectObj = addAsignacionesRecursos(projectObj,jsonObject);
         projectObj = addPredecesoras(projectObj,jsonObject);
         projectObj = addSucesores(projectObj,jsonObject);
