@@ -14,6 +14,7 @@ import net.sf.mpxj.ProjectFile;
 import net.sf.mpxj.Relation;
 import net.sf.mpxj.Resource;
 import net.sf.mpxj.ResourceAssignment;
+import net.sf.mpxj.ResourceContainer;
 import net.sf.mpxj.Table;
 
 import java.util.ArrayList;
@@ -25,12 +26,11 @@ import net.sf.mpxj.Task;
 import net.sf.mpxj.common.FieldTypeHelper;
 public class Project  {
 
-    public static String getRecursos(ProjectFile project) throws Exception{
+    public String getRecursos(ProjectFile project) throws Exception{
         String recursos ="[";
 
         for (Resource resource : project.getAllResources()){
-
-            if(resource.getName() ==null) {}
+            if(resource.getName() == null) {}
             else{
                 recursos = recursos + "{ " + " 'name' :'" + resource.getName() 
                 +"' , "+ " 'id' : '" + resource.getID()  
@@ -450,16 +450,21 @@ public class Project  {
             
     }
 
-    public String getRecursos (ProjectCalendar calendar){
-        String recursos = "";
-        System.out.println( "RECURSOS");
+    public String getRecursoCalendario (ProjectCalendar calendar, ProjectFile project){
+        String recursoID = "";
+        // ResourceContainer resourceContainer = project.getResources();
+        // for (Resource resource : resourceContainer){
+        //     System.out.println(resource.getName() + ", " + resource.getID());
+        // }
         if (calendar.getResource() != null){
-            recursos =  calendar.getResource().getID().toString();
+            System.out.println("calendar name: " + calendar.getName());
+            System.out.println("calendar-resource: " + calendar.getResource().getName());
+            System.out.println("calendar-resource-ID: " + calendar.getResource().getID());
+            recursoID =  calendar.getResource().getID().toString();
         }else{
-            recursos = "null";
+            recursoID = "null";
         }
-
-        return recursos;
+        return recursoID;
     }
 
 	public ArrayList <Day> getDiasCalendario (ProjectCalendar calendar, DayType dT){
@@ -493,14 +498,15 @@ public class Project  {
     }
     public String getCalendarioBase (ProjectCalendar calendar, ProjectFile file){
         
-        System.out.println(calendar.getName() + ", " + file.getDefaultCalendar().getName());
+        System.out.println(calendar.getName() + ", " + file.getDefaultCalendar().getName() + ", " + calendar.getUniqueID());
         
         String nombreCalendario = "";
         if (calendar.getParent() == null){
             nombreCalendario = calendar.getName();
             System.out.println(nombreCalendario);
         }else{
-            nombreCalendario = file.getDefaultCalendar().getName();
+            //nombreCalendario = file.getDefaultCalendar().getName();
+            nombreCalendario = calendar.getParent().getName();
             System.out.println(nombreCalendario);
         }
         return nombreCalendario;

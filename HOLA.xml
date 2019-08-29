@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project xmlns="http://schemas.microsoft.com/project">
     <SaveVersion>14</SaveVersion>
-    <Name>Proyecto1.xml</Name>
-    <Author>Diego</Author>
+    <Name>Casa6</Name>
+    <Title>Casa6</Title>
+    <Company>Training Park</Company>
+    <Author>New_Horizons</Author>
     <CreationDate>2019-08-26T08:00:00</CreationDate>
     <LastSaved>2019-08-26T10:14:00</LastSaved>
     <ScheduleFromStart>1</ScheduleFromStart>
-    <StartDate>2018-07-16T08:30:00</StartDate>
-    <FinishDate>2019-07-10T13:30:00</FinishDate>
+    <StartDate>1997-12-01T08:00:00</StartDate>
+    <FinishDate>1998-02-12T11:30:00</FinishDate>
     <FYStartDate>1</FYStartDate>
     <CriticalSlackLimit>0</CriticalSlackLimit>
     <CurrencyDigits>2</CurrencyDigits>
@@ -91,12 +93,12 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
+                            <FromTime>07:30:00</FromTime>
                             <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
                             <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
+                            <ToTime>16:30:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
@@ -105,12 +107,12 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
+                            <FromTime>07:30:00</FromTime>
                             <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
                             <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
+                            <ToTime>16:30:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
@@ -119,12 +121,12 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
+                            <FromTime>07:30:00</FromTime>
                             <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
                             <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
+                            <ToTime>16:30:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
@@ -133,12 +135,12 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
+                            <FromTime>07:30:00</FromTime>
                             <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
                             <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
+                            <ToTime>16:30:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
@@ -147,98 +149,12 @@
                     <DayWorking>1</DayWorking>
                     <WorkingTimes>
                         <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
+                            <FromTime>07:30:00</FromTime>
                             <ToTime>12:00:00</ToTime>
                         </WorkingTime>
                         <WorkingTime>
                             <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>7</DayType>
-                    <DayWorking>0</DayWorking>
-                </WeekDay>
-            </WeekDays>
-        </Calendar>
-        <Calendar>
-            <UID>1</UID>
-            <Name>Standard</Name>
-            <IsBaseCalendar>1</IsBaseCalendar>
-            <BaseCalendarUID>-1</BaseCalendarUID>
-            <WeekDays>
-                <WeekDay>
-                    <DayType>1</DayType>
-                    <DayWorking>0</DayWorking>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>2</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>3</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>4</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>5</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>6</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
+                            <ToTime>16:30:00</ToTime>
                         </WorkingTime>
                     </WorkingTimes>
                 </WeekDay>
@@ -255,162 +171,62 @@
             <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
-            <UID>6</UID>
-            <Name>Administrador de Contrato - Cliente</Name>
-            <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>1</BaseCalendarUID>
-        </Calendar>
-        <Calendar>
             <UID>7</UID>
-            <Name>Líder Técnico - Cliente</Name>
+            <Name>Carpinteros</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
             <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
             <UID>8</UID>
-            <Name>Líder Funcional - Usuario Experto - Cliente</Name>
+            <Name>Electricistas</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
             <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
             <UID>9</UID>
-            <Name>Funcionarios Técnicos - Cliente</Name>
+            <Name>Decorador de Interiores</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
             <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
             <UID>10</UID>
-            <Name>Usuarios Finales - Cliente</Name>
+            <Name>Obreros</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
             <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
-            <UID>48</UID>
-            <Name>Desarrollador PlanERP</Name>
+            <UID>11</UID>
+            <Name>Albañiles</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
             <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
-            <UID>49</UID>
-            <Name>Gerente de Proyecto PlanERP</Name>
+            <UID>12</UID>
+            <Name>Fontaneros</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
             <BaseCalendarUID>1</BaseCalendarUID>
-        </Calendar>
-        <Calendar>
-            <UID>50</UID>
-            <Name>Líder del Proyecto/Desarrollo PlanERP</Name>
-            <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>1</BaseCalendarUID>
-        </Calendar>
-        <Calendar>
-            <UID>51</UID>
-            <Name>Analista Procesos PlanERP</Name>
-            <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>1</BaseCalendarUID>
-        </Calendar>
-        <Calendar>
-            <UID>56</UID>
-            <Name>Analista de Calidad PlanERP</Name>
-            <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>1</BaseCalendarUID>
-        </Calendar>
-        <Calendar>
-            <UID>57</UID>
-            <Name>Especialista Base de Datos PlanERP</Name>
-            <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>1</BaseCalendarUID>
-        </Calendar>
-        <Calendar>
-            <UID>58</UID>
-            <Name>Consultor Especialista en Procesos de GADs PlanERP</Name>
-            <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>1</BaseCalendarUID>
-        </Calendar>
-        <Calendar>
-            <UID>59</UID>
-            <Name>Compras Publicas</Name>
-            <IsBaseCalendar>1</IsBaseCalendar>
-            <BaseCalendarUID>-1</BaseCalendarUID>
             <WeekDays>
                 <WeekDay>
-                    <DayType>1</DayType>
+                    <DayType>0</DayType>
                     <DayWorking>0</DayWorking>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>2</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>3</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>4</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>5</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>6</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes>
-                        <WorkingTime>
-                            <FromTime>08:00:00</FromTime>
-                            <ToTime>12:00:00</ToTime>
-                        </WorkingTime>
-                        <WorkingTime>
-                            <FromTime>13:00:00</FromTime>
-                            <ToTime>17:00:00</ToTime>
-                        </WorkingTime>
-                    </WorkingTimes>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>7</DayType>
-                    <DayWorking>0</DayWorking>
+                    <TimePeriod>
+                        <FromDate>1997-09-22T00:00:00</FromDate>
+                        <ToDate>1997-09-26T23:59:59</ToDate>
+                    </TimePeriod>
                 </WeekDay>
             </WeekDays>
+            <Exceptions>
+                <Exception>
+                    <EnteredByOccurrences>0</EnteredByOccurrences>
+                    <TimePeriod>
+                        <FromDate>1997-09-22T00:00:00</FromDate>
+                        <ToDate>1997-09-26T23:59:59</ToDate>
+                    </TimePeriod>
+                    <Occurrences>1</Occurrences>
+                    <Type>1</Type>
+                    <DayWorking>0</DayWorking>
+                </Exception>
+            </Exceptions>
         </Calendar>
     </Calendars>
     <Tasks>
@@ -418,7 +234,7 @@
             <UID>0</UID>
             <GUID>2747835a-9e9a-42be-a2e9-bdf1886407a7</GUID>
             <ID>0</ID>
-            <Name>20190122- Plan del Proyecto de Implementacion del SIIM Daule</Name>
+            <Name>Casa6</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
             <CreateDate>2019-08-26T10:14:00</CreateDate>
@@ -462,9 +278,9 @@
             <Manual>0</Manual>
         </Task>
         <Task>
-            <UID>4</UID>
+            <UID>1</UID>
             <ID>1</ID>
-            <Name>Programa de Implementación SIIM</Name>
+            <Name>Fundamentos</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
             <WBS>2</WBS>
@@ -500,15 +316,16 @@
             <Manual>0</Manual>
         </Task>
         <Task>
-            <UID>272</UID>
+            <UID>2</UID>
             <ID>2</ID>
-            <Name>FASE 1: Implementación de Módulos de Servicio al Cliente (SC) y Atención al Ciudadano (AC)</Name>
-            <Type>1</Type>
+            <Name>Forma</Name>
+            <Type>0</Type>
             <IsNull>0</IsNull>
             <WBS>2.1</WBS>
             <OutlineNumber>1</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
+            <Duration>PT24H0M0S</Duration>
             <Duration>PT1276H34M17S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -517,12 +334,13 @@
             <OverAllocated>0</OverAllocated>
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
-            <Summary>1</Summary>
+            <Summary>0</Summary>
             <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT24H0M0S</RemainingDuration>
             <PercentWorkComplete>100</PercentWorkComplete>
             <ActualDuration>PT1276H34M17S</ActualDuration>
             <RemainingDuration>PT1276H34M17S</RemainingDuration>
@@ -536,10 +354,13 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
+            <DurationText>3.0d</DurationText>
         </Task>
         <Task>
-            <UID>115</UID>
+            <UID>3</UID>
             <ID>3</ID>
+            <Name>Encofrado</Name>
+            <Type>0</Type>
             <Name>ETAPA 1: Preparación del Proyecto e Instalación del SIIM - Módulos SC y AC</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
@@ -619,11 +440,11 @@
             <Name>Revisión de Información de Contrato y Anexos</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>2.1.1.1.1</WBS>
-            <OutlineNumber>1.1.1.1</OutlineNumber>
-            <OutlineLevel>4</OutlineLevel>
+            <WBS>2.2</WBS>
+            <OutlineNumber>2</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT6H0M0S</Duration>
+            <Duration>PT7H0M0S</Duration>
             <DurationFormat>5</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -637,6 +458,7 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT7H0M0S</RemainingDuration>
             <PercentWorkComplete>100</PercentWorkComplete>
             <ActualDuration>PT6H0M0S</ActualDuration>
             <RemainingDuration>PT6H0M0S</RemainingDuration>
@@ -648,8 +470,21 @@
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>2</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>14400</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
+            <DurationText>7.0h</DurationText>
+        </Task>
+        <Task>
+            <UID>4</UID>
+            <ID>4</ID>
+            <Name>Fase Estructura</Name>
         </Task>
         <Task>
             <UID>16</UID>
@@ -15924,19 +15759,19 @@
             <Name>   Revisar la ETAPA del Proyecto</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>2.3.4.5</WBS>
-            <OutlineNumber>3.4.5</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
+            <WBS>3</WBS>
+            <OutlineNumber>0</OutlineNumber>
+            <OutlineLevel>0</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT2H0M0S</Duration>
-            <DurationFormat>5</DurationFormat>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
             <OverAllocated>0</OverAllocated>
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
-            <Summary>0</Summary>
+            <Summary>1</Summary>
             <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
@@ -15953,27 +15788,27 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>509</PredecessorUID>
+                <PredecessorUID>3</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
-                <LinkLag>12342</LinkLag>
-                <LagFormat>7</LagFormat>
+                <LinkLag>4200</LinkLag>
+                <LagFormat>5</LagFormat>
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
         </Task>
         <Task>
-            <UID>513</UID>
-            <ID>359</ID>
-            <Name>  HITO: FINALIZACION ETAPA 4</Name>
-            <Type>1</Type>
+            <UID>5</UID>
+            <ID>5</ID>
+            <Name>Marcos</Name>
+            <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>2.3.4.6</WBS>
-            <OutlineNumber>3.4.6</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
+            <WBS>3.1</WBS>
+            <OutlineNumber>1</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
+            <Duration>PT80H0M0S</Duration>
+            <DurationFormat>9</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
@@ -15986,6 +15821,7 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT80H0M0S</RemainingDuration>
             <PercentWorkComplete>0</PercentWorkComplete>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
@@ -15995,6 +15831,9 @@
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <DurationText>2.0w</DurationText>
             <PredecessorLink>
                 <PredecessorUID>512</PredecessorUID>
                 <Type>1</Type>
@@ -16010,15 +15849,17 @@
             <Manual>0</Manual>
         </Task>
         <Task>
-            <UID>514</UID>
-            <ID>360</ID>
-            <Name> ETAPA 5:  Despliegue en Producción y Soporte Técnico - Módulos PRI</Name>
-            <Type>1</Type>
+            <UID>6</UID>
+            <ID>6</ID>
+            <Name>Paredes</Name>
+            <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>2.3.5</WBS>
-            <OutlineNumber>3.5</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
+            <WBS>3.2</WBS>
+            <OutlineNumber>2</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
+            <Duration>PT100H0M0S</Duration>
+            <DurationFormat>9</DurationFormat>
             <Duration>PT123H25M43S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -16027,12 +15868,13 @@
             <OverAllocated>0</OverAllocated>
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
-            <Summary>1</Summary>
+            <Summary>0</Summary>
             <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT100H0M0S</RemainingDuration>
             <PercentWorkComplete>0</PercentWorkComplete>
             <RemainingDuration>PT123H25M43S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
@@ -16044,24 +15886,32 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>499</PredecessorUID>
+                <PredecessorUID>5</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
-                <LinkLag>59657</LinkLag>
+                <LinkLag>48000</LinkLag>
+                <LagFormat>9</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>8</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>91200</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
+            <DurationText>2.5w</DurationText>
         </Task>
         <Task>
-            <UID>515</UID>
-            <ID>361</ID>
-            <Name>  Soporte en Producción</Name>
-            <Type>1</Type>
+            <UID>7</UID>
+            <ID>7</ID>
+            <Name>Techos</Name>
+            <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>2.3.5.1</WBS>
-            <OutlineNumber>3.5.1</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
+            <WBS>3.3</WBS>
+            <OutlineNumber>3</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Duration>PT80H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
@@ -16071,7 +15921,7 @@
             <OverAllocated>0</OverAllocated>
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
-            <Summary>1</Summary>
+            <Summary>0</Summary>
             <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
@@ -16087,20 +15937,28 @@
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>5</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>48000</LinkLag>
+                <LagFormat>9</LagFormat>
+            </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
+            <DurationText>10.0d</DurationText>
         </Task>
         <Task>
-            <UID>516</UID>
-            <ID>362</ID>
-            <Name>  Soporte durante la Salida a Producción</Name>
+            <UID>8</UID>
+            <ID>8</ID>
+            <Name>Mecánica</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>2.3.5.1.1</WBS>
-            <OutlineNumber>3.5.1.1</OutlineNumber>
-            <OutlineLevel>4</OutlineLevel>
+            <WBS>4</WBS>
+            <OutlineNumber>0</OutlineNumber>
+            <OutlineLevel>0</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT40H0M0S</Duration>
+            <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -16108,7 +15966,7 @@
             <OverAllocated>0</OverAllocated>
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
-            <Summary>0</Summary>
+            <Summary>1</Summary>
             <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
@@ -16124,277 +15982,27 @@
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
-            <Active>1</Active>
-            <Manual>0</Manual>
-        </Task>
-        <Task>
-            <UID>517</UID>
-            <ID>363</ID>
-            <Name>  Resolver incidentes críticos</Name>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>2.3.5.1.2</WBS>
-            <OutlineNumber>3.5.1.2</OutlineNumber>
-            <OutlineLevel>4</OutlineLevel>
-            <Priority>500</Priority>
-            <Duration>PT24H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>1</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentWorkComplete>0</PercentWorkComplete>
-            <RemainingDuration>PT24H0M0S</RemainingDuration>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>516</PredecessorUID>
+                <PredecessorUID>5</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
-                <LinkLag>24000</LinkLag>
-                <LagFormat>7</LagFormat>
+                <LinkLag>48000</LinkLag>
+                <LagFormat>9</LagFormat>
             </PredecessorLink>
             <Active>1</Active>
             <Manual>0</Manual>
         </Task>
         <Task>
-            <UID>518</UID>
-            <ID>364</ID>
-            <Name>  Entregar el soporte y Administración al cliente</Name>
-            <Type>1</Type>
+            <UID>9</UID>
+            <ID>9</ID>
+            <Name>Calefacción</Name>
+            <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>2.3.5.1.3</WBS>
-            <OutlineNumber>3.5.1.3</OutlineNumber>
-            <OutlineLevel>4</OutlineLevel>
+            <WBS>4.1</WBS>
+            <OutlineNumber>1</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT16H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>1</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentWorkComplete>0</PercentWorkComplete>
-            <RemainingDuration>PT16H0M0S</RemainingDuration>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>517</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>14400</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <Active>1</Active>
-            <Manual>0</Manual>
-        </Task>
-        <Task>
-            <UID>519</UID>
-            <ID>365</ID>
-            <Name>  Mejora Continua</Name>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>2.3.5.2</WBS>
-            <OutlineNumber>3.5.2</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Duration>PT120H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>1</Summary>
-            <Critical>1</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentWorkComplete>0</PercentWorkComplete>
-            <RemainingDuration>PT120H0M0S</RemainingDuration>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>499</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>59657</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <Active>1</Active>
-            <Manual>0</Manual>
-        </Task>
-        <Task>
-            <UID>520</UID>
-            <ID>366</ID>
-            <Name>  Monitoreo del Sistema y Acompañamiento</Name>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>2.3.5.2.1</WBS>
-            <OutlineNumber>3.5.2.1</OutlineNumber>
-            <OutlineLevel>4</OutlineLevel>
-            <Priority>500</Priority>
-            <Duration>PT120H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>1</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentWorkComplete>0</PercentWorkComplete>
-            <RemainingDuration>PT120H0M0S</RemainingDuration>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <Active>1</Active>
-            <Manual>0</Manual>
-        </Task>
-        <Task>
-            <UID>521</UID>
-            <ID>367</ID>
-            <Name>  Ajustes y Configuraciones finales al Software acorde a necesidades Entidad</Name>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>2.3.5.2.2</WBS>
-            <OutlineNumber>3.5.2.2</OutlineNumber>
-            <OutlineLevel>4</OutlineLevel>
-            <Priority>500</Priority>
-            <Duration>PT120H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>1</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentWorkComplete>0</PercentWorkComplete>
-            <RemainingDuration>PT120H0M0S</RemainingDuration>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>499</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>59657</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <Active>1</Active>
-            <Manual>0</Manual>
-        </Task>
-        <Task>
-            <UID>522</UID>
-            <ID>368</ID>
-            <Name>  Cierre de la FASE 3 y Proyecto</Name>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>2.3.5.3</WBS>
-            <OutlineNumber>3.5.3</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Duration>PT3H25M43S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>1</Summary>
-            <Critical>1</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <PercentWorkComplete>0</PercentWorkComplete>
-            <RemainingDuration>PT3H25M43S</RemainingDuration>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>519</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>72000</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <Active>1</Active>
-            <Manual>0</Manual>
-        </Task>
-        <Task>
-            <UID>523</UID>
-            <ID>369</ID>
-            <Name>  Reunión de Cierre de la FASE 3 y Proyecto</Name>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>2.3.5.3.1</WBS>
-            <OutlineNumber>3.5.3.1</OutlineNumber>
-            <OutlineLevel>4</OutlineLevel>
-            <Priority>500</Priority>
-            <Duration>PT3H0M0S</Duration>
+            <Duration>PT36H0M0S</Duration>
             <DurationFormat>5</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -16408,6 +16016,257 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT36H0M0S</RemainingDuration>
+            <PercentWorkComplete>0</PercentWorkComplete>
+            <RemainingDuration>PT24H0M0S</RemainingDuration>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <DurationText>36.0h</DurationText>
+        </Task>
+        <Task>
+            <UID>10</UID>
+            <ID>10</ID>
+            <Name>Aire Acondicionado</Name>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>4.2</WBS>
+            <OutlineNumber>2</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
+            <Priority>500</Priority>
+            <Duration>PT36H0M0S</Duration>
+            <DurationFormat>5</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT36H0M0S</RemainingDuration>
+            <PercentWorkComplete>0</PercentWorkComplete>
+            <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>9</PredecessorUID>
+                <Type>3</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>21600</LinkLag>
+                <LagFormat>5</LagFormat>
+            </PredecessorLink>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <DurationText>36.0h</DurationText>
+        </Task>
+        <Task>
+            <UID>11</UID>
+            <ID>11</ID>
+            <Name>Fontanería</Name>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>4.3</WBS>
+            <OutlineNumber>3</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
+            <Priority>500</Priority>
+            <Duration>PT50H0M0S</Duration>
+            <DurationFormat>9</DurationFormat>
+            <Duration>PT120H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT50H0M0S</RemainingDuration>
+            <PercentWorkComplete>0</PercentWorkComplete>
+            <RemainingDuration>PT120H0M0S</RemainingDuration>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <DurationText>1.25w</DurationText>
+        </Task>
+        <Task>
+            <UID>12</UID>
+            <ID>12</ID>
+            <Name>Electricidad</Name>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>4.4</WBS>
+            <OutlineNumber>4</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
+            <Priority>500</Priority>
+            <Duration>PT80H0M0S</Duration>
+            <DurationFormat>9</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT80H0M0S</RemainingDuration>
+            <PercentWorkComplete>0</PercentWorkComplete>
+            <RemainingDuration>PT120H0M0S</RemainingDuration>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <DurationText>2.0w</DurationText>
+        </Task>
+        <Task>
+            <UID>13</UID>
+            <ID>13</ID>
+            <Name>Acabado Exterior</Name>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>5</WBS>
+            <OutlineNumber>0</OutlineNumber>
+            <OutlineLevel>0</OutlineLevel>
+            <Priority>500</Priority>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>1</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentWorkComplete>0</PercentWorkComplete>
+            <RemainingDuration>PT120H0M0S</RemainingDuration>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>4</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>199200</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <Active>1</Active>
+            <Manual>0</Manual>
+        </Task>
+        <Task>
+            <UID>14</UID>
+            <ID>14</ID>
+            <Name>Colocar Puertas</Name>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>5.1</WBS>
+            <OutlineNumber>1</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
+            <Priority>500</Priority>
+            <Duration>PT16H0M0S</Duration>
+            <DurationFormat>5</DurationFormat>
+            <Duration>PT3H25M43S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <PercentWorkComplete>0</PercentWorkComplete>
+            <RemainingDuration>PT3H25M43S</RemainingDuration>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <DurationText>16.0h</DurationText>
+        </Task>
+        <Task>
+            <UID>15</UID>
+            <ID>15</ID>
+            <Name>Instalar Ventanas</Name>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>5.2</WBS>
+            <OutlineNumber>2</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
+            <Priority>500</Priority>
+            <Duration>PT56H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT56H0M0S</RemainingDuration>
             <PercentWorkComplete>0</PercentWorkComplete>
             <RemainingDuration>PT3H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
@@ -16420,16 +16279,17 @@
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
+            <DurationText>7.0d</DurationText>
         </Task>
         <Task>
-            <UID>524</UID>
-            <ID>370</ID>
-            <Name>  HITO: FIN DE LA FASE 3 y Proyecto</Name>
+            <UID>16</UID>
+            <ID>16</ID>
+            <Name>Fin</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>2.3.5.4</WBS>
-            <OutlineNumber>3.5.4</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
+            <WBS>6</WBS>
+            <OutlineNumber>0</OutlineNumber>
+            <OutlineLevel>0</OutlineLevel>
             <Priority>500</Priority>
             <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
@@ -16455,10 +16315,10 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>519</PredecessorUID>
+                <PredecessorUID>13</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
-                <LinkLag>72000</LinkLag>
+                <LinkLag>33600</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <ExtendedAttribute>
@@ -16494,9 +16354,9 @@
             <AvailabilityPeriods/>
         </Resource>
         <Resource>
-            <UID>3</UID>
+            <UID>5</UID>
             <ID>1</ID>
-            <Name>Administrador de Contrato - Cliente</Name>
+            <Name>Carpinteros</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
             <MaxUnits>1</MaxUnits>
@@ -16514,9 +16374,9 @@
             <AvailabilityPeriods/>
         </Resource>
         <Resource>
-            <UID>4</UID>
+            <UID>6</UID>
             <ID>2</ID>
-            <Name>Líder Técnico - Cliente</Name>
+            <Name>Electricistas</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
             <MaxUnits>1</MaxUnits>
@@ -16534,9 +16394,9 @@
             <AvailabilityPeriods/>
         </Resource>
         <Resource>
-            <UID>5</UID>
+            <UID>7</UID>
             <ID>3</ID>
-            <Name>Líder Funcional - Usuario Experto - Cliente</Name>
+            <Name>Decorador de Interiores</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
             <MaxUnits>1</MaxUnits>
@@ -16554,9 +16414,9 @@
             <AvailabilityPeriods/>
         </Resource>
         <Resource>
-            <UID>6</UID>
+            <UID>8</UID>
             <ID>4</ID>
-            <Name>Funcionarios Técnicos - Cliente</Name>
+            <Name>Obreros</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
             <MaxUnits>1</MaxUnits>
@@ -16574,9 +16434,9 @@
             <AvailabilityPeriods/>
         </Resource>
         <Resource>
-            <UID>7</UID>
+            <UID>9</UID>
             <ID>5</ID>
-            <Name>Usuarios Finales - Cliente</Name>
+            <Name>Albañiles</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
             <MaxUnits>1</MaxUnits>
@@ -16594,8 +16454,9 @@
             <AvailabilityPeriods/>
         </Resource>
         <Resource>
-            <UID>45</UID>
+            <UID>10</UID>
             <ID>6</ID>
+            <Name>Fontaneros</Name>
             <Name>Desarrollador PlanERP</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
