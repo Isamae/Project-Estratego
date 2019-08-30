@@ -66,9 +66,8 @@ public class RestProjectFileMpp {
         projectObj = addSucesores(projectObj,jsonObject);
         projectObj = addFechasTareas(projectObj,jsonObject);
         projectObj = addCalendarioTarea(projectObj,jsonObject);
-        projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
         projectObj = addAsignacionesRecursos(projectObj,jsonObject);
-        
+        //projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
 
         
         //projectObj = addDuracionTareas(projectObj,jsonObject);
@@ -502,11 +501,11 @@ public class RestProjectFileMpp {
                     
                     assignment.setActualStart(df.parse(json.getString("ActualStart")));
                 }
-                if(json.getString("ActualFinish").compareToIgnoreCase("null")==0){}
+                /*if(json.getString("ActualFinish").compareToIgnoreCase("null")==0){}
                 else{
                     
                     assignment.setActualFinish(df.parse(json.getString("ActualFinish")));
-                }
+                }*/
 
 
                 if(json.getString("Start").compareToIgnoreCase("null")==0){}
@@ -514,17 +513,18 @@ public class RestProjectFileMpp {
                     
                     assignment.setStart(df.parse(json.getString("Start")));
                 }
-                if(json.getString("Finish").compareToIgnoreCase("null")==0){}
+                /*if(json.getString("Finish").compareToIgnoreCase("null")==0){}
                 else{
                     
                     assignment.setFinish(df.parse(json.getString("Finish")));
-                }
+                }*/
             
                 
                 assignment.setUnits(json.getDouble("Units"));
                 assignment.setUniqueID(json.getInt("UniqueID"));
+                assignment.setUniqueID(json.getInt("UniqueID"));
 
-                /*if(json.getString("ActualWork").contains("d")){
+                if(json.getString("ActualWork").contains("d")){
                     assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("d", "")),TimeUnit.DAYS));
                     if(json.getString("Delay").compareToIgnoreCase("null")!=0){
                         assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("d", "")),TimeUnit.DAYS));
@@ -566,7 +566,7 @@ public class RestProjectFileMpp {
                     if(json.getString("Delay").compareToIgnoreCase("null")!=0){
                         assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("p", "")),TimeUnit.PERCENT));
                     }
-                }*/
+                }
                 
             } catch (JSONException e) {
                 e.printStackTrace();

@@ -66,9 +66,8 @@ public class RestProjectFileMpp {
         projectObj = addSucesores(projectObj,jsonObject);
         projectObj = addFechasTareas(projectObj,jsonObject);
         projectObj = addCalendarioTarea(projectObj,jsonObject);
-        projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
         projectObj = addAsignacionesRecursos(projectObj,jsonObject);
-        
+        //projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
 
         
         //projectObj = addDuracionTareas(projectObj,jsonObject);
@@ -524,7 +523,7 @@ public class RestProjectFileMpp {
                 assignment.setUnits(json.getDouble("Units"));
                 assignment.setUniqueID(json.getInt("UniqueID"));
 
-                /*if(json.getString("ActualWork").contains("d")){
+                if(json.getString("ActualWork").contains("d")){
                     assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("d", "")),TimeUnit.DAYS));
                     if(json.getString("Delay").compareToIgnoreCase("null")!=0){
                         assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("d", "")),TimeUnit.DAYS));
@@ -566,7 +565,7 @@ public class RestProjectFileMpp {
                     if(json.getString("Delay").compareToIgnoreCase("null")!=0){
                         assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("p", "")),TimeUnit.PERCENT));
                     }
-                }*/
+                }
                 
             } catch (JSONException e) {
                 e.printStackTrace();

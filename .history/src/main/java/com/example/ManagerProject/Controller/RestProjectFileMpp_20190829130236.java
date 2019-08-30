@@ -65,14 +65,9 @@ public class RestProjectFileMpp {
         projectObj = addPredecesoras(projectObj,jsonObject);
         projectObj = addSucesores(projectObj,jsonObject);
         projectObj = addFechasTareas(projectObj,jsonObject);
-        projectObj = addCalendarioTarea(projectObj,jsonObject);
-        projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
         projectObj = addAsignacionesRecursos(projectObj,jsonObject);
-        
-
-        
-        //projectObj = addDuracionTareas(projectObj,jsonObject);
-        
+        projectObj = addDuracionTareas(projectObj,jsonObject);
+        projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
         
         
         /*ProjectWriter writer = ProjectWriterUtility.getProjectWriter("HOLA.mpx");  
@@ -262,41 +257,41 @@ public class RestProjectFileMpp {
                 
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
                 
-                /*if(json.getJSONArray("hijos").length() == 0){*/
-                    Task task =  project.getTaskByID(json.getInt("id"));
-                    task.getStart();
-                    task.getFinish();
-                    task.getStartText();
-                    task.getFinishText();
-                    task.getActualStart();
-                    task.getActualFinish();
+                if(json.getJSONArray("hijos").length() == 0){
+                    project.getTaskByID(json.getInt("id")).getStart();
+                    project.getTaskByID(json.getInt("id")).getFinish();
 
-                    if(json.getString("AfechaInicio").compareToIgnoreCase("null")!=0 ){
-                        task.setActualStart(df.parse(json.getString("AfechaInicio")));
+
+                    if(json.getString("AfechaInicio") != "null"){
+                        project.getTaskByID(json.getInt("id")).setActualStart(df.parse(json.getString("fechaInicio")));
                     }
-                    if(json.getString("fechaInicio").compareToIgnoreCase("null")!=0){
-                        task.setStart(df.parse(json.getString("fechaInicio")));
+                    if(json.getString("fechaInicio") != "null"){
+                        project.getTaskByID(json.getInt("id")).setStart(df.parse(json.getString("fechaInicio")));
                     }
-                    if(json.getString("TfechaInicio").compareToIgnoreCase("null")!=0){
-                        task.setStartText(json.getString("TfechaInicio"));
+                    if(json.getString("TfechaInicio") != "null"){
+                        project.getTaskByID(json.getInt("id")).setStartText(json.getString("TfechaInicio"));
                     }
-                    if(json.getString("AfechaFin").compareToIgnoreCase("null")!=0){
-                        task.setActualFinish(df.parse(json.getString("AfechaFin")));
+
+                    
+                    if(json.getString("AfechaFin") != "null"){
+                        project.getTaskByID(json.getInt("id")).setActualFinish(df.parse(json.getString("fechaFin")));
                     }
-                    if(json.getString("fechaFin").compareToIgnoreCase("null")!=0){
-                        task.setFinish(df.parse(json.getString("fechaFin")));
+
+
+                    if(json.getString("fechaFin") != "null"){
+                        project.getTaskByID(json.getInt("id")).setFinish(df.parse(json.getString("fechaFin")));
                     }
-                    if(json.getString("TfechaFin").compareToIgnoreCase("null")!=0){
-                        task.setFinishText(json.getString("TfechaFin"));
+                    if(json.getString("TfechaFin") != "null"){
+                        project.getTaskByID(json.getInt("id")).setFinishText(json.getString("TfechaFin"));
                     }
-                /*}
+                }
                 else{
                     project.getTaskByID(json.getInt("id")).getStart();
                     project.getTaskByID(json.getInt("id")).getFinish();
                     if(json.getString("AfechaInicio") != "null"){
                         project.getTaskByID(json.getInt("id")).setActualStart(df.parse(json.getString("fechaInicio")));
                     }
-                }*/
+                }
                 
                 
             } catch (JSONException e) {
@@ -468,10 +463,10 @@ public class RestProjectFileMpp {
         for(int i=0 ;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
                 JSONObject json = ((JSONArray)(jsonObject.get("tareas"))).getJSONObject(i);
-                if(json.getInt("CalendarioUniqueID") ==-1){}
-                else{
-                    project.getTaskByID(json.getInt("id")).setCalendarUniqueID(json.getInt("CalendarioUniqueID"));
-                }
+                project.getTaskByID(json.getInt("id")).setCalendarUniqueID(json.getInt("CalendarioUniqueID"));;
+
+
+          
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (ClassCastException e) {
@@ -493,80 +488,54 @@ public class RestProjectFileMpp {
                 ResourceAssignment assignment =  task.addResourceAssignment(resource);
                 assignment.setCost(json.getDouble("Cost"));
 
-                assignment.getActualStart();
-                assignment.getActualFinish();
-                assignment.getStart();
-                assignment.getFinish();
-                if(json.getString("ActualStart").compareToIgnoreCase("null")==0){}
+                /*if(json.getString("ActualStart").compareToIgnoreCase("null")==0){}
                 else{
-                    
+                    assignment.getActualStart();
                     assignment.setActualStart(df.parse(json.getString("ActualStart")));
                 }
                 if(json.getString("ActualFinish").compareToIgnoreCase("null")==0){}
                 else{
-                    
+                    assignment.getActualFinish();
                     assignment.setActualFinish(df.parse(json.getString("ActualFinish")));
-                }
+                }*/
 
 
-                if(json.getString("Start").compareToIgnoreCase("null")==0){}
+                /*if(json.getString("Start").compareToIgnoreCase("null")==0){}
                 else{
-                    
+                    assignment.getStart();
                     assignment.setStart(df.parse(json.getString("Start")));
                 }
                 if(json.getString("Finish").compareToIgnoreCase("null")==0){}
                 else{
-                    
+                    assignment.getFinish();
                     assignment.setFinish(df.parse(json.getString("Finish")));
                 }
-            
+                */
                 
                 assignment.setUnits(json.getDouble("Units"));
                 assignment.setUniqueID(json.getInt("UniqueID"));
 
-                /*if(json.getString("ActualWork").contains("d")){
+                if(json.getString("ActualWork").contains("d")){
                     assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("d", "")),TimeUnit.DAYS));
-                    if(json.getString("Delay").compareToIgnoreCase("null")!=0){
-                        assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("d", "")),TimeUnit.DAYS));
-                    }
-                    
                 }
                 else if(json.getString("ActualWork").contains("h")){
                     assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("h", "")),TimeUnit.HOURS));
-                    if(json.getString("Delay").compareToIgnoreCase("null")!=0){
-                        assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("h", "")),TimeUnit.HOURS));
-                    }
                 }
                 else if(json.getString("ActualWork").contains("y")){
                     assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("y", "")),TimeUnit.YEARS));
-                    if(json.getString("Delay").compareToIgnoreCase("null")!=0){
-                        assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("y", "")),TimeUnit.YEARS));
-                    }
                 }
                 else if(json.getString("ActualWork").contains("w")){
                     assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("w", "")),TimeUnit.WEEKS));
-                    if(json.getString("Delay").compareToIgnoreCase("null")!=0){
-                        assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("w", "")),TimeUnit.WEEKS));
-                    }
                 }
                 else if(json.getString("ActualWork").contains("m")){
                     assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("m", "")),TimeUnit.MINUTES));
-                    if(json.getString("Delay").compareToIgnoreCase("null")!=0){
-                        assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("m", "")),TimeUnit.MINUTES));
-                    }
                 }
                 else if(json.getString("ActualWork").contains("M")){
                     assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("M", "")),TimeUnit.MONTHS));
-                    if(json.getString("Delay").compareToIgnoreCase("null")!=0){
-                        assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("M", "")),TimeUnit.MONTHS));
-                    }
                 }
                 else{
                     assignment.setActualWork(Duration.getInstance(Double.parseDouble(json.getString("ActualWork").replace("p", "")),TimeUnit.PERCENT));
-                    if(json.getString("Delay").compareToIgnoreCase("null")!=0){
-                        assignment.setDelay(Duration.getInstance(Double.parseDouble(json.getString("Delay").replace("p", "")),TimeUnit.PERCENT));
-                    }
-                }*/
+                }
                 
             } catch (JSONException e) {
                 e.printStackTrace();

@@ -66,9 +66,8 @@ public class RestProjectFileMpp {
         projectObj = addSucesores(projectObj,jsonObject);
         projectObj = addFechasTareas(projectObj,jsonObject);
         projectObj = addCalendarioTarea(projectObj,jsonObject);
-        projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
         projectObj = addAsignacionesRecursos(projectObj,jsonObject);
-        
+        projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
 
         
         //projectObj = addDuracionTareas(projectObj,jsonObject);
