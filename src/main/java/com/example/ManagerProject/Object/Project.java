@@ -118,8 +118,7 @@ public class Project  {
             }
         }
         String tareas ="[";
-        for (Task task : project.getAllTasks())
-        {
+        for (Task task : project.getTasks()){
             String valores = "[" ;
             for(int y = 0 ; y< types.size(); y ++){
                 if(types.get(y).getName().compareTo("ID")==0 || types.get(y).getName().compareTo("Task Name")==0 
@@ -142,17 +141,21 @@ public class Project  {
             if(valores.length()>1){
                 valores = valores.substring(0, valores.length()-1) ;
             }
-            else{}
     
             valores = valores + "]" ; 
             
-            if(task.getName() ==null || task.getID() ==null) {}
-            else{
+            if(task.getName() != null && task.getID() != null) {
                 tareas = tareas  
-                + "{ " + " 'name' :" +  "'"+task.getName()+"'" +" , "+ " id : " +task.getID() +" , "+ " uniqueID : " +task.getUniqueID()+" , "+ " estado : " +task.getActive()
+                + "{ " + " 'name' :" + "'" + task.getName()+"'"
+                + " , " + " id : " + task.getID()
+                + " , " + " uniqueID : " + task.getUniqueID()
+                + " , " + " estado : " + task.getActive()
+                + " , " + " 'duracion': " + "'" + task.getDuration() + "'"
+                + " , " + " 'estimada': " + task.getEstimated()
+                + " , " + " 'porcentajeCompletado': " + task.getPercentageComplete()
+                
                 + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getID())  
                 + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getID())
-                + " , " + " 'duracion': " + "'" + task.getDuration()+"'" 
                 + " , " + " 'AfechaInicio': " + "'" +task.getActualStart() +"'" 
                 + " , " + " 'AfechaFin': " + "'" + task.getActualFinish() + "'" 
                 + " , " + " 'TfechaInicio': " + "'" +task.getStartText() +"'" 
@@ -174,7 +177,6 @@ public class Project  {
                 + " , " + " 'BaselineStart': " + "'"+ task.getBaselineStart() +"'"
                 + " , " + " 'Columnas': " + valores
                 + " , " + " 'CalendarioUniqueID': " + task.getCalendarUniqueID()
-
                 + " }"  + " ,";
            
             }
@@ -183,7 +185,6 @@ public class Project  {
         if(tareas.length()>1){
             tareas = tareas.substring(0, tareas.length()-1) ;
         }
-        else{}
 
         tareas = tareas + "]" ;
 
