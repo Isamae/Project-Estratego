@@ -59,10 +59,10 @@ public class ProjectController{
 	
 	public String getCalendarios(Project project, ProjectFile archivo){
 		String calendarios = "[ ";
-		List < ProjectCalendar > calendars = archivo.getCalendars ();
+		ProjectCalendarContainer calendars = archivo.getCalendars ();
 		
 		for(ProjectCalendar calendar : calendars){
-			if (calendar != null){
+			if (calendar != null && !calendar.getName().equalsIgnoreCase("Unnamed Resource")){
 				calendarios = calendarios 
 				+ " { " + " 'nombre' : " + "'" + calendar.getName() + "'"
 				+ " , " + " 'diaslab' : " + (project.getDiasCalendario (calendar, DayType.WORKING)).toString() 
