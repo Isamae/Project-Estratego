@@ -341,12 +341,12 @@ public class RestProjectFileMpp {
                             seteadoValue = null;
                         }
                         else{
-                            if(tipodato.compareToIgnoreCase("STRING")==0 || tipodato.compareToIgnoreCase("ASCII_STRING")==0){
+                            if(tipodato.compareToIgnoreCase("STRING")==0){
                                 seteadoValue = datoObject.getString("ValorCampo");
                             }
                             else if(tipodato.compareToIgnoreCase("PERCENTAGE")==0 || tipodato.compareToIgnoreCase("SHORT")==0
                             || tipodato.compareToIgnoreCase("SHORT")==0 || tipodato.compareToIgnoreCase("NUMERIC")==0
-                            || tipodato.compareToIgnoreCase("CURRENCY")==0 ){
+                            || tipodato.compareToIgnoreCase("CURRENCY")==0 || tipodato.compareToIgnoreCase("ASCII_STRING")==0){
                                 seteadoValue =  Double.parseDouble(datoObject.getString("ValorCampo")) ;
                             }
                             else if(tipodato.compareToIgnoreCase("DURATION")==0 || tipodato.compareToIgnoreCase("WORK")==0){

@@ -341,12 +341,12 @@ public class RestProjectFileMpp {
                             seteadoValue = null;
                         }
                         else{
-                            if(tipodato.compareToIgnoreCase("STRING")==0 || tipodato.compareToIgnoreCase("ASCII_STRING")==0){
+                            if(tipodato.compareToIgnoreCase("STRING")==0){
                                 seteadoValue = datoObject.getString("ValorCampo");
                             }
                             else if(tipodato.compareToIgnoreCase("PERCENTAGE")==0 || tipodato.compareToIgnoreCase("SHORT")==0
                             || tipodato.compareToIgnoreCase("SHORT")==0 || tipodato.compareToIgnoreCase("NUMERIC")==0
-                            || tipodato.compareToIgnoreCase("CURRENCY")==0 ){
+                            || tipodato.compareToIgnoreCase("CURRENCY")==0){
                                 seteadoValue =  Double.parseDouble(datoObject.getString("ValorCampo")) ;
                             }
                             else if(tipodato.compareToIgnoreCase("DURATION")==0 || tipodato.compareToIgnoreCase("WORK")==0){
@@ -379,31 +379,14 @@ public class RestProjectFileMpp {
 
                             }
                             else if(tipodato.compareToIgnoreCase("CONSTRAINT")==0){
-                                seteadoValue = DataType.CONSTRAINT.valueOf(datoObject.getString("ValorCampo"));
-                            }
-                            else if(tipodato.compareToIgnoreCase("BOOLEAN")==0){
-                                seteadoValue = Boolean.parseBoolean(datoObject.getString("ValorCampo"));
-                            }
-                            else if(tipodato.compareToIgnoreCase("TASK_TYPE")==0 || tipodato.compareToIgnoreCase("RELATION_LIST")==0){
-                            }
-                            else if(tipodato.compareToIgnoreCase("DATE")==0){
-                                SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
-                                seteadoValue = df.parse(json.getString("ValorCampo"));
-                            }
-                            else if(tipodato.compareToIgnoreCase("EARNED_VALUE_METHOD")==0){
-                                seteadoValue = DataType.EARNED_VALUE_METHOD.valueOf(json.getString("ValorCampo"));
-                            }
-                            else if(tipodato.compareToIgnoreCase("INTEGER")==0){
-                                seteadoValue = Integer.parseInt(json.getString("ValorCampo"));
-                            }
-                            else if(tipodato.compareToIgnoreCase("GUID")==0){
-                                seteadoValue = DataType.GUID.valueOf(json.getString("ValorCampo"));
-                            }
-                            else if(tipodato.compareToIgnoreCase("ACCRUE")==0){
-                                seteadoValue = DataType.ACCRUE.valueOf(json.getString("ValorCampo"));
+                                if(datoObject.getString("ValorCampo").compareToIgnoreCase("AS_SOON_AS_POSSIBLE")==0){
+                                    seteadoValue = DataType.CONSTRAINT;
+                                }
+                                
+                               
                             }
                             else{
-                                seteadoValue = null;
+                                seteadoValue =  Double.parseDouble(datoObject.getString("ValorCampo")) ;
                             }
                         }       
                         FieldType fieldType = FieldTypeHelper.getInstance14(datoObject.getInt("FieldTypeID"));

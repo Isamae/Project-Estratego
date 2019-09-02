@@ -53,18 +53,17 @@ public class Project  {
         List<Column> iter2 =  project.getTables().get(0).getColumns();
         
         for(int i = 0 ; i < iter2.size(); i++){
-            if(iter2.get(i).getFieldType() ==null){}
-            else{
-                columnas =  columnas + " { " 
-                + "'FieldTypeName'" + ":" + "'" + iter2.get(i).getFieldType().getName() +"'"
-                + "," + "'FieldTypeClass'" + ":" + "'" +    iter2.get(i).getFieldType().name() +"'"
-                + "," + "'FieldTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getValue() +"'"
-                + "," + "'FieldTypeDataTypeString'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().toString() +"'"
-                + "," + "'FieldTypeDataTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().getValue() +"'"
-                + "," + "'FieldTypeID'" + ":" + "'" +FieldTypeHelper.getFieldID(iter2.get(i).getFieldType()) +"'"
-                + "," + "'ColumTitulo'" + ":" + "'" + iter2.get(i).getTitle() +"'"
-                + "}" + "," ;
-            }
+            columnas =  columnas + " { " 
+            + "'FieldTypeName'" + ":" + "'" + iter2.get(i).getFieldType().getName() +"'"
+            + "," + "'FieldTypeClass'" + ":" + "'" +    iter2.get(i).getFieldType().name() +"'"
+            + "," + "'FieldTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getValue() +"'"
+            + "," + "'FieldTypeDataTypeString'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().toString() +"'"
+            + "," + "'FieldTypeDataTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().getValue() +"'"
+            + "," + "'FieldTypeID'" + ":" + "'" +FieldTypeHelper.getFieldID(iter2.get(i).getFieldType()) +"'"
+            + "," + "'ColumTitulo'" + ":" + "'" + iter2.get(i).getTitle() +"'"
+            + "}" + "," ;
+           
+
         }
         if(columnas.length()>1){
             columnas = columnas.substring(0, columnas.length()-1) ;
@@ -108,22 +107,14 @@ public class Project  {
             CustomField customField = iter.next();
             if(types.contains(customField.getFieldType())){}
             else{
-                if(customField.getFieldType()==null){}
-                else{
-                    types.add(customField.getFieldType());
-                }
-                 
+                 types.add(customField.getFieldType());
             }
         }
         List<Column> iter2 =  project.getTables().get(0).getColumns();
         for(int i = 0 ; i < iter2.size(); i++){
             if(types.contains(iter2.get(i).getFieldType())){}
             else{
-                if(iter2.get(i).getFieldType()==null){}
-                else{
-                    types.add(iter2.get(i).getFieldType());
-                }
-                 
+                 types.add(iter2.get(i).getFieldType());
             }
         }
         String tareas ="[";

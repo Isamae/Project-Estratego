@@ -53,7 +53,7 @@ public class Project  {
         List<Column> iter2 =  project.getTables().get(0).getColumns();
         
         for(int i = 0 ; i < iter2.size(); i++){
-            if(iter2.get(i).getFieldType() ==null){}
+            if(iter2.get(i).getFieldType().getName() ==null){}
             else{
                 columnas =  columnas + " { " 
                 + "'FieldTypeName'" + ":" + "'" + iter2.get(i).getFieldType().getName() +"'"
