@@ -53,18 +53,17 @@ public class Project  {
         List<Column> iter2 =  project.getTables().get(0).getColumns();
         
         for(int i = 0 ; i < iter2.size(); i++){
-            if(iter2.get(i).getFieldType() ==null){}
-            else{
-                columnas =  columnas + " { " 
-                + "'FieldTypeName'" + ":" + "'" + iter2.get(i).getFieldType().getName() +"'"
-                + "," + "'FieldTypeClass'" + ":" + "'" +    iter2.get(i).getFieldType().name() +"'"
-                + "," + "'FieldTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getValue() +"'"
-                + "," + "'FieldTypeDataTypeString'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().toString() +"'"
-                + "," + "'FieldTypeDataTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().getValue() +"'"
-                + "," + "'FieldTypeID'" + ":" + "'" +FieldTypeHelper.getFieldID(iter2.get(i).getFieldType()) +"'"
-                + "," + "'ColumTitulo'" + ":" + "'" + iter2.get(i).getTitle() +"'"
-                + "}" + "," ;
-            }
+            columnas =  columnas + " { " 
+            + "'FieldTypeName'" + ":" + "'" + iter2.get(i).getFieldType().getName() +"'"
+            + "," + "'FieldTypeClass'" + ":" + "'" +    iter2.get(i).getFieldType().name() +"'"
+            + "," + "'FieldTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getValue() +"'"
+            + "," + "'FieldTypeDataTypeString'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().toString() +"'"
+            + "," + "'FieldTypeDataTypeValue'" + ":" + "'" + iter2.get(i).getFieldType().getDataType().getValue() +"'"
+            + "," + "'FieldTypeID'" + ":" + "'" +FieldTypeHelper.getFieldID(iter2.get(i).getFieldType()) +"'"
+            + "," + "'ColumTitulo'" + ":" + "'" + iter2.get(i).getTitle() +"'"
+            + "}" + "," ;
+           
+
         }
         if(columnas.length()>1){
             columnas = columnas.substring(0, columnas.length()-1) ;
@@ -158,30 +157,24 @@ public class Project  {
                 + "{ " + " 'name' :" + "'" + task.getName()+"'"
                 + " , " + " id : " + task.getID()
                 + " , " + " uniqueID : " + task.getUniqueID()
-                + " , " + " 'duracion': " + "'" + task.getDuration() + "'"
-                + " , " + " estimada: " + task.getEstimated()
                 + " , " + " estado : " + task.getActive()
-                + " , " + " 'Priority': " + "'"+ task.getPriority() +"'"
-                + " , " + " 'modoProgramacion': " + task.getTaskMode()
-                + " , " + " 'fechaInicio': " + "'" +task.getStart() +"'" 
-                + " , " + " 'fechaFin': " + "'" + task.getFinish() + "'"
-                + " , " + " 'fechaRestriccion': " + "'" + task.getConstraintDate() + "'"
-                + " , " + " 'tipoRestriccion': " + "'" + task.getConstraintType() + "'"
-                + " , " + " 'hito': " + task.getMilestone()
-
+                + " , " + " 'duracion': " + "'" + task.getDuration() + "'"
+                + " , " + " 'estimada': " + task.getEstimated()
+                + " , " + " 'porcentajeCompletado': " + task.getPercentageComplete()
+                
                 + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getID())  
                 + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getID())
-                + " , " + " 'AfechaInicio': " + "'" + task.getActualStart() +"'" 
+                + " , " + " 'AfechaInicio': " + "'" +task.getActualStart() +"'" 
                 + " , " + " 'AfechaFin': " + "'" + task.getActualFinish() + "'" 
                 + " , " + " 'TfechaInicio': " + "'" +task.getStartText() +"'" 
-                + " , " + " 'TfechaFin': " + "'" + task.getFinishText() + "'"
-                
-                 
+                + " , " + " 'TfechaFin': " + "'" + task.getFinishText() + "'" 
+                + " , " + " 'fechaInicio': " + "'" +task.getStart() +"'" 
+                + " , " + " 'fechaFin': " + "'" + task.getFinish() + "'" 
                 + " , " + " 'hijos': " +  getHijos(task) 
                 + " , " + " 'LevelAssignments': " + "'"+ task.getLevelAssignments() +"'"
                 + " , " + " 'OutlineLevel': " + "'"+ task.getOutlineLevel() +"'"
                 + " , " + " 'OutlineNumber': " + "'"+ task.getOutlineNumber() +"'"
-                
+                + " , " + " 'Priority': " + "'"+ task.getPriority() +"'"
                 + " , " + " 'Sucesores': " + relacionesSucesorasTareas(project,task.getID())
                 + " , " + " 'Type': " + "'"+ task.getType() +"'"
                 + " , " + " 'ActualDuration': " + "'"+ task.getActualDuration() +"'"
