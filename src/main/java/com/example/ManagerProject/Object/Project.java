@@ -1,26 +1,23 @@
 package com.example.ManagerProject.Object;
 
-
-
 import net.sf.mpxj.Column;
 import net.sf.mpxj.CustomField;
 import net.sf.mpxj.Day;
 import net.sf.mpxj.DayType;
 import net.sf.mpxj.FieldType;
 import net.sf.mpxj.ProjectCalendar;
+import net.sf.mpxj.ProjectCalendarContainer;
 import net.sf.mpxj.ProjectCalendarException;
 import net.sf.mpxj.ProjectCalendarHours;
 import net.sf.mpxj.ProjectFile;
 import net.sf.mpxj.Relation;
 import net.sf.mpxj.Resource;
 import net.sf.mpxj.ResourceAssignment;
-import net.sf.mpxj.ResourceContainer;
 import net.sf.mpxj.Table;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 
 import net.sf.mpxj.Task;
 import net.sf.mpxj.common.FieldTypeHelper;
@@ -29,7 +26,7 @@ public class Project  {
     public String getRecursos(ProjectFile project) throws Exception{
         String recursos ="[";
 
-        for (Resource resource : project.getAllResources()){
+        for (Resource resource : project.getResources()){
             if(resource.getName() == null) {}
             else{
                 recursos = recursos + "{ " + " 'name' :'" + resource.getName() 
@@ -43,7 +40,6 @@ public class Project  {
         if(recursos.length()>1){
             recursos = recursos.substring(0, recursos.length()-1) ;
         }
-        else{}
 
         recursos = recursos + "]" ;
         return recursos;
@@ -69,7 +65,6 @@ public class Project  {
         if(columnas.length()>1){
             columnas = columnas.substring(0, columnas.length()-1) ;
         }
-        else{}
 
         columnas = columnas + "]" ;
         return columnas ;         
@@ -94,7 +89,6 @@ public class Project  {
         if(campospersonalizados.length()>1){
             campospersonalizados = campospersonalizados.substring(0, campospersonalizados.length()-1) ;
         }
-        else{}
 
         campospersonalizados = campospersonalizados + "]" ;
         return campospersonalizados ;  
@@ -228,7 +222,6 @@ public class Project  {
         if(tareas.length()>1){
             tareas = tareas.substring(0, tareas.length()-1) ;
         }
-        else{}
         tareas = tareas + "]";
         return tareas;
 
@@ -237,7 +230,7 @@ public class Project  {
     public static String asignacionesRecursos(ProjectFile project)  throws Exception{
         String asignaciones ="[";
 
-        for (ResourceAssignment assignment : project.getAllResourceAssignments()){
+        for (ResourceAssignment assignment : project.getResourceAssignments()){
             Task task = assignment.getTask();
 
             int taskId;
@@ -424,7 +417,7 @@ public class Project  {
         Iterator iter = tables.iterator();
         Table table = (Table)iter.next();
         String dataTable = " { " ;
-        List tasks = project.getAllTasks();
+        List tasks = project.getTasks();
         Iterator resourceIter = tasks.iterator();
         while (resourceIter.hasNext()){
             Task tarea = (Task)resourceIter.next();
@@ -467,15 +460,9 @@ public class Project  {
     }
 
     public String getRecursoCalendario (ProjectCalendar calendar, ProjectFile project){
+        // get id del recurso relacionado a un calendario
         String recursoID = "";
-        // ResourceContainer resourceContainer = project.getResources();
-        // for (Resource resource : resourceContainer){
-        //     System.out.println(resource.getName() + ", " + resource.getID());
-        // }
         if (calendar.getResource() != null){
-            System.out.println("calendar name: " + calendar.getName());
-            System.out.println("calendar-resource: " + calendar.getResource().getName());
-            System.out.println("calendar-resource-ID: " + calendar.getResource().getID());
             recursoID =  calendar.getResource().getID().toString();
         }else{
             recursoID = "null";
@@ -484,6 +471,11 @@ public class Project  {
     }
 
 	public ArrayList <Day> getDiasCalendario (ProjectCalendar calendar, DayType dT){
+        /* Day type:
+        WORKING
+        NON_WORKING
+        DEFAULT
+         */
 		DayType days [] = calendar.getDays();
 		ArrayList <Day> dias = new ArrayList<Day>();
 		for (int i=1; i<8; i++){
@@ -512,18 +504,12 @@ public class Project  {
 		}
 		return horarioCalendario;
     }
-    public String getCalendarioBase (ProjectCalendar calendar, ProjectFile file){
-        
-        System.out.println(calendar.getName() + ", " + file.getDefaultCalendar().getName() + ", " + calendar.getUniqueID());
-        
+    public String getCalendarioBase (ProjectCalendar calendar, ProjectFile file){        
         String nombreCalendario = "";
         if (calendar.getParent() == null){
             nombreCalendario = calendar.getName();
-            System.out.println(nombreCalendario);
         }else{
-            //nombreCalendario = file.getDefaultCalendar().getName();
             nombreCalendario = calendar.getParent().getName();
-            System.out.println(nombreCalendario);
         }
         return nombreCalendario;
     }
@@ -538,7 +524,58 @@ public class Project  {
 			ex = "'";
 		}
 		return excepcionesCalendario;
-	}
+    }
+    
+    public String getCalendarios(Project project, ProjectFile archivo){
+        String calendarios = "[ ";
+        ProjectCalendarContainer calendars = archivo.getCalendars ();
+        for(ProjectCalendar calendar : calendars){
+            if (calendar != null && !calendar.getName().equalsIgnoreCase("Unnamed Resource")){
+                calendarios = calendarios 
+                + " { " + " 'nombre' : " + "'" + calendar.getName() + "'"
+                + " , " + " 'diaslab' : " + (getDiasCalendario (calendar, DayType.WORKING)).toString() 
+                + " , " + " 'diasnolab' : " + (getDiasCalendario (calendar, DayType.NON_WORKING)).toString() 
+                + " , " + " 'calenderDefault' :" + (getDiasCalendario (calendar, DayType.DEFAULT)).toString() 
+                + " , " + " 'calenderHorario' :" + (getHorasCalendario (calendar, project.getDiasCalendario (calendar, DayType.WORKING))).toString() 
+                + " , " + " 'calenderExcepciones' :" + (getExcepcionesCalendario (calendar)).toString()
+                + " , " + " 'calenderBase' : " + "'" + (getCalendarioBase(calendar, archivo)).toString() + "'"
+                + " , " + " 'calenderID' : " + "'" + (calendar.getUniqueID().toString()) + "'"
+                + " , " + " 'recursoID' : " + "'" + (getRecursoCalendario(calendar, archivo)).toString() + "'"
+                + " } " + " ,";
+            }
+        }
+        if(calendarios.length()>1){
+            calendarios = calendarios.substring(0, calendarios.length()-1) ;
+        }
+        calendarios = calendarios + "]" ;
+        return calendarios;
+    }
+    
+    public String getDefaultCalendario(Project project, ProjectFile archivo){
+        String calendario = "[ ";
+        ProjectCalendar calendar = archivo.getDefaultCalendar();
+        if (calendar != null){
+            calendario = calendario 
+            + " { " + " 'nombre' : " + "'" + calendar.getName() + "'"
+            + " , " + " 'diaslab' : " + (getDiasCalendario (calendar, DayType.WORKING)).toString() 
+            + " , " + " 'diasnolab' : " + (getDiasCalendario (calendar, DayType.NON_WORKING)).toString() 
+            + " , " + " 'calenderDefault' :" + (getDiasCalendario (calendar, DayType.DEFAULT)).toString() 
+            + " , " + " 'calenderHorario' :" + (getHorasCalendario (calendar, project.getDiasCalendario (calendar, DayType.WORKING))).toString() 
+            + " , " + " 'calenderExcepciones' :" + (getExcepcionesCalendario (calendar)).toString()
+            + " , " + " 'calenderBase' : " + "'" + (getCalendarioBase(calendar, archivo)).toString() + "'"
+            + " , " + " 'calenderID' : " + "'" + (calendar.getUniqueID().toString()) + "'"
+            + " , " + " 'recursoID' : " + "'" + (getRecursoCalendario(calendar, archivo)).toString() + "'"
+            + " } " + " ,";
+        }
+        
+        if(calendario.length()>1){
+            calendario = calendario.substring(0, calendario.length()-1) ;
+        }
+        calendario = calendario + "]" ;
+        return calendario;
+    }
 
 }
+
+
  

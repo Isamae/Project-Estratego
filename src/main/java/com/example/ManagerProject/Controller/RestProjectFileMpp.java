@@ -1,5 +1,7 @@
 package com.example.ManagerProject.Controller;
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -15,22 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import net.sf.mpxj.*;
 import net.sf.mpxj.Resource;
-import net.sf.mpxj.reader.*;  
-import net.sf.mpxj.writer.*;  
-import net.sf.mpxj.mpp.*;
 import net.sf.mpxj.mspdi.MSPDIWriter;
-import net.sf.mpxj.mspdi.SaveVersion;
 //import net.sf.mpxj.writer.*;  
 import net.sf.mpxj.Task;
 import net.sf.mpxj.common.FieldTypeHelper;
-import net.sf.mpxj.mspdi.MSPDIWriter;
 import net.sf.mpxj.reader.UniversalProjectReader;
 
-import java.util.Calendar;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 
 
 /**
@@ -62,7 +56,6 @@ public class RestProjectFileMpp {
         projectObj = addRecursos(projectObj,jsonObject);
 
         projectObj = addTarea(projectObj,jsonObject);
-        //projectObj = addCalendario(projectObj,jsonObject);
         //projectObj = addCalendarioTarea(projectObj,jsonObject);
         projectObj = addCalendario(projectObj,jsonObject);
         projectObj = addPredecesoras(projectObj,jsonObject);
@@ -73,43 +66,38 @@ public class RestProjectFileMpp {
         projectObj = addAsignacionesRecursos(projectObj,jsonObject);
         
 
-        
-        //projectObj = addDuracionTareas(projectObj,jsonObject);
-        
-        
-        
-        /*ProjectWriter writer = ProjectWriterUtility.getProjectWriter("HOLA.mpx");  
-        writer.write(projectObj,"HOLA.mpx");*/
-
         String nombFile = "archivo";
-        if (!jsonObject.getString("projectName").equalsIgnoreCase("null")){
-            nombFile = jsonObject.getString("projectName");
-        }else if (jsonObject.getString("projectName").equalsIgnoreCase("null") && !jsonObject.getString("projectTittle").equalsIgnoreCase("null")){
-            nombFile = jsonObject.getString("projectTittle");
-        }
+        // if (projectObj.getProjectProperties().getName() != null){
+        //     nombFile = projectObj.getProjectProperties().getName();
+        // }else if (projectObj.getProjectProperties().getProjectTitle() != null) {
+        //     nombFile = projectObj.getProjectProperties().getProjectTitle();
+        // }
         nombFile = nombFile + ".xml";
         System.out.println(nombFile);
-        
 
         MSPDIWriter writer = new MSPDIWriter();
         writer.write(projectObj, nombFile);
+        
         return "Hola Mundo";
     }
 
     public ProjectFile setPropiedades (ProjectFile project, JSONObject json) throws JSONException, ParseException {
+        // set propiedades iniciales del proyecto
 
+        //set start date
         Date startDate = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(json.getString("PStartDate"));
         project.getProjectProperties().setStartDate(startDate);
-        
+        //set finish date
         Date finishDate = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(json.getString("PFinishDate"));
         project.getProjectProperties().setFinishDate(finishDate);
-
+        // set project name y project tittle
         if (json.getString("projectName").equalsIgnoreCase("null") && !json.getString("projectTittle").equalsIgnoreCase("null")){
             project.getProjectProperties().setName(json.getString("projectTittle"));
             project.getProjectProperties().setProjectTitle(json.getString("projectTittle"));
         }
-
+        //set company
         project.getProjectProperties().setCompany(json.getString("projectCompany"));
+        // set author
         project.getProjectProperties().setAuthor(json.getString("projectAuthor"));
 
         return project;
@@ -904,25 +892,25 @@ public class RestProjectFileMpp {
     public ProjectFile setDefaultCalendario (ProjectFile project, JSONObject json) throws Exception {
         JSONObject calendarioJson = json.getJSONArray("defaultCalendario").getJSONObject(0);
         ProjectCalendar defaultCalendario = project.getDefaultCalendar();
+        // set calendar name, set calendar unique id
         defaultCalendario.setName(calendarioJson.getString("nombre"));
         defaultCalendario.setUniqueID(calendarioJson.getInt("calenderID"));
-
         setCalendario(defaultCalendario, calendarioJson, null);
         project.setDefaultCalendar(defaultCalendario);
-        System.out.println("Default calendar: " + project.getDefaultCalendar().getName() + ", UniqueID " + project.getDefaultCalendar().getUniqueID());
         return project;
     }
 
     public ProjectFile addCalendarios(ProjectFile project, JSONArray calendariosJson) throws JSONException {
         ProjectCalendar defaultCalendario = project.getDefaultCalendar();
+        JSONObject json = null;
         for(int i=0; i< calendariosJson.length(); i++){
-            JSONObject json = calendariosJson.getJSONObject(i);
+            json = calendariosJson.getJSONObject(i);
             if (!json.getString("nombre").equalsIgnoreCase(defaultCalendario.getName())){
-                System.out.println("\n\t add new calendar");
+                // add mew calendar
                 ProjectCalendar calendar = project.addCalendar();
+                //set name, set unique id
                 calendar.setName(json.getString("nombre"));
                 calendar.setUniqueID(json.getInt("calenderID"));
-                System.out.println("setName " + calendar.getName() + ", setUniqueID " + calendar.getUniqueID());
             }
         }
         return project;
@@ -941,10 +929,9 @@ public class RestProjectFileMpp {
                 if (!id.equalsIgnoreCase("null") && !id.equalsIgnoreCase("")){
                     resource = project.getResourceByID(Integer.parseInt(id));
                     if (resource != null){
+                        // link calendar to resource
                         calendar.setResource(resource);
                         resource.setResourceCalendar(calendar);
-                    }else{
-                        System.out.println("resource null");
                     }
                 }
             }
@@ -960,13 +947,10 @@ public class RestProjectFileMpp {
             json = calendariosJson.getJSONObject(i);
             calendar = project.getCalendarByName(json.getString("nombre"));
             if (calendar != null){
+                // get base calendar
                 calendarParent = project.getCalendarByName(json.getString("calenderBase"));
+                // set base calendar
                 calendar.setParent(calendarParent);
-                if (calendar.getParent() != null){
-                    System.out.println("calendar " + calendar.getName() + ", parent: " + calendar.getParent().getName());
-                }else{
-                    System.out.println(calendar.getName() + " es un calendario base");
-                }
             }
         }
         return project;
@@ -979,25 +963,29 @@ public class RestProjectFileMpp {
         for (int i=0; i<calendariosJson.length(); i++){
             json = calendariosJson.getJSONObject(i);
             calendar = project.getCalendarByName(json.getString("nombre"));
-
             if (json.getString("nombre").equalsIgnoreCase(json.getString("calenderBase"))){
+                // if calendar name = base calendar name: is a base calendar
+                // set calendario
                 calendar = setCalendario(calendar, json, jsonParent);
             }else{
-                jsonParent = getDefaultCalendario(calendariosJson, calendar.getParent().getName());
+                // get base calendar
+                jsonParent = getBaseCalendarJson(calendariosJson, calendar.getParent().getName());
+                // set caledario
                 calendar = setCalendario(calendar, json, jsonParent);
             }
         }
         return project;
     }
 
-    public JSONObject getDefaultCalendario (JSONArray calendarios, String calendarName) throws JSONException {
+    public JSONObject getBaseCalendarJson (JSONArray calendarios, String calendarName) throws JSONException {
         JSONObject json = null;
         for (int i =0; i<calendarios.length(); i++){
             json = calendarios.getJSONObject(i);
             if (json.getString("nombre").equalsIgnoreCase(calendarName)){
                 return json;
             }
-        } 
+        }
+        //return json base calendar
         return json;       
     }
 
@@ -1037,12 +1025,16 @@ public class RestProjectFileMpp {
 
     public ProjectCalendar setHorario (JSONArray horarioCalendario, ProjectCalendar calendario) throws JSONException, ParseException {
         for (int  i=0; i<horarioCalendario.length(); i++){
-            // get horario from horarioCalendario
-            String horarioStr = horarioCalendario.getString(i);
+            /*
+            horario [0] = day name
+            horario [1] = date range 1
+            horario [2] = date range 2
+            */
+            String[] horario = horarioCalendario.getString(i).split("/");
 
-            String[] horario = horarioStr.split("/");
-
+            // get day
             Day day = Day.valueOf(horario[0]);
+            // parse String format "Sat Dec 31 08:00:00 COT 1983" to Date
             DateRange dateRange = new DateRange(new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(horario[1]), new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(horario[2]));
             DateRange dateRange2 = new DateRange(new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(horario[3]), new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(horario[4]));
             
@@ -1055,8 +1047,12 @@ public class RestProjectFileMpp {
 
     public ProjectCalendar setExcepciones (JSONArray excepcionesCalendario, ProjectCalendar calendario) throws JSONException, ParseException {
         for (int  i=0; i<excepcionesCalendario.length(); i++){
-            String exStr = excepcionesCalendario.getString(i);
-            String[] excepcion = exStr.split("/");           
+            /*
+            excepcion [0] = exception name
+            excepcion [1] = date range 1
+            excepcion [2] = date range 2
+            */
+            String[] excepcion = excepcionesCalendario.getString(i).split("/");           
             calendario.addCalendarException(new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(excepcion[1]), new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(excepcion[2]));
             ProjectCalendarException ex = calendario.getException(new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy").parse(excepcion[1]));
             if (!excepcion[0].equals("null")){

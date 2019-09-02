@@ -5,8 +5,8 @@
     <Title>Casa6</Title>
     <Company>Training Park</Company>
     <Author>New_Horizons</Author>
-    <CreationDate>2019-08-26T08:00:00</CreationDate>
-    <LastSaved>2019-08-26T10:14:00</LastSaved>
+    <CreationDate>2019-08-30T09:00:00</CreationDate>
+    <LastSaved>2019-08-30T09:31:00</LastSaved>
     <ScheduleFromStart>1</ScheduleFromStart>
     <StartDate>1997-12-01T08:00:00</StartDate>
     <FinishDate>1998-02-12T11:30:00</FinishDate>
@@ -16,9 +16,9 @@
     <CurrencySymbol>$</CurrencySymbol>
     <CurrencyCode>USD</CurrencyCode>
     <CurrencySymbolPosition>0</CurrencySymbolPosition>
-    <CalendarUID>0</CalendarUID>
-    <DefaultStartTime>08:00:00</DefaultStartTime>
-    <DefaultFinishTime>17:00:00</DefaultFinishTime>
+    <CalendarUID>1</CalendarUID>
+    <DefaultStartTime>09:00:00</DefaultStartTime>
+    <DefaultFinishTime>19:00:00</DefaultFinishTime>
     <MinutesPerDay>480</MinutesPerDay>
     <MinutesPerWeek>2400</MinutesPerWeek>
     <DaysPerMonth>20</DaysPerMonth>
@@ -38,21 +38,21 @@
     <SpreadPercentComplete>0</SpreadPercentComplete>
     <TaskUpdatesResource>1</TaskUpdatesResource>
     <FiscalYearStart>0</FiscalYearStart>
-    <WeekStartDay>0</WeekStartDay>
+    <WeekStartDay>1</WeekStartDay>
     <MoveCompletedEndsBack>0</MoveCompletedEndsBack>
     <MoveRemainingStartsBack>0</MoveRemainingStartsBack>
     <MoveRemainingStartsForward>0</MoveRemainingStartsForward>
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2019-08-26T08:00:00</CurrentDate>
+    <CurrentDate>2019-08-30T09:00:00</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>0</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
     <DefaultTaskEVMethod>0</DefaultTaskEVMethod>
     <ProjectExternallyEdited>0</ProjectExternallyEdited>
     <ExtendedCreationDate>1984-01-01T00:00:00</ExtendedCreationDate>
-    <ActualsInSync>1</ActualsInSync>
+    <ActualsInSync>0</ActualsInSync>
     <RemoveFileProperties>0</RemoveFileProperties>
     <AdminProject>0</AdminProject>
     <ExtendedAttributes>
@@ -64,7 +64,7 @@
     </ExtendedAttributes>
     <Calendars>
         <Calendar>
-            <UID>0</UID>
+            <UID>1</UID>
             <Name>Estándar</Name>
             <IsBaseCalendar>1</IsBaseCalendar>
             <BaseCalendarUID>-1</BaseCalendarUID>
@@ -150,46 +150,40 @@
             </WeekDays>
         </Calendar>
         <Calendar>
-            <UID>2</UID>
-            <Name>Unnamed Resource</Name>
-            <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>0</BaseCalendarUID>
-        </Calendar>
-        <Calendar>
             <UID>7</UID>
             <Name>Carpinteros</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>0</BaseCalendarUID>
+            <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
             <UID>8</UID>
             <Name>Electricistas</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>0</BaseCalendarUID>
+            <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
             <UID>9</UID>
             <Name>Decorador de Interiores</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>0</BaseCalendarUID>
+            <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
             <UID>10</UID>
             <Name>Obreros</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>0</BaseCalendarUID>
+            <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
             <UID>11</UID>
             <Name>Albañiles</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>0</BaseCalendarUID>
+            <BaseCalendarUID>1</BaseCalendarUID>
         </Calendar>
         <Calendar>
             <UID>12</UID>
             <Name>Fontaneros</Name>
             <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>0</BaseCalendarUID>
+            <BaseCalendarUID>1</BaseCalendarUID>
             <WeekDays>
                 <WeekDay>
                     <DayType>0</DayType>
@@ -213,64 +207,23 @@
                 </Exception>
             </Exceptions>
         </Calendar>
-        <Calendar>
-            <UID>0</UID>
-            <Name>Standard</Name>
-            <IsBaseCalendar>0</IsBaseCalendar>
-            <BaseCalendarUID>0</BaseCalendarUID>
-            <WeekDays>
-                <WeekDay>
-                    <DayType>1</DayType>
-                    <DayWorking>0</DayWorking>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>2</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes/>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>3</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes/>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>4</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes/>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>5</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes/>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>6</DayType>
-                    <DayWorking>1</DayWorking>
-                    <WorkingTimes/>
-                </WeekDay>
-                <WeekDay>
-                    <DayType>7</DayType>
-                    <DayWorking>0</DayWorking>
-                </WeekDay>
-            </WeekDays>
-        </Calendar>
     </Calendars>
     <Tasks>
         <Task>
             <UID>0</UID>
-            <GUID>2747835a-9e9a-42be-a2e9-bdf1886407a7</GUID>
+            <GUID>e6a557c2-32cb-e911-9531-b4b676ec7f8d</GUID>
             <ID>0</ID>
             <Name>Casa6</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2019-08-26T10:14:00</CreateDate>
+            <CreateDate>2019-08-30T09:30:00</CreateDate>
             <WBS>0</WBS>
             <OutlineNumber>0</OutlineNumber>
             <OutlineLevel>0</OutlineLevel>
             <Priority>500</Priority>
             <Start>1997-12-01T08:00:00</Start>
-            <Finish>2019-08-26T08:00:00</Finish>
-            <Duration>PT427H30M0S</Duration>
+            <Finish>1998-02-12T11:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
             <DurationFormat>39</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -278,19 +231,18 @@
             <OverAllocated>0</OverAllocated>
             <Estimated>1</Estimated>
             <Milestone>0</Milestone>
-            <Summary>1</Summary>
+            <Summary>0</Summary>
             <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
-            <EarlyStart>2019-08-26T08:00:00</EarlyStart>
-            <EarlyFinish>2019-08-26T08:00:00</EarlyFinish>
-            <LateStart>2019-08-26T08:00:00</LateStart>
-            <LateFinish>2019-08-26T08:00:00</LateFinish>
+            <EarlyStart>2019-08-30T09:00:00</EarlyStart>
+            <EarlyFinish>2019-08-30T09:00:00</EarlyFinish>
+            <LateStart>2019-08-30T09:00:00</LateStart>
+            <LateFinish>2019-08-30T09:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <PercentComplete>0</PercentComplete>
             <PercentWorkComplete>0</PercentWorkComplete>
-            <ActualStart>1997-12-01T08:00:00</ActualStart>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>1</LevelAssignments>
@@ -299,6 +251,156 @@
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <PhysicalPercentComplete>0</PhysicalPercentComplete>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+        </Task>
+        <Task>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>0</WBS>
+            <Priority>500</Priority>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+        </Task>
+        <Task>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>0</WBS>
+            <Priority>500</Priority>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+        </Task>
+        <Task>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>0</WBS>
+            <Priority>500</Priority>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+        </Task>
+        <Task>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>0</WBS>
+            <Priority>500</Priority>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <Active>1</Active>
+            <Manual>0</Manual>
+        </Task>
+        <Task>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>0</WBS>
+            <Priority>500</Priority>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>1</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -313,7 +415,9 @@
             <OutlineNumber>1</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT31H0M0S</Duration>
+            <Start>1997-12-01T08:00:00</Start>
+            <Finish>1997-12-04T16:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -327,8 +431,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-01T08:00:00</ActualStart>
-            <RemainingDuration>PT31H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -354,7 +456,9 @@
             <OutlineNumber>1.1</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT24H0M0S</Duration>
+            <Start>1997-12-01T08:00:00</Start>
+            <Finish>1997-12-04T08:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -368,9 +472,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-01T08:00:00</ActualStart>
-            <ActualFinish>1997-12-04T08:00:00</ActualFinish>
-            <RemainingDuration>PT24H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -396,8 +497,10 @@
             <OutlineNumber>1.2</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT7H0M0S</Duration>
-            <DurationFormat>5</DurationFormat>
+            <Start>1997-12-04T08:00:00</Start>
+            <Finish>1997-12-04T16:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
@@ -410,9 +513,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-04T08:00:00</ActualStart>
-            <ActualFinish>1997-12-04T16:00:00</ActualFinish>
-            <RemainingDuration>PT7H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -445,7 +545,9 @@
             <OutlineNumber>2</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT332H0M0S</Duration>
+            <Start>1997-12-08T07:30:00</Start>
+            <Finish>1998-02-03T11:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -459,8 +561,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-08T07:30:00</ActualStart>
-            <RemainingDuration>PT332H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -493,8 +593,10 @@
             <OutlineNumber>2.1</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT80H0M0S</Duration>
-            <DurationFormat>9</DurationFormat>
+            <Start>1997-12-08T07:30:00</Start>
+            <Finish>1997-12-19T16:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
@@ -507,9 +609,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-08T07:30:00</ActualStart>
-            <ActualFinish>1997-12-19T16:30:00</ActualFinish>
-            <RemainingDuration>PT80H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -535,8 +634,10 @@
             <OutlineNumber>2.2</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT100H0M0S</Duration>
-            <DurationFormat>9</DurationFormat>
+            <Start>1998-01-16T07:30:00</Start>
+            <Finish>1998-02-03T11:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
@@ -549,9 +650,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1998-01-16T07:30:00</ActualStart>
-            <ActualFinish>1998-02-03T11:30:00</ActualFinish>
-            <RemainingDuration>PT100H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -591,7 +689,9 @@
             <OutlineNumber>2.3</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT80H0M0S</Duration>
+            <Start>1997-12-22T07:30:00</Start>
+            <Finish>1998-01-02T16:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -605,9 +705,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-22T07:30:00</ActualStart>
-            <ActualFinish>1998-01-02T16:30:00</ActualFinish>
-            <RemainingDuration>PT80H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -640,7 +737,9 @@
             <OutlineNumber>3</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT152H0M0S</Duration>
+            <Start>1997-12-22T07:30:00</Start>
+            <Finish>1998-01-15T16:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -654,8 +753,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-22T07:30:00</ActualStart>
-            <RemainingDuration>PT152H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -688,8 +785,10 @@
             <OutlineNumber>3.1</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT36H0M0S</Duration>
-            <DurationFormat>5</DurationFormat>
+            <Start>1997-12-22T07:30:00</Start>
+            <Finish>1997-12-26T11:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
@@ -702,9 +801,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-22T07:30:00</ActualStart>
-            <ActualFinish>1997-12-26T11:30:00</ActualFinish>
-            <RemainingDuration>PT36H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -730,8 +826,10 @@
             <OutlineNumber>3.2</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT36H0M0S</Duration>
-            <DurationFormat>5</DurationFormat>
+            <Start>1997-12-26T11:30:00</Start>
+            <Finish>1998-01-01T16:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
@@ -744,9 +842,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-26T11:30:00</ActualStart>
-            <ActualFinish>1998-01-01T16:30:00</ActualFinish>
-            <RemainingDuration>PT36H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -779,8 +874,10 @@
             <OutlineNumber>3.3</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT50H0M0S</Duration>
-            <DurationFormat>9</DurationFormat>
+            <Start>1997-12-22T07:30:00</Start>
+            <Finish>1997-12-30T09:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
@@ -793,9 +890,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1997-12-22T07:30:00</ActualStart>
-            <ActualFinish>1997-12-30T09:30:00</ActualFinish>
-            <RemainingDuration>PT50H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -821,8 +915,10 @@
             <OutlineNumber>3.4</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT80H0M0S</Duration>
-            <DurationFormat>9</DurationFormat>
+            <Start>1998-01-02T07:30:00</Start>
+            <Finish>1998-01-15T16:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
@@ -835,9 +931,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1998-01-02T07:30:00</ActualStart>
-            <ActualFinish>1998-01-15T16:30:00</ActualFinish>
-            <RemainingDuration>PT80H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -863,7 +956,9 @@
             <OutlineNumber>4</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT56H0M0S</Duration>
+            <Start>1998-02-03T11:30:00</Start>
+            <Finish>1998-02-12T11:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -877,8 +972,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1998-02-03T11:30:00</ActualStart>
-            <RemainingDuration>PT56H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -911,8 +1004,10 @@
             <OutlineNumber>4.1</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT16H0M0S</Duration>
-            <DurationFormat>5</DurationFormat>
+            <Start>1998-02-03T11:30:00</Start>
+            <Finish>1998-02-05T11:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
             <Recurring>0</Recurring>
@@ -925,9 +1020,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1998-02-03T11:30:00</ActualStart>
-            <ActualFinish>1998-02-05T11:30:00</ActualFinish>
-            <RemainingDuration>PT16H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -953,7 +1045,9 @@
             <OutlineNumber>4.2</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Duration>PT56H0M0S</Duration>
+            <Start>1998-02-03T11:30:00</Start>
+            <Finish>1998-02-12T11:30:00</Finish>
+            <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -967,9 +1061,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1998-02-03T11:30:00</ActualStart>
-            <ActualFinish>1998-02-12T11:30:00</ActualFinish>
-            <RemainingDuration>PT56H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -995,6 +1086,8 @@
             <OutlineNumber>5</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
+            <Start>1998-02-12T11:30:00</Start>
+            <Finish>1998-02-12T11:30:00</Finish>
             <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -1009,8 +1102,6 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <ActualStart>1998-02-12T11:30:00</ActualStart>
-            <ActualFinish>1998-02-12T11:30:00</ActualFinish>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -1049,6 +1140,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
+            <CalendarUID>7</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>1</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -1069,6 +1161,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
+            <CalendarUID>8</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>1</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -1087,6 +1180,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
+            <CalendarUID>9</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>1</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -1105,6 +1199,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
+            <CalendarUID>10</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>1</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -1125,6 +1220,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
+            <CalendarUID>11</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>1</IsInactive>
             <IsEnterprise>0</IsEnterprise>
@@ -1145,6 +1241,7 @@
             <CanLevel>0</CanLevel>
             <StandardRateFormat>3</StandardRateFormat>
             <OvertimeRateFormat>3</OvertimeRateFormat>
+            <CalendarUID>12</CalendarUID>
             <IsGeneric>0</IsGeneric>
             <IsInactive>1</IsInactive>
             <IsEnterprise>0</IsEnterprise>
