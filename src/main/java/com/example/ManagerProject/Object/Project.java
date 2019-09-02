@@ -148,7 +148,7 @@ public class Project  {
             valores = valores + "]" ; 
             
             if(task.getName() != null && task.getID() != null) {
-                System.out.println(task.getEarnedValueMethod() + task.getEarnedValueMethod().getClass().toString());
+                
                 tareas = tareas  
                 + "{ " + " 'name' :" + "'" + task.getName()+"'"
                 + " , " + " id : " + task.getID()
