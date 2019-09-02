@@ -367,12 +367,14 @@ public class RestProjectFileMpp {
     }
 
     public static ProjectFile addTarea(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException {
+        Task tarea = project.getTasks().get(0);
         
-        project.getTasks().get(0).setName(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getString("name"));
-        project.getTasks().get(0).setUniqueID(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getInt("uniqueID"));
-        project.getTasks().get(0).setActive(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getBoolean("estado"));
-        project.getTasks().get(0).setOutlineNumber(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getString("OutlineNumber"));
-        project.getTasks().get(0).setOutlineLevel(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getInt("OutlineLevel"));
+        tarea.setName(jsonObject.getJSONArray("tareas").getJSONObject(0).getString("name"));
+        tarea.setUniqueID(jsonObject.getJSONArray("tareas").getJSONObject(0).getInt("uniqueID"));
+        tarea.setActive(jsonObject.getJSONArray("tareas").getJSONObject(0).getBoolean("estado"));
+        tarea.setOutlineNumber(jsonObject.getJSONArray("tareas").getJSONObject(0).getString("OutlineNumber"));
+        tarea.setOutlineLevel(jsonObject.getJSONArray("tareas").getJSONObject(0).getInt("OutlineLevel"));
+        
        
         for(int i=1 ;i< ((JSONArray)(jsonObject.get("tareas"))).length();i++){
             try {
@@ -868,8 +870,6 @@ public class RestProjectFileMpp {
                 System.out.println("setName " + calendar.getName() + ", setUniqueID " + calendar.getUniqueID());
             }
         }
-
-       
         return project;
     }
 
@@ -888,8 +888,6 @@ public class RestProjectFileMpp {
                     if (resource != null){
                         calendar.setResource(resource);
                         resource.setResourceCalendar(calendar);
-                        System.out.println("set resource: " + calendar.getResource().getName());
-                        System.out.println("set calendar: " + resource.getResourceCalendar().getName());
                     }else{
                         System.out.println("resource null");
                     }
@@ -915,26 +913,6 @@ public class RestProjectFileMpp {
                     System.out.println(calendar.getName() + " es un calendario base");
                 }
             }
-        }
-        
-        ProjectCalendar calendar1 = project.getCalendarByName("Estándar");
-        ProjectCalendar calendar2 = project.getCalendarByName("Standard");
-        if (calendar1 != null && calendar2 != null){
-            int idCalendar;
-            if (project.getDefaultCalendar().getName().equalsIgnoreCase(calendar1.getName())){
-                idCalendar = calendar2.getUniqueID();
-                System.out.println(calendar2.getName() + ", " + calendar2.getUniqueID());
-                calendar2 = calendar1;
-                calendar2.setUniqueID(idCalendar);
-                System.out.println(calendar2.getName() + ", " + calendar2.getUniqueID());
-            }else if (project.getDefaultCalendar().getName().equalsIgnoreCase(calendar2.getName())){
-                idCalendar = calendar1.getUniqueID();
-                System.out.println(calendar1.getName() + ", " + calendar1.getUniqueID());
-                calendar1 = calendar2;
-                calendar1.setUniqueID(idCalendar);
-                System.out.println(calendar1.getName() + ", " + calendar1.getUniqueID());
-            }
-                   
         }
         return project;
     }

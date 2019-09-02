@@ -34,7 +34,6 @@ public class ProjectController{
 		String jsonString = "{ ";
 		jsonString = jsonString + " 'calendarios' : " +getCalendarios(project,archivo)
 		+ " , " + " 'defaultCalendario' : " + getDefaultCalendario(project,archivo)
-		+ " , " + " 'baselineCalendario' : " + getBaselineCalendario(project,archivo)
 		+ " , " + " 'recursos' : " + project.getRecursos(archivo)
 		+ " , " + " 'tareas' : " + project.getTareas(archivo)
 		+ " , " + " asigRecursos : " + project.asignacionesRecursos(archivo)
@@ -87,31 +86,6 @@ public class ProjectController{
 	public String getDefaultCalendario(Project project, ProjectFile archivo){
 		String calendario = "[ ";
 		ProjectCalendar calendar = archivo.getDefaultCalendar();
-		if (calendar != null){
-			calendario = calendario 
-			+ " { " + " 'nombre' : " + "'" + calendar.getName() + "'"
-			+ " , " + " 'diaslab' : " + (project.getDiasCalendario (calendar, DayType.WORKING)).toString() 
-			+ " , " + " 'diasnolab' : " + (project.getDiasCalendario (calendar, DayType.NON_WORKING)).toString() 
-			+ " , " + " 'calenderDefault' :" + (project.getDiasCalendario (calendar, DayType.DEFAULT)).toString() 
-			+ " , " + " 'calenderHorario' :" + (project.getHorasCalendario (calendar, project.getDiasCalendario (calendar, DayType.WORKING))).toString() 
-			+ " , " + " 'calenderExcepciones' :" + (project.getExcepcionesCalendario (calendar)).toString()
-			+ " , " + " 'calenderBase' : " + "'" + (project.getCalendarioBase(calendar, archivo)).toString() + "'"
-			+ " , " + " 'calenderID' : " + "'" + (calendar.getUniqueID().toString()) + "'"
-			+ " , " + " 'recursoID' : " + "'" + (project.getRecursoCalendario(calendar, archivo)).toString() + "'"
-			+ " } " + " ,";
-		}
-			
-		
-		if(calendario.length()>1){
-            calendario = calendario.substring(0, calendario.length()-1) ;
-        }
-        calendario = calendario + "]" ;
-        return calendario;
-	}
-
-	public String getBaselineCalendario(Project project, ProjectFile archivo){
-		String calendario = "[ ";
-		ProjectCalendar calendar = archivo.getBaselineCalendar();
 		if (calendar != null){
 			calendario = calendario 
 			+ " { " + " 'nombre' : " + "'" + calendar.getName() + "'"
