@@ -536,9 +536,39 @@ public class RestProjectFileMpp {
                     project.getTaskByID(json.getInt("id")).setTaskMode(TaskMode.MANUALLY_SCHEDULED);
                 }
 
-                
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743697),ConstraintType.valueOf(json.getString("tipoRestricion")));
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744802), EarnedValueMethod.valueOf(json.getString("metodoValorAcumulado")));
+                if(json.getString("tipoRestricion").compareToIgnoreCase("AS_SOON_AS_POSSIBLE")==0){
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.AS_SOON_AS_POSSIBLE);
+                }
+                else if(json.getString("tipoRestricion").compareToIgnoreCase("AS_LATE_AS_POSSIBLE")==0){
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.AS_LATE_AS_POSSIBLE);
+                }
+                else if(json.getString("tipoRestricion").compareToIgnoreCase("FINISH_NO_EARLIER_THAN")==0){
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.FINISH_NO_EARLIER_THAN);
+                }
+                else if(json.getString("tipoRestricion").compareToIgnoreCase("FINISH_NO_LATER_THAN")==0){
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.FINISH_NO_LATER_THAN);
+                }
+                else if(json.getString("tipoRestricion").compareToIgnoreCase("MANDATORY_FINISH")==0){
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.MANDATORY_FINISH);
+                }
+                else if(json.getString("tipoRestricion").compareToIgnoreCase("MANDATORY_FINISH")==0){
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.MANDATORY_START);
+                }
+                else if(json.getString("tipoRestricion").compareToIgnoreCase("MUST_FINISH_ON")==0){
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.MUST_FINISH_ON);
+                }
+                else if(json.getString("tipoRestricion").compareToIgnoreCase("MUST_START_ON")==0){
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.MUST_START_ON);
+                }
+                else if(json.getString("tipoRestricion").compareToIgnoreCase("START_NO_EARLIER_THAN")==0){
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.START_NO_EARLIER_THAN);
+                }
+                else{
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.START_NO_LATER_THAN);
+                }
+
+
+                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744802), TaskField.EARNED_VALUE_METHOD.valueOf(json.getString("metodoValorAcumulado")));
                 if(json.getString("propetarioAsignacion").compareToIgnoreCase("null")==0){
                 }
                 else{

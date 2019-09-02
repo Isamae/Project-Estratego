@@ -422,7 +422,7 @@ public class RestProjectFileMpp {
     }
 
     public static ProjectFile addTarea(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException {
-        SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
+        
         project.getTasks().get(0).setName(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getString("name"));
         project.getTasks().get(0).setUniqueID(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getInt("uniqueID"));
         project.getTasks().get(0).setActive(((JSONArray)(jsonObject.get("tareas"))).getJSONObject(0).getBoolean("estado"));
@@ -523,41 +523,7 @@ public class RestProjectFileMpp {
                 project.getTaskByID(json.getInt("id")).setEstimated(json.getBoolean("estimada"));
                 project.getTaskByID(json.getInt("id")).setActive(json.getBoolean("estado"));
                 project.getTaskByID(json.getInt("id")).setPercentageComplete(json.getDouble("porcentajeCompletado"));
-                project.getTaskByID(json.getInt("id")).setNotes(json.getString("notas"));
-                project.getTaskByID(json.getInt("id")).setHideBar(json.getBoolean("ocultarBarra"));
-                project.getTaskByID(json.getInt("id")).setMilestone(json.getBoolean("hito"));
-                project.getTaskByID(json.getInt("id")).setPriority(Priority.getInstance(json.getInt("priority")));
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743812), json.getBoolean("condicionadaEsfuerzo"));
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743762), json.getBoolean("resumida"));
-                if(json.getString("modoProgramacion").compareToIgnoreCase("AUTO_SCHEDULED")==0){
-                    project.getTaskByID(json.getInt("id")).setTaskMode(TaskMode.AUTO_SCHEDULED);
-                }
-                else{
-                    project.getTaskByID(json.getInt("id")).setTaskMode(TaskMode.MANUALLY_SCHEDULED);
-                }
-
-                
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743697),ConstraintType.valueOf(json.getString("tipoRestricion")));
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744802), EarnedValueMethod.valueOf(json.getString("metodoValorAcumulado")));
-                if(json.getString("propetarioAsignacion").compareToIgnoreCase("null")==0){
-                }
-                else{
-                    project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744850), json.getString("propetarioAsignacion"));
-                }
-                
-                if(json.getString("fechaRestriccion").compareToIgnoreCase("null")==0){
-                }
-                else{
-                    project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743698), df.parse(json.getString("fechaRestriccion")));
-                }
-
-                if(json.getString("fechaLimite").compareToIgnoreCase("null")==0){
-                }
-                else{
-                    project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744117), df.parse(json.getString("fechaLimite")));
-                }
-
-
+                project.getTaskByID(json.getInt("id")).setNotes(json.getString("porcentajeCompletado"));
 
             } catch (JSONException e) {
                 e.printStackTrace();

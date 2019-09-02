@@ -535,10 +535,7 @@ public class RestProjectFileMpp {
                 else{
                     project.getTaskByID(json.getInt("id")).setTaskMode(TaskMode.MANUALLY_SCHEDULED);
                 }
-
-                
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743697),ConstraintType.valueOf(json.getString("tipoRestricion")));
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744802), EarnedValueMethod.valueOf(json.getString("metodoValorAcumulado")));
+                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744802), DataType.EARNED_VALUE_METHOD.valueOf(json.getString("metodoValorAcumulado")));
                 if(json.getString("propetarioAsignacion").compareToIgnoreCase("null")==0){
                 }
                 else{
@@ -551,7 +548,7 @@ public class RestProjectFileMpp {
                     project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743698), df.parse(json.getString("fechaRestriccion")));
                 }
 
-                if(json.getString("fechaLimite").compareToIgnoreCase("null")==0){
+                if(json.getString("fechaRestriccion").compareToIgnoreCase("null")==0){
                 }
                 else{
                     project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744117), df.parse(json.getString("fechaLimite")));

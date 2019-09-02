@@ -163,7 +163,7 @@ public class Project  {
                 + " , " + " 'porcentajeCompletado': " + task.getPercentageComplete()
                 + " , " + " 'tipoRestricion': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743697))+"'"
                 + " , " + " 'propetarioAsignacion': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188744850))+"'"
-                + " , " + " 'priority': " + "'"+ task.getPriority().getValue() +"'"
+                + " , " + " 'priority': " + "'"+ task.getPriority() +"'"
                 + " , " + " 'ignoreCalendario': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188744079))+"'"
                 + " , " + " 'ocultarBarra': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743789))+"'"
                 + " , " + " 'notas': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743774))+"'"

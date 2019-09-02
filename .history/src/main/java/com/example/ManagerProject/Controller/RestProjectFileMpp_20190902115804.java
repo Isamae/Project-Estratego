@@ -537,7 +537,9 @@ public class RestProjectFileMpp {
                 }
 
                 
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743697),ConstraintType.valueOf(json.getString("tipoRestricion")));
+                    project.getTaskByID(json.getInt("id")).setConstraintType(ConstraintType.AS_SOON_AS_POSSIBLE);
+                
+                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743697), EarnedValueMethod.valueOf(json.getString("metodoValorAcumulado")));
                 project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744802), EarnedValueMethod.valueOf(json.getString("metodoValorAcumulado")));
                 if(json.getString("propetarioAsignacion").compareToIgnoreCase("null")==0){
                 }

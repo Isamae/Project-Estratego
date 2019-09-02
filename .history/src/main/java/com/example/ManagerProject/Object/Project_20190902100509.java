@@ -158,12 +158,13 @@ public class Project  {
                 + "{ " + " 'name' :" + "'" + task.getName()+"'"
                 + " , " + " id : " + task.getID()
                 + " , " + " uniqueID : " + task.getUniqueID()
+                
                 + " , " + " 'duracion': " + "'" + task.getDuration() + "'"
                 + " , " + " 'estimada': " + task.getEstimated()
                 + " , " + " 'porcentajeCompletado': " + task.getPercentageComplete()
                 + " , " + " 'tipoRestricion': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743697))+"'"
                 + " , " + " 'propetarioAsignacion': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188744850))+"'"
-                + " , " + " 'priority': " + "'"+ task.getPriority().getValue() +"'"
+                + " , " + " 'priority': " + "'"+ task.getPriority() +"'"
                 + " , " + " 'ignoreCalendario': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188744079))+"'"
                 + " , " + " 'ocultarBarra': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743789))+"'"
                 + " , " + " 'notas': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743774))+"'"
@@ -172,9 +173,8 @@ public class Project  {
                 + " , " + " 'fechaLimite': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188744117))+"'"
                 + " , " + " 'fechaRestriccion': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743698))+"'"
                 + " , " + " estado : " + task.getActive()
-                + " , " + " 'condicionadaEsfuerzo': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743812))+"'"
-                + " , " + " 'resumida': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743762))+"'"
                 + " , " + " 'hito': " + "'"+ task.getMilestone()+"'"
+                + " , " + " 'condicionadaEsfuerzo': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743812))+"'"
                 + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getID())  
                 + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getID())
                 + " , " + " 'AfechaInicio': " + "'" +task.getActualStart() +"'" 

@@ -535,10 +535,7 @@ public class RestProjectFileMpp {
                 else{
                     project.getTaskByID(json.getInt("id")).setTaskMode(TaskMode.MANUALLY_SCHEDULED);
                 }
-
-                
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743697),ConstraintType.valueOf(json.getString("tipoRestricion")));
-                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744802), EarnedValueMethod.valueOf(json.getString("metodoValorAcumulado")));
+                project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744802), DataType.EARNED_VALUE_METHOD.valueOf(json.getString("metodoValorAcumulado")));
                 if(json.getString("propetarioAsignacion").compareToIgnoreCase("null")==0){
                 }
                 else{

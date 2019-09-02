@@ -158,23 +158,16 @@ public class Project  {
                 + "{ " + " 'name' :" + "'" + task.getName()+"'"
                 + " , " + " id : " + task.getID()
                 + " , " + " uniqueID : " + task.getUniqueID()
+                + " , " + " estado : " + task.getActive()
                 + " , " + " 'duracion': " + "'" + task.getDuration() + "'"
                 + " , " + " 'estimada': " + task.getEstimated()
                 + " , " + " 'porcentajeCompletado': " + task.getPercentageComplete()
-                + " , " + " 'tipoRestricion': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743697))+"'"
-                + " , " + " 'propetarioAsignacion': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188744850))+"'"
-                + " , " + " 'priority': " + "'"+ task.getPriority().getValue() +"'"
-                + " , " + " 'ignoreCalendario': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188744079))+"'"
-                + " , " + " 'ocultarBarra': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743789))+"'"
-                + " , " + " 'notas': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743774))+"'"
-                + " , " + " 'modoProgramacion': " + task.getTaskMode()
-                + " , " + " 'metodoValorAcumulado': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188744802))+"'"
-                + " , " + " 'fechaLimite': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188744117))+"'"
-                + " , " + " 'fechaRestriccion': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743698))+"'"
-                + " , " + " estado : " + task.getActive()
-                + " , " + " 'condicionadaEsfuerzo': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743812))+"'"
-                + " , " + " 'resumida': " + "'"+ task.getCurrentValue(FieldTypeHelper.getInstance(188743762))+"'"
-                + " , " + " 'hito': " + "'"+ task.getMilestone()+"'"
+                + " , " + " 'Priority': " + "'"+ task.getPriority() +"'"
+                + " , " + " 'modoProgracion': " + task.getTaskMode()
+                
+                + " , " + " 'modoProgramacion': " + "'"+ FieldTypeHelper.getFieldID(FieldTypeHelper.getInstance(188744079))+"'"
+                + " , " + " 'ocultarBarra': " + "'"+ FieldTypeHelper.getFieldID(FieldTypeHelper.getInstance(188743789))+"'"
+                + " , " + " 'notas': " + "'"+ FieldTypeHelper.getFieldID(FieldTypeHelper.getInstance(188743774))+"'"
                 + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getID())  
                 + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getID())
                 + " , " + " 'AfechaInicio': " + "'" +task.getActualStart() +"'" 
@@ -187,6 +180,7 @@ public class Project  {
                 + " , " + " 'LevelAssignments': " + "'"+ task.getLevelAssignments() +"'"
                 + " , " + " 'OutlineLevel': " + "'"+ task.getOutlineLevel() +"'"
                 + " , " + " 'OutlineNumber': " + "'"+ task.getOutlineNumber() +"'"
+                
                 + " , " + " 'Sucesores': " + relacionesSucesorasTareas(project,task.getID())
                 + " , " + " 'Type': " + "'"+ task.getType() +"'"
                 + " , " + " 'ActualDuration': " + "'"+ task.getActualDuration() +"'"
