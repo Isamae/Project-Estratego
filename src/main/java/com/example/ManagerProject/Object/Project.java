@@ -162,7 +162,9 @@ public class Project  {
                 + " , " + " 'duracion': " + "'" + task.getDuration() + "'"
                 + " , " + " 'estimada': " + task.getEstimated()
                 + " , " + " 'porcentajeCompletado': " + task.getPercentageComplete()
-                
+                + " , " + " 'Priority': " + "'"+ task.getPriority() +"'"
+                + " , " + " 'modo': " + task.getTaskMode()
+
                 + " , " + " 'recursos': " + asignacionesRecursosTarea(project,task.getID())  
                 + " , " + " 'predecesoras': " + relacionesPredecesoraTareas(project,task.getID())
                 + " , " + " 'AfechaInicio': " + "'" +task.getActualStart() +"'" 
@@ -175,7 +177,7 @@ public class Project  {
                 + " , " + " 'LevelAssignments': " + "'"+ task.getLevelAssignments() +"'"
                 + " , " + " 'OutlineLevel': " + "'"+ task.getOutlineLevel() +"'"
                 + " , " + " 'OutlineNumber': " + "'"+ task.getOutlineNumber() +"'"
-                + " , " + " 'Priority': " + "'"+ task.getPriority() +"'"
+                
                 + " , " + " 'Sucesores': " + relacionesSucesorasTareas(project,task.getID())
                 + " , " + " 'Type': " + "'"+ task.getType() +"'"
                 + " , " + " 'ActualDuration': " + "'"+ task.getActualDuration() +"'"
