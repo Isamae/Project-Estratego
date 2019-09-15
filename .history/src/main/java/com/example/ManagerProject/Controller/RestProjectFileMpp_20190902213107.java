@@ -705,6 +705,8 @@ public class RestProjectFileMpp {
     }
 
     public static  ProjectFile addDuracionProyecto(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException{
+
+        
         SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
         project.getTaskByID(0).setStart(df.parse(jsonObject.getString("StartDate")));
        

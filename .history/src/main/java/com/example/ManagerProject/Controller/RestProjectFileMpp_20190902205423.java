@@ -59,11 +59,11 @@ public class RestProjectFileMpp {
         projectObj = addCalendario(projectObj,jsonObject);
         projectObj = addPredecesoras(projectObj,jsonObject);
         projectObj = addSucesores(projectObj,jsonObject);
-        projectObj = addFechasTareas(projectObj,jsonObject);
-        projectObj = addDuracionTareas(projectObj,jsonObject);
+        //projectObj = addFechasTareas(projectObj,jsonObject);
+        //projectObj = addDuracionTareas(projectObj,jsonObject);
         projectObj = addCalendarioTarea(projectObj,jsonObject);
         projectObj = addValoresCamposPersonalizados(projectObj,jsonObject);
-        //projectObj = addAsignacionesRecursos(projectObj,jsonObject);
+        projectObj = addAsignacionesRecursos(projectObj,jsonObject);
         
 
         String nombFile = "archivo";
@@ -108,13 +108,19 @@ public class RestProjectFileMpp {
         for(int i=0 ;i< ((JSONArray)(jsonObject.get("CamposPersonalizados"))).length();i++){
             try {
                 JSONObject object  = ((JSONArray)(jsonObject.get("CamposPersonalizados"))).getJSONObject(i);
-                if(object.getString("AliasCampo").compareToIgnoreCase("null")==0 || object.getInt("FieldTypeID")==-1){}
+                if(object.getString("AliasCampo").compareToIgnoreCase("null")==0 || object.getInt("FieldTypeID")==-1){
+
+                }
                 else{
+                    
                     FieldType fieldType = FieldTypeHelper.getInstance14(object.getInt("FieldTypeID")); 
+                    //CustomFieldContainer fields = project.getCustomFields();
                     if(fieldType.getName() == null){}
                     else{
+                        //fields.getCustomField(fieldType);
                         project.getCustomFields().getCustomField(fieldType).setAlias(object.getString("AliasCampo"));
                     }
+                   
                 }
                 
             } catch (JSONException e) {
@@ -443,7 +449,7 @@ public class RestProjectFileMpp {
                     project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744850), json.getString("propetarioAsignacion"));
                 }
                 
-                if(json.getString("fechaRestriccion").compareToIgnoreCase("null")==0){
+                /*if(json.getString("fechaRestriccion").compareToIgnoreCase("null")==0){
                 }
                 else{
                     project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743698), df.parse(json.getString("fechaRestriccion")));
@@ -453,7 +459,7 @@ public class RestProjectFileMpp {
                 }
                 else{
                     project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744117), df.parse(json.getString("fechaLimite")));
-                }
+                }*/
 
 
 
@@ -705,6 +711,8 @@ public class RestProjectFileMpp {
     }
 
     public static  ProjectFile addDuracionProyecto(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException{
+
+        
         SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
         project.getTaskByID(0).setStart(df.parse(jsonObject.getString("StartDate")));
        
@@ -735,7 +743,27 @@ public class RestProjectFileMpp {
             project.getProjectProperties().getFinishDate().setMonth(df.parse(jsonObject.getString("FinishDate")).getMonth());
             project.getProjectProperties().getFinishDate().setYear(df.parse(jsonObject.getString("FinishDate")).getYear());
         }
-        
+        if(jsonObject.getString("StartDate").compareToIgnoreCase("null")==0){}
+        else{
+            
+            project.getStartDate().setTime(df.parse(jsonObject.getString("StartDate")).getTime());
+            project.getStartDate().setSeconds(df.parse(jsonObject.getString("StartDate")).getSeconds());
+            project.getStartDate().setMinutes(df.parse(jsonObject.getString("StartDate")).getMinutes());
+            project.getStartDate().setHours(df.parse(jsonObject.getString("StartDate")).getHours());
+            project.getStartDate().setMonth(df.parse(jsonObject.getString("StartDate")).getMonth());
+            project.getStartDate().setYear(df.parse(jsonObject.getString("StartDate")).getYear());
+        }
+
+        if(jsonObject.getString("FinishDate").compareToIgnoreCase("null")==0){}
+        else{
+            
+            project.getFinishDate().setTime(df.parse(jsonObject.getString("FinishDate")).getTime());
+            project.getFinishDate().setSeconds(df.parse(jsonObject.getString("FinishDate")).getSeconds());
+            project.getFinishDate().setMinutes(df.parse(jsonObject.getString("FinishDate")).getMinutes());
+            project.getFinishDate().setHours(df.parse(jsonObject.getString("FinishDate")).getHours());
+            project.getFinishDate().setMonth(df.parse(jsonObject.getString("FinishDate")).getMonth());
+            project.getFinishDate().setYear(df.parse(jsonObject.getString("FinishDate")).getYear());
+        }
         return project;
     }
 

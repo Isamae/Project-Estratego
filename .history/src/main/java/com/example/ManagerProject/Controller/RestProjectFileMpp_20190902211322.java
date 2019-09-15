@@ -108,13 +108,19 @@ public class RestProjectFileMpp {
         for(int i=0 ;i< ((JSONArray)(jsonObject.get("CamposPersonalizados"))).length();i++){
             try {
                 JSONObject object  = ((JSONArray)(jsonObject.get("CamposPersonalizados"))).getJSONObject(i);
-                if(object.getString("AliasCampo").compareToIgnoreCase("null")==0 || object.getInt("FieldTypeID")==-1){}
+                if(object.getString("AliasCampo").compareToIgnoreCase("null")==0 || object.getInt("FieldTypeID")==-1){
+
+                }
                 else{
+                    
                     FieldType fieldType = FieldTypeHelper.getInstance14(object.getInt("FieldTypeID")); 
+                    //CustomFieldContainer fields = project.getCustomFields();
                     if(fieldType.getName() == null){}
                     else{
+                        //fields.getCustomField(fieldType);
                         project.getCustomFields().getCustomField(fieldType).setAlias(object.getString("AliasCampo"));
                     }
+                   
                 }
                 
             } catch (JSONException e) {
@@ -443,7 +449,7 @@ public class RestProjectFileMpp {
                     project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744850), json.getString("propetarioAsignacion"));
                 }
                 
-                if(json.getString("fechaRestriccion").compareToIgnoreCase("null")==0){
+                /*if(json.getString("fechaRestriccion").compareToIgnoreCase("null")==0){
                 }
                 else{
                     project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188743698), df.parse(json.getString("fechaRestriccion")));
@@ -453,7 +459,7 @@ public class RestProjectFileMpp {
                 }
                 else{
                     project.getTaskByID(json.getInt("id")).set(FieldTypeHelper.getInstance(188744117), df.parse(json.getString("fechaLimite")));
-                }
+                }*/
 
 
 
@@ -705,6 +711,8 @@ public class RestProjectFileMpp {
     }
 
     public static  ProjectFile addDuracionProyecto(ProjectFile project,JSONObject jsonObject) throws JSONException, ParseException{
+
+        
         SimpleDateFormat df = new SimpleDateFormat("E MMM dd HH:mm:ss zzz yyyy");
         project.getTaskByID(0).setStart(df.parse(jsonObject.getString("StartDate")));
        
